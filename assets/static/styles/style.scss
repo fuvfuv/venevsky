@@ -23,10 +23,11 @@ body {
   font-family: $base-font-family;
   color: $base-text-color;
 
-  background-color: $body-color;
+  background-color: $main-bg-color;
 }
 
 a {
+  color: $base-text-color;
   text-decoration: none;
 }
 

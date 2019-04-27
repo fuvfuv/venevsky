@@ -1,7 +1,20 @@
-.image {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 50%);
-  text-align: center;
+.header {
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  &-top {
+    padding: 12px 0;
+    &__user-nav {
+      margin-left: auto;
+    }
+    &__main-nav {
+      margin-left: 80px;
+    }
+  }
+  &-main {
+    padding: 20px 0;
+
+    background-color: $dark-bg-color;
+  }
 }
