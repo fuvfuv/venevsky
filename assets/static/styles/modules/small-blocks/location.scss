@@ -1,6 +1,4 @@
 .location {
-  // flex: 0 0 165px;
-  // width: 165px;
   &__header {
     display: flex;
     align-items: center;
@@ -13,9 +11,17 @@
     }
   }
 
+  &__icon {
+    width: 15px;
+    height: 14px;
+
+    fill: $base-text-color;
+  }
+
   &__current {
     display: flex;
     align-items: center;
+    font-size: 14px;
 
     &:after {
       content: "";

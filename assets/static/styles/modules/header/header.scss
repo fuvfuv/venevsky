@@ -1,10 +1,18 @@
 .header {
+  color: $white;
   .container {
     display: flex;
     align-items: center;
+    & > * {
+      &:not(:last-child) {
+        margin-right: 60px;
+      }
+    }
   }
   &-top {
     padding: 12px 0;
+
+    color: $base-text-color;
     &__user-nav {
       margin-left: auto;
     }
@@ -16,5 +24,8 @@
     padding: 20px 0;
 
     background-color: $dark-bg-color;
+  }
+  &__basket-prev {
+    margin-left: auto;
   }
 }

@@ -1,1 +1,41 @@
 @import "location";
+@import "logo";
+
+.search {
+  display: flex;
+  align-items: center;
+  & > * {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__icon {
+    fill: $white;
+
+@include size(22px);
+  }
+  .input-field {
+    width: 220px;
+  }
+}
+
+.order-callback {
+  display: flex;
+  flex-direction: column;
+  &__link {
+    font-weight: 500;
+    font-size: 14px;
+    color: $white;
+    text-decoration: underline;
+  }
+  &__phone {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 1.5;
+    color: $main-action-Color;
+    white-space: nowrap;
+  }
+  &__description {
+    font-size: 12px;
+  }
+}

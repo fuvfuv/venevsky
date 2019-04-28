@@ -6,7 +6,7 @@ const gulpif = require('gulp-if');
 
 svgPath = {
   "input": "./assets/static/images/icons/*.svg",
-  "output": "./build/images/sprite"
+  "output": "./build/images/svg"
 };
 
 module.exports = function () {

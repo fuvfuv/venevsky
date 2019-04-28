@@ -3,7 +3,7 @@ const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const gulpif = require('gulp-if');
 
 imgPath = {
-  "input": "./assets/static/images/**/*.{png,jpg,gif}",
+  "input": "./assets/static/images/**/*.{svg,png,jpg,gif}",
   "ouput": "./build/images"
 };
 
