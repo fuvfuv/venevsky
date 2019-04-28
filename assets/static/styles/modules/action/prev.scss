@@ -1,0 +1,38 @@
+.actions-prev {
+  display: flex;
+  & > * {
+    flex-grow: 1;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.action-prev {
+  overflow: hidden;
+
+  border-radius: 4px;
+  &__header {
+    display: flex;
+    align-items: flex-end;
+    height: 185px;
+    padding: 20px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &__body {
+    padding: 15px 20px;
+
+    background-color: $white;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 21px;
+  }
+}

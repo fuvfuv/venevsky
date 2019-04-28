@@ -1,6 +1,8 @@
 @import "location";
 @import "logo";
 @import "banner";
+@import "section";
+
 
 .search {
   display: flex;
@@ -55,4 +57,11 @@
     line-height: 1.25;
     color: $base-text-color;
   }
+}
+
+.count-text {
+  margin-left: 5px;
+
+  font-size: 14px;
+  color: $text-info-color;
 }
