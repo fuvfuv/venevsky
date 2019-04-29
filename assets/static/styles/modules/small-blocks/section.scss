@@ -8,6 +8,9 @@
   &-sales-leaders {
     padding-bottom: 20px;
   }
+  &-question {
+    padding: 10px 0;
+  }
 }
 
 .section-header {
@@ -18,9 +21,5 @@
   &__right {
     margin-left: auto;
   }
-  &__link {
-    font-weight: 600;
-    color: $link-color;
-    text-decoration: underline;
-  }
+
 }

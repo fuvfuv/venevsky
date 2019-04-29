@@ -1,0 +1,33 @@
+.footer {
+  &-main {
+    padding: 30px 0;
+    color: $white;
+    background-color: $dark-bg-color;
+  }
+  &-bottom {
+    padding: 10px 0;
+
+    font-size: 12px;
+    color: rgba($white, 0.6);
+
+    background-color: $darkest-bg-color;
+    .container {
+      & > * {
+        margin: 10px 0;
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &__line {
+      & > * {
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}

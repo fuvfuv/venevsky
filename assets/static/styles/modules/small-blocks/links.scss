@@ -1,0 +1,17 @@
+.link {
+  color: $base-text-color;
+  &-white {
+    color: $white;
+  }
+  &-green {
+    color: $link-color;
+    font-weight: 600;
+    &:hover,
+    &:focus {
+      color: $link-color-hover;
+    }
+  }
+  &-underline {
+    text-decoration: underline;
+  }
+}

@@ -46,16 +46,12 @@
   }
   &__item {
     margin-bottom: 10px;
+
+    font-weight: 500;
+    font-size: 15px;
     &:last-child {
       margin-top: 20px;
       margin-bottom: 0;
-      .category-prev__link {
-        color: $link-color;
-      }
     }
-  }
-  &__link {
-    font-weight: 500;
-    font-size: 14px;
   }
 }
