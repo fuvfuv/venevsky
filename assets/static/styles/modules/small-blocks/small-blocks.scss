@@ -2,7 +2,7 @@
 @import "logo";
 @import "banner";
 @import "section";
-
+@import "sales-leaders";
 
 .search {
   display: flex;
@@ -21,7 +21,6 @@
     width: 220px;
   }
 }
-
 .order-callback {
   display: flex;
   flex-direction: column;
@@ -42,7 +41,6 @@
     font-size: 12px;
   }
 }
-
 .title {
   &-page {
     font-weight: 500;
@@ -50,18 +48,44 @@
     line-height: 1.25;
   }
   &-section {
-    margin-bottom: 30px;
-
     font-weight: 500;
     font-size: 40px;
     line-height: 1.25;
     color: $base-text-color;
   }
 }
-
 .count-text {
   margin-left: 5px;
 
   font-size: 14px;
   color: $text-info-color;
+}
+
+.slider-nav {
+  position: absolute;
+  top: 50%;
+  z-index: 100;
+  transform: translateY(-50%);
+  transition: all linear 0.3s;
+  &__icon {
+    cursor: pointer;
+    opacity: 0.5;
+    fill: #333333;
+
+@include size (35px);
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+  &.slider-nav--prev {
+    left: -35px;
+  }
+  &.slider-nav--next {
+    right: -35px;
+  }
+  &.slick-disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
 }

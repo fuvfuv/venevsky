@@ -1,16 +1,26 @@
-.s-bg-white {
-  background-color: $white;
+.s {
+  &-bg-white {
+    background-color: $white;
+  }
+  &-popular-categories {
+    padding-bottom: 10px;
+  }
+  &-sales-leaders {
+    padding-bottom: 20px;
+  }
 }
 
 .section-header {
   display: flex;
   align-items: baseline;
+  margin-bottom: 30px;
+
   &__right {
     margin-left: auto;
   }
   &__link {
+    font-weight: 600;
     color: $link-color;
     text-decoration: underline;
-    font-weight: 600;
   }
 }
