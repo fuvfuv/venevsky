@@ -1,5 +1,63 @@
+mixin footerNavLink(link, text, description)
+  li.footer-nav__item 
+    a(href=link).footer-nav__link=text
+    if (description)
+      span.footer-nav__description=description
+
 footer.footer
-  .footer-main
+  .footer-top
+    .container
+      .footer-callback
+        img(src="images/general/wiki.png", alt="фото иконки википедии").footer-callback__img 
+        .order-callback.footer-callback__order-callback
+          span.order-callback__description Звоните круглосуточно
+          a(href="tel:+74993348888").order-callback__phone +7 499 334-88-88
+          a(href="#").order-callback__link.link-white.link-underline Заказать звонок
+      .footer-main
+        .footer-col
+          span.footer__title О нас
+          ul.footer-nav__list
+            +footerNavLink('', 'Оплата и доставка', '')
+            +footerNavLink('', 'Гарантия', '')
+            +footerNavLink('', 'Услуги по обработке металла', '')
+            +footerNavLink('', 'Компания', '')
+            +footerNavLink('', 'Контакты', 'Связь с директором')
+        .footer-col
+          span.footer__title Каталог
+          ul.footer-nav__list
+            +footerNavLink('', 'Все для кровли', '')
+            +footerNavLink('', 'Фасад', '')
+            +footerNavLink('', 'Профнастил', '')
+            +footerNavLink('', 'Листовой прокат', '')
+            +footerNavLink('', 'Рулонная сталь', '')
+        .footer-col
+          .footer__block
+            span.footer__title Принимаем к оплате
+            .payment-types
+              ul.payment-types__list
+                li.payment-types__item
+                  +icon('visa', 'payment-types__icon')
+                li.payment-types__item
+                  +icon('mastercard', 'payment-types__icon')
+                li.payment-types__item
+                  +icon('paypal', 'payment-types__icon')
+              a(href="#").link-underline.link-yellow Оплата заказа онлайн
+          .footer__block
+            span Акции и спецпредложения
+        .footer-col
+          .footer__block
+            span.footer__title Контакты
+            .footer-contacts
+              +icon('map','footer-contacts__icon')
+              span.footer-contacts__title Офис
+              p.footer-contacts__text 111033, Москва, ул.Золоторожский вал, д. 11, стр. 9
+                a(href="#").footer-contacts__link.link-white на карте
+          .footer__block
+            .footer-contacts
+              +icon('map','footer-contacts__icon')
+              span.footer-contacts__title Производство и склад
+              p.footer-contacts__text Московская обл., Ленинский р-н, г. Видное, Северная видновская промзона, ФГУП 'Комплекс'
+                a(href="#").footer-contacts__link.link-white на карте
   .footer-bottom
     .container
       .footer-bottom__line

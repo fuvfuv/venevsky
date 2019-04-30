@@ -1,62 +1,60 @@
 .advantages {
-  display: flex;
-  & > * {
-    &:not(:last-child) {
-      flex-grow: 1;
-      margin-right: 35px;
+    display: flex;
+    & > * {
+        &:not(:last-child) {
+            flex: 1;
+            margin-right: 35px;
+        }
     }
-  }
 }
 
 .advantage {
-  display: flex;
-  & > * {
-    &:not(:last-child) {
-      margin-right: 15px;
-    }
-  }
-  &__icon {
-    fill: $main-action-color;
-    &.icon {
-      &-bill {
-        width: 43px;
-        height: 64px;
-      }
-      &-support {
-        width: 48px;
-        height: 64px;
-      }
-      &-save-money {
-        width: 53px;
-        height: 64px;
-      }
-    }
-  }
-  &__body {
     display: flex;
-    flex-direction: column;
-
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.25px;
-  }
-  &__title {
-    margin-bottom: 4px;
-    font-size: 16px;
-    font-weight: 600;
-  }
-  &__text {
-    font-size: 14px;
-    color: $text-info-color;
-    letter-spacing: 0.25px;
-  }
-  &__link {
-    display: inline-block;
-    margin-top: 8px;
-
-    &:hover,
-    &:focus {
-      text-decoration: none;
+    & > * {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
     }
-  }
+    &__icon {
+        fill: $main-action-color;
+        &.icon {
+            &-bill {
+                width: 43px;
+                height: 64px;
+            }
+            &-support {
+                width: 48px;
+                height: 64px;
+            }
+            &-save-money {
+                width: 53px;
+                height: 64px;
+            }
+        }
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: .25px;
+    }
+    &__title {
+        margin-bottom: 4px;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &__text {
+        font-size: 14px;
+        color: $text-info-color;
+        letter-spacing: .25px;
+    }
+    &__link {
+        display: inline-block;
+        margin-top: 8px;
+
+        &:hover, &:focus {
+            text-decoration: none;
+        }
+    }
 }
