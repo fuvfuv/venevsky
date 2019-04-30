@@ -6,145 +6,145 @@
 @import "sales-leaders";
 
 .search {
-    display: flex;
-    align-items: center;
-    & > * {
-        &:not(:last-child) {
-            margin-right: 10px;
-        }
-    }
-    &__icon {
-        fill: $white;
-        @include size(22px);
-    }
-    .input-field {
-        width: 220px;
-    }
+		display: flex;
+		align-items: center;
+		& > * {
+				&:not(:last-child) {
+						margin-right: 10px;
+				}
+		}
+		&__icon {
+				fill: $white;
+				@include size(22px);
+		}
+		.input-field {
+				width: 220px;
+		}
 }
 .order-callback {
-    display: flex;
-    flex-direction: column;
-    &__link {
-        font-weight: 600;
-        font-size: 14px;
-        letter-spacing: .25px;
-    }
-    &__phone {
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 1.5;
-        color: $main-action-color;
-        white-space: nowrap;
-    }
-    &__description {
-        font-size: 12px;
-    }
+		display: flex;
+		flex-direction: column;
+		&__link {
+				font-weight: 600;
+				font-size: 14px;
+				letter-spacing: .25px;
+		}
+		&__phone {
+				font-weight: 800;
+				font-size: 24px;
+				line-height: 1.5;
+				color: $main-action-color;
+				white-space: nowrap;
+		}
+		&__description {
+				font-size: 12px;
+		}
 }
 .title {
-    &-page {
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.25;
-    }
-    &-section {
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.25;
-        color: $base-text-color;
-    }
+		&-page {
+				font-weight: 500;
+				font-size: 40px;
+				line-height: 1.25;
+		}
+		&-section {
+				font-weight: 500;
+				font-size: 40px;
+				line-height: 1.25;
+				color: $base-text-color;
+		}
 }
 .count-text {
-    margin-left: 5px;
-    font-size: 14px;
-    color: $text-info-color;
+		margin-left: 5px;
+		font-size: 14px;
+		color: $text-info-color;
 }
 .slider-nav {
-    position: absolute;
-    top: 50%;
-    z-index: 100;
-    transform: translateY(-50%);
-    transition: all linear .3s;
-    &__icon {
-        cursor: pointer;
-        opacity: .5;
-        fill: #333;
+		position: absolute;
+		top: 50%;
+		z-index: 100;
+		transform: translateY(-50%);
+		transition: all linear .3s;
+		&__icon {
+				cursor: pointer;
+				opacity: .5;
+				fill: #333;
 
-        @include size (35px);
+				@include size (35px);
 
-        &:hover, &:focus {
-            opacity: 1;
-        }
-    }
-    &.slider-nav--prev {
-        left: -35px;
-    }
-    &.slider-nav--next {
-        right: -35px;
-    }
-    &.slick-disabled {
-        cursor: default;
-        opacity: .5;
-    }
+				&:hover, &:focus {
+						opacity: 1;
+				}
+		}
+		&.slider-nav--prev {
+				left: -35px;
+		}
+		&.slider-nav--next {
+				right: -35px;
+		}
+		&.slick-disabled {
+				cursor: default;
+				opacity: .5;
+		}
 }
 .upgrade {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    font-size: 14px;
-    & > * {
-        &:not(:last-child) {
-            margin-right: 10px;
-        }
-    }
-    &__icon {
-        margin: auto;
-        fill: $white;
+		display: flex;
+		align-items: center;
+		font-weight: 600;
+		font-size: 14px;
+		& > * {
+				&:not(:last-child) {
+						margin-right: 10px;
+				}
+		}
+		&__icon {
+				margin: auto;
+				fill: $white;
 
-        @include size(10px);
+				@include size(10px);
 
-        &-wrapper {
-            display: flex;
-            background-color: $text-info-color;
-            border-radius: 50%;
+				&-wrapper {
+						display: flex;
+						background-color: $text-info-color;
+						border-radius: 50%;
 
-            @include size(16px);
-        }
-    }
+						@include size(16px);
+				}
+		}
 }
 .questions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 }
 .ask-your-question {
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-    & > * {
-        &:not(:last-child) {
-            margin-right: 30px;
-        }
-    }
-    &__list {
-        display: flex;
-        align-items: center;
-        & > * {
-            &:not(:last-child) {
-                margin-right: 20px;
-            }
-        }
-    }
-    &__link {
-        display: flex;
-        align-items: center;
-        & > * {
-            &:not(:last-child) {
-                margin-right: 10px;
-            }
-        }
-    }
-    &__icon {
-        @include size(24px);
-        fill: $base-text-color;
-    }
+		display: flex;
+		align-items: center;
+		font-weight: 500;
+		& > * {
+				&:not(:last-child) {
+						margin-right: 30px;
+				}
+		}
+		&__list {
+				display: flex;
+				align-items: center;
+				& > * {
+						&:not(:last-child) {
+								margin-right: 20px;
+						}
+				}
+		}
+		&__link {
+				display: flex;
+				align-items: center;
+				& > * {
+						&:not(:last-child) {
+								margin-right: 10px;
+						}
+				}
+		}
+		&__icon {
+				@include size(24px);
+				fill: $base-text-color;
+		}
 }

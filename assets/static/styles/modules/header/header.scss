@@ -20,8 +20,17 @@
         }
     }
     &-main {
+        color: $white;
         padding: 20px 0;
         background-color: $dark-bg-color;
+        .container {
+            position: relative;
+            & > * {
+                &:not(:last-child) {
+                    margin-right: 40px;
+                }
+            }
+        }
     }
     &__basket-prev {
         margin-left: auto;

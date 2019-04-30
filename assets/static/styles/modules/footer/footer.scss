@@ -1,8 +1,8 @@
 .footer {
     &-top {
-        padding: 30px 0;
-        color: $white;
         background-color: $dark-bg-color;
+        color: $white;
+        padding: 30px 0;
     }
     &-main {
         display: flex;
@@ -29,10 +29,10 @@
         }
     }
     &-bottom {
-        padding: 10px 0;
-        font-size: 12px;
-        color: rgba($white, .6);
         background-color: $darkest-bg-color;
+        color: rgba($white, .6);
+        font-size: 12px;
+        padding: 10px 0;
         .container {
             & > * {
                 margin: 10px 0;
@@ -54,7 +54,7 @@
         &__link {
             color: inherit;
             text-decoration: underline;
-            &:hover, &:focus {
+            &:hover,&:focus {
                 color: $white;
             }
         }
@@ -80,32 +80,33 @@
             }
         }
         &__description {
-            font-size: 12px;
             color: rgba($white, .6);
+            font-size: 12px;
         }
         &__link {
             color: $white;
-            &:hover, &:focus {
+            &:hover,&:focus {
                 color: darken($white, 20%);
             }
         }
     }
     &-contacts {
-        position: relative;
         padding-left: 20px;
+        position: relative;
 
         &__icon {
+            left: 0;
             position: absolute;
             top: 0;
-            left: 0;
             fill: $white;
+
             @include size(16px);
         }
         &__title {
             display: block;
-            margin-bottom: 5px;
             font-size: 15px;
             font-weight: 600;
+            margin-bottom: 5px;
         }
         &__text {
             font-size: 13px;
@@ -118,9 +119,9 @@
     }
     &__title {
         display: block;
-        margin-bottom: 10px;
         font-size: 17px;
         font-weight: 600;
+        margin-bottom: 10px;
     }
     &__block {
         margin-bottom: 30px;
