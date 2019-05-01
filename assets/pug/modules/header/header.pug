@@ -1,13 +1,8 @@
 header.header
 	.header-top
 		.container
-			.location.header-top__location
-				.location__header
-					+icon('map', 'location__icon')
-					span.location__current Нижний Новгород
-					.location__body
-
-					include ../navigation/main-nav
+			include ./location
+			include ../navigation/main-nav
 			.user-nav.header-top__user-nav
 				a(href="#").user-nav__link.link-green Войти
 

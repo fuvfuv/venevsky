@@ -88,7 +88,7 @@
         }
         &:hover,&:focus {
             .catalog-subnav {
-                display: flex;
+                display: block;
             }
         }
     }
@@ -101,14 +101,19 @@
     bottom: 0;
     display: none;
     left: calc(100% - 2px);
-    overflow: auto;
     padding: 15px 20px 0;
     position: absolute;
     top: 0;
     width: 670px;
-    & > * {
-        &:not(:last-child) {
-            margin-right: 30px;
+    .simplebar-vertical {
+        margin: 10px 10px 10px 0;
+    }
+    &__inner {
+        display: flex;
+        & > * {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
         }
     }
     &__col {
@@ -125,6 +130,7 @@
     }
     &__header {
         display: flex;
+        justify-content: flex-start;
         margin-bottom: 3px;
         align-items: baseline;
     }

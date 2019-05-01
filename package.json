@@ -34,7 +34,9 @@
 	},
 	"dependencies": {
 		"jquery": "^3.4.0",
+		"magnific-popup": "^1.1.0",
 		"normalize.css": "^8.0.1",
+		"simplebar": "^4.0.0-alpha.6",
 		"slick-carousel": "^1.8.1",
 		"svg4everybody": "^2.1.9"
 	}

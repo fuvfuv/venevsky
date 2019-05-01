@@ -1,20 +1,28 @@
 .input-field {
-		height: 50px;
-		padding: 10px 15px;
-		font-family: inherit;
-		color: $base-text-color;
-		background-color: $white;
-		border: 1px solid $input-border-color;
-		border-radius: 4px;
-		box-shadow: none;
-		outline: none;
+    height: 50px;
+    width: 100%;
+    padding: 10px 15px;
+    font-family: inherit;
+    color: $base-text-color;
+    background-color: $white;
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    box-shadow: none;
+    outline: none;
 
-		@include placeholder {
-				color: $text-info-color;
-		}
-		&.input-field--size-small {
-				height: 40px;
-				font-size: 14px;
-				line-height: 20px;
-		}
+    @include placeholder {
+        color: $text-info-color;
+    }
+    &.input-field--size {
+        &-s {
+            height: 40px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &-xs {
+            height: 40px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
 }

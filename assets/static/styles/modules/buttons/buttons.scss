@@ -1,19 +1,21 @@
 .btn {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-weight: 600;
     line-height: 20px;
     background-color: $main-action-color;
     border: 0;
+    border: 2px solid transparent;
     border-radius: 4px;
+    white-space: nowrap;
     cursor: pointer;
     & > * {
         &:not(:last-child) {
             margin-right: 10px;
         }
     }
-    &:hover, &:focus {
+    &:hover,&:focus {
         background-color: #F0DE01;
     }
     &:active {
@@ -30,6 +32,18 @@
         }
         &--disabled {
             opacity: .5;
+        }
+        &--bg-green {
+            background-color: $button-green-color;
+            color: $white;
+        }
+        &--border-green {
+            background-color: $white;
+            border-color: $button-green-color;
+            color: $button-green-color;
+        }
+        &--size-s {
+            padding: 3px 15px;
         }
     }
 }
