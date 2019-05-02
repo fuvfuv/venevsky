@@ -53,14 +53,60 @@ $(document).ready(function () {
 		});
 
 		$(document).on('click', '.location__header', function () {
-			$(this).siblings('.location__body').addClass('is-location-choose');;
+			$(this).siblings('.location__body').addClass('is-location-choose');
 		});
+	}
+
+	var popupLink = function () {
+		$('.js-popup-link').magnificPopup({
+			showCloseBtn: false
+		});
+
+		$(document).on('click', '.popup__close', function () {
+			$.magnificPopup.close();
+		});
+	}
+
+	var formValidation = function () {
+		$('form').each(function () {
+			$(this).on('submit', function () {
+				$(this).validate({
+					rules: {
+						name: 'required',
+						phone: 'required',
+						// email: 'required',
+						password: 'required',
+						comment: 'required'
+					},
+					messages: {
+						name: 'Введите корректное имя',
+						phone: 'Введите корректный номер',
+						// email: 'Введите корректный email',
+						password: 'Введите корректный пароль',
+						comment: 'Заполните поле'
+					},
+					errorPlacement: function (error, element) {
+						element.attr('placeholder', error[0].outerText);
+					}
+				});
+				if ($(this).valid()) {
+					var wrap = $(this)[0].closest('.hide-on-success');
+					if (wrap) {
+						$(wrap).siblings('.show-on-success').show();
+						$(wrap).hide();
+					}
+				}
+				return false;
+			});
+		});	
 	}
 
 	sandwich();
 	popularCategoriesSlider();
 	productPrevSlider();
 	locationChoose();
+	popupLink();
+	formValidation();
 });
 
 var popularCategoriesSlider = function () {

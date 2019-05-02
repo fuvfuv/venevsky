@@ -17,14 +17,22 @@
         width: 15px;
         height: 14px;
         fill: $base-text-color;
+        flex-shrink: 0;
     }
 
     &__current {
+        position: relative;
         display: flex;
         align-items: center;
         font-size: 14px;
-
+        padding-right: 15px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         &:after {
+            position: absolute;
+            z-index: 1;
+            right: 0;
             content: "";
             width: 0;
             height: 0;

@@ -1,0 +1,19 @@
+.textarea-field {
+    background-color: $white;
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    box-shadow: none;
+    height: 100px;
+    padding: 10px 15px;
+    width: 100%;
+    resize: vertical;
+    &::placeholder {
+        color: $text-info-color;
+    }
+    &.error {
+        &::placeholder {
+            color: $warning-color;
+        }
+        border-color: $warning-color;
+    }
+}

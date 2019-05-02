@@ -1,0 +1,40 @@
+.popup {
+    position: relative;
+    max-width: 520px;
+    margin: 50px auto;
+    border-radius: 8px;
+    &__title {
+        font-size: 18px;
+        line-height: 1.44;
+    }
+    &__header {
+        display: flex;
+        align-items: center;
+        padding: 15px 25px 15px 40px;
+        background-color: $light-bg-color;
+    }
+    &__close {
+        @include size(25px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        cursor: pointer;
+        opacity: .4;
+        &:hover,&:focus {
+            opacity: .8;
+        }
+        &-icon {
+            @include size(16px);
+        }
+    }
+    &__body {
+        padding: 40px;
+        background-color: $white;
+    }
+}
+
+.mfp-bg {
+    background-color: $base-text-color;
+    opacity: .5;
+}

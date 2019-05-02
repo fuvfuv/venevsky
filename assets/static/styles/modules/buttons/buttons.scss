@@ -42,8 +42,13 @@
             border-color: $button-green-color;
             color: $button-green-color;
         }
-        &--size-s {
-            padding: 3px 15px;
+        &--size {
+            &-s {
+                padding: 3px 15px;
+            }
+            &-l {
+                padding: 12px 27px;
+            }
         }
     }
 }

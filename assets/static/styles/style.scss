@@ -4,91 +4,72 @@
 @import "utils/fonts";
 
 html {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
+*,*::before,*::after {
+    box-sizing: inherit;
 }
 
 body {
-	min-width: 320px;
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-
-	font-size: $base-font-size;
-	font-family: $base-font-family;
-	color: $base-text-color;
-
-	background-color: $main-bg-color;
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-size: $base-font-size;
+    font-family: $base-font-family;
+    color: $base-text-color;
+    background-color: $main-bg-color;
 }
 
 a {
-	color: $base-text-color;
-	text-decoration: none;
+    color: $base-text-color;
+    text-decoration: none;
 }
 
-ul,
-li {
-	margin: 0;
-	padding: 0;
-
-	list-style-type: none;
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	margin: 0;
+p,h1,h2,h3,h4,h5,h6 {
+    margin: 0;
 }
 
 .img-responsive {
-	display: block;
-	max-width: 100%;
-	height: auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
 
-	&.img-width {
-		width: 100%;
-	}
+    &.img-width {
+        width: 100%;
+    }
 }
 
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-	position: absolute;
-
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	padding: 0;
-	overflow: hidden;
-
-	white-space: nowrap;
-
-	border: 0;
-
-	clip: rect(0 0 0 0);
-	clip-path: inset(100%);
+.visually-hidden:not(:focus):not(:active),input[type="checkbox"].visually-hidden,input[type="radio"].visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
 }
 
 .container {
-	width: 100%;
-	max-width: $content-size;
-	margin: 0 auto;
-	padding: 0 10px;
+    width: 100%;
+    max-width: $content-size;
+    margin: 0 auto;
+    padding: 0 10px;
 }
 
 section {
-	position: relative;
-
-	padding: 40px 0;
+    position: relative;
+    padding: 40px 0;
 }
 
 //Модули
