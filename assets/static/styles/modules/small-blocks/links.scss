@@ -1,29 +1,30 @@
 .link {
-      color: $base-text-color;
-      &:hover, &:focus {
+    color: $base-text-color;
+    &:hover,&:focus {
+        color: $link-color-hover;
+    }
+    &-white {
+        color: $white;
+        &:hover,&:focus {
+            color: darken($white, 20%);
+        }
+    }
+    &-green {
+        font-weight: 600;
+        color: $link-color;
+        &:hover,&:focus {
             color: $link-color-hover;
-      }
-      &-white {
-            color: $white;
-            &:hover, &:focus {
-                  color: darken($white, 20%);
-            }
-      }
-      &-green {
-            font-weight: 600;
-            color: $link-color;
-            &:hover, &:focus {
-                  color: $link-color-hover;
-            }
-      }
-      &-yellow {
-            font-weight: 600;
-            color: $main-action-color;
-            &:hover, &:focus {
-                  color: darken($main-action-color, 20%);
-            }
-      }
-      &-underline {
-            text-decoration: underline;
-      }
+        }
+    }
+    &-yellow {
+        font-size: 14px;
+        font-weight: 600;
+        color: $main-action-color;
+        &:hover,&:focus {
+            color: darken($main-action-color, 20%);
+        }
+    }
+    &-underline {
+        text-decoration: underline;
+    }
 }

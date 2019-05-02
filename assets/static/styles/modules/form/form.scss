@@ -39,7 +39,7 @@
         align-items: center;
         & > * {
             &:not(:last-child) {
-                margin-right: 30px;
+                margin-right: 20px;
             }
         }
         &__info {
@@ -110,11 +110,6 @@
             font-weight: 700;
             font-size: 18px;
         }
-        &__label {
-            display: block;
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
         &-contacts {
             display: flex;
             flex-direction: column;
@@ -135,6 +130,28 @@
                 position: absolute;
                 left: 0;
                 top: 0;
+            }
+        }
+    }
+}
+
+.fast-review-form {
+    padding: 20px 40px 30px;
+    background-color: $light-bg-color;
+    & > * {
+        margin: 20px 0;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__line {
+        display: flex;
+        & > * {
+            &:not(:last-child) {
+                margin-right: 10px;
             }
         }
     }

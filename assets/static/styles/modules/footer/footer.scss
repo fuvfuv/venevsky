@@ -1,8 +1,21 @@
 .footer {
+    &__title {
+        display: block;
+        font-size: 17px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &__block {
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
     &-top {
         background-color: $dark-bg-color;
         color: $white;
         padding: 30px 0;
+        padding-bottom: 40px;
     }
     &-main {
         display: flex;
@@ -110,30 +123,22 @@
         }
         &__text {
             font-size: 13px;
-            line-height: 1.3;
+            line-height: 1.35;
         }
         &__link {
             margin-left: 5px;
             text-decoration: underline;
         }
     }
-    &__title {
-        display: block;
-        font-size: 17px;
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-    &__block {
-        margin-bottom: 30px;
-        &:last-child {
-            margin-bottom: 0;
-        }
+    &-action {
+        position: relative;
+        display: inline-block;
     }
 }
 
 .payment-types {
     & > * {
-        margin: 15px 0;
+        margin: 5px 0;
         &:not(:last-child) {
             margin-right: 10px;
         }
