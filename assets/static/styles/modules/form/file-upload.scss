@@ -1,13 +1,13 @@
 .file-upload {
     align-items: center;
-		display: flex;
-		cursor: pointer;
+      display: flex;
+      cursor: pointer;
     input[type="file"] {
         display: none;
     }
     &__custom {
-				display: flex;
-				align-items: center;
+            display: flex;
+            align-items: center;
         color: #1FA349; // hex
         font-weight: 600;
         & > * {
