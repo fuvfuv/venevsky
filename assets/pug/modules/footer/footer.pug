@@ -54,14 +54,42 @@ footer.footer
                   .footer-contacts
                      +icon('map','footer-contacts__icon')
                      span.footer-contacts__title Офис
-                     p.footer-contacts__text 111033, Москва, ул.Золоторожский вал, д. 11, стр. 9
-                        a(href="#").footer-contacts__link.link-white на карте
+                     .footer-contacts__text 111033, Москва, ул.Золоторожский вал, д. 11, стр. 9
+                        .contacts-popup
+                           button.contacts-popup__toogle.link.link-white на карте
+                           .contacts-popup__body
+                              .contacts-popup__map#popup-contacts-office
+                              .contacts-popup__info
+                                 .contacts-popup__close
+                                    +icon('close', 'contacts-popup__close-icon')
+                                 span.contacts-popup__title Центральный офис в Москве
+                                 span.contacts-popup__text 111033, Москва, ул. Золоторожский вал, дом 11, строение 9
+                                 .contacts-popup__block
+                                    span.contacts-popup__label Время работы:
+                                    span.contacts-popup__text пн-пт 9:00 - 18:00
+                                 .contacts-popup__qr
+                                    span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR-код
+                                    img(src="images/general/wiki.png", alt="qr код").contacts-popup__qr-img
                .footer__block
                   .footer-contacts
                      +icon('map','footer-contacts__icon')
                      span.footer-contacts__title Производство и склад
-                     p.footer-contacts__text Московская обл., Ленинский р-н, г. Видное, Северная видновская промзона, ФГУП 'Комплекс'
-                        a(href="#").footer-contacts__link.link-white на карте
+                     .footer-contacts__text Московская обл., Ленинский р-н, г. Видное, Северная видновская промзона, ФГУП 'Комплекс'
+                        .contacts-popup
+                           button.contacts-popup__toogle.link.link-white на карте
+                           .contacts-popup__body
+                              .contacts-popup__map#popup-contacts-stock
+                              .contacts-popup__info
+                                 .contacts-popup__close
+                                    +icon('close', 'contacts-popup__close-icon')
+                                 span.contacts-popup__title Производство и склад
+                                 span.contacts-popup__text Московская обл., Ленинский р-н, г.Видное, Северная видновская промзона, ФГУП 'комплекс'
+                                 .contacts-popup__block
+                                    span.contacts-popup__label Время работы:
+                                    span.contacts-popup__text пн-пт 9:00 - 18:00
+                                 .contacts-popup__qr
+                                    span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR-код
+                                    img(src="images/general/wiki.png", alt="qr код").contacts-popup__qr-img
    .footer-bottom
       .container
          .footer-bottom__line

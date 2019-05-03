@@ -125,10 +125,6 @@
             font-size: 13px;
             line-height: 1.35;
         }
-        &__link {
-            margin-left: 5px;
-            text-decoration: underline;
-        }
     }
     &-action {
         position: relative;
@@ -154,5 +150,96 @@
     &__icon {
         fill: $white;
         @include size(40px);
+    }
+}
+
+.contacts-popup {
+    position: relative;
+    display: inline-block;
+    &.contacts-popup--active {
+        .contacts-popup__body {
+            display: flex;
+        }
+    }
+    &__toogle {
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        color: inherit;
+        text-decoration: underline;
+        cursor: pointer;
+        outline: none;
+    }
+    &__body {
+        background-color: $white;
+        display: none;
+        width: 690px;
+        position: absolute;
+        bottom: 25px;
+        right: -10px;
+        box-shadow: 0 0 30px 0 rgba(0,0,0, .2);
+        color: $base-text-color;
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 12px 0 12px;
+            border-color: $white transparent transparent transparent;
+        }
+    }
+    &__info {
+        flex-basis: 260px;
+        max-width: 260px;
+        width: 260px;
+        padding: 40px 20px;
+    }
+    &__close {
+        @include size(30px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        opacity: .4;
+        &:hover,&:focus {
+            opacity: .7;
+        }
+        &-icon {
+            @include size(16px);
+        }
+    }
+    &__title {
+        font-size: 18px;
+        display: block;
+        margin-bottom: 10px;
+        line-height: 1.44;
+    }
+    &__text {
+        font-size: 14px;
+        line-height: 18px;
+        display: block;
+        margin-bottom: 10px;
+    }
+    &__label {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    &__qr-img {
+       width: 100%;
+    }
+    &__map {
+       flex: 1;
+
     }
 }
