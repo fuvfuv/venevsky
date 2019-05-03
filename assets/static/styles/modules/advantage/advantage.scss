@@ -58,3 +58,13 @@
         }
     }
 }
+
+@media screen and(max-width: $tablet-size) {
+    .advantages {
+        & > * {
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+    }
+}

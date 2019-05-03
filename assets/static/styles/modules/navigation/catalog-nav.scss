@@ -157,3 +157,16 @@
     }
 }
 
+@media screen and(max-width: $tablet-size) {
+    .catalog-nav {
+        &__body {
+            left: 10px;
+            top: 100%;
+            max-width: calc(100% - 40px);
+        }
+    }
+
+    .catalog-subnav {
+        width: 496px;
+    }
+}

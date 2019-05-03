@@ -6,10 +6,8 @@
     border: 2px solid transparent;
     border-radius: 4px;
     transition: all linear .3s;
-    width: 305px;
-
-    flex-grow: 1;
-    &:hover, &:focus {
+    flex: 1;
+    &:hover,&:focus {
         border-color: $main-action-color;
         box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
         .product-prev {
@@ -25,7 +23,6 @@
         overflow: hidden;
         padding: 10px;
         position: relative;
-
         align-items: center;
     }
     &__body {
@@ -81,7 +78,6 @@
     &__info {
         display: flex;
         margin-bottom: 15px;
-
         align-items: flex-end;
         & > * {
             &:not(:last-child) {
@@ -111,6 +107,48 @@
         &-current {
             font-size: 18px;
             font-weight: 800;
+        }
+    }
+}
+
+
+@media screen and(max-width: $tablet-size) {
+    .products-prev-line {
+        .product-prev {
+            max-width: 33%;
+            &:nth-child(4n) {
+                display: none;
+            }
+        }
+    }
+
+    .product-prev {
+        &__info {
+            flex-direction: column;
+            align-items: flex-start;
+            flex-basis: 33%;
+            width: 33%;
+            max-width: 33%;
+            &.product-prev__info--wide {
+                align-items: flex-start;
+                flex-direction: column;
+                flex: 1;
+                max-width: 100%;
+            }
+            &--wrapper {
+                display: flex;
+                & > * {
+                    &:not(:last-child) {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            & > * {
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
 }

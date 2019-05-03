@@ -1,3 +1,13 @@
+$slider-tablet-width: 1239px;
+
 .products-prev-slider {
-   position: relative;
+    position: relative;
+}
+
+@media screen and(max-width: $slider-tablet-width) {
+    .products-prev-slider {
+        .slider-nav {
+            display: none !important; // перебиваем инлайновые стили
+        }
+    }
 }

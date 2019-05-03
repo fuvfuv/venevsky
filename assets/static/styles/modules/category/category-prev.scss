@@ -52,3 +52,26 @@
         }
     }
 }
+
+@media screen and(max-width: $tablet-size) {
+    .category-prev {
+        &.category-prev--tablet-hide {
+            display: none;
+        }
+    }
+
+    .js-categories-prev {
+        & > * {
+            flex-basis: calc(33% - 25px);
+            max-width: 33%;
+            margin-right: 25px;
+            margin-bottom: 25px;
+            &:nth-child(4n+4) {
+                margin-right: 25px;
+            }
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
+        }
+    }
+}

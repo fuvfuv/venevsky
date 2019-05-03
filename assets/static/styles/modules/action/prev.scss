@@ -33,3 +33,19 @@
         font-size: 21px;
     }
 }
+
+@media screen and(max-width: $tablet-size) {
+    .actions-prev {
+        & > * {
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    .action-prev {
+        &.action-prev--tablet-hide {
+            display: none;
+        }
+    }
+}
