@@ -65,6 +65,7 @@
                 margin-right: 15px;
             }
         }
+
         &::before {
             border-color: transparent transparent $white transparent;
             border-style: solid;
@@ -106,6 +107,9 @@
         &__header {
             border-bottom: 2px solid $main-action-color;
         }
+        &__close {
+            display: none;
+        }
         &__item {
             font-size: 14px;
             font-weight: 600;
@@ -145,6 +149,106 @@
             height: 100%;
             overflow: auto;
             height: 100%;
+        }
+    }
+}
+
+@media screen and(max-width: $tablet-size) {
+    .location {
+        &-question {
+            max-width: 728px;
+            &__text {
+                display: block;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@media screen and(max-width: $phone-size) {
+    .location {
+        &-question {
+            border: 2px solid $main-action-color;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            top: auto;
+            max-width: 100%;
+            padding: 10px 20px 20px;
+            flex-direction: column;
+            & > * {
+                &:not(:last-child) {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+            }
+
+            &__text {
+                color: $base-text-color;
+                display: block;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            &::before {
+                display: none;
+            }
+        }
+        &-choose {
+            top: 60px;
+            left: 20px;
+            right: 20px;
+            bottom: 30px;
+            width: auto;
+            flex-direction: column;
+            &__close {
+                display: flex;
+                @include size(30px);
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                right: 0;
+                top: -35px;
+                cursor: pointer;
+                &-icon {
+                    @include size(16px);
+                    fill: $main-action-color;
+                }
+            }
+            &__item {
+                color: $base-text-color;
+            }
+            &__body {
+                max-height: 100%;
+            }
+        }
+        &__body {
+            &.is-location-choose {
+                background-color: rgba(#033,.2);
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 0;
+                z-index: 3;
+                position: fixed;
+                .location-choose {
+                    display: flex;
+                }
+            }
+        }
+        &-mobile {
+            .location {
+                &__icon {
+                    fill: $link-color;
+                }
+                &__current {
+                    font-size: 16px;
+                    color: $link-color;
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
         }
     }
 }

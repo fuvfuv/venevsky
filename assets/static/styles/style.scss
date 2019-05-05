@@ -5,23 +5,25 @@
 
 html {
     box-sizing: border-box;
-   //  outline: 1px solid red;
+    //  outline: 1px solid red;
 }
 
 *,*::before,*::after {
     box-sizing: inherit;
-   //  outline: 1px solid red;
+    //  outline: 1px solid red;
 }
 
 body {
     min-width: 320px;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     font-size: $base-font-size;
     font-family: $base-font-family;
     color: $base-text-color;
     background-color: $main-bg-color;
+    &.fixed {
+        overflow: hidden;
+    }
 }
 
 a {
@@ -66,10 +68,10 @@ p,h1,h2,h3,h4,h5,h6 {
     width: 100%;
     max-width: $content-size;
     margin: 0 auto;
-    padding: 0 10px;
-    @media screen and (max-width: $tablet-size) {
-        padding: 0 10px;
-    }
+    padding: 0 20px;
+    //  @media screen and (max-width: $tablet-size) {
+    //      padding: 0 10px;
+    //  }
 }
 
 section {

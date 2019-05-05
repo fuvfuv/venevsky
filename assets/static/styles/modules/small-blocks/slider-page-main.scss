@@ -28,7 +28,7 @@
 }
 
 $slider-break-point-tablet: 1239px;
-@media screen and(max-width: &slider-break-point-tablet) {
+@media screen and(max-width: $slider-break-point-tablet) {
     .slick-dots {
         & > * {
             &:not(:last-child) {

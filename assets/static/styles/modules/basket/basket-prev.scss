@@ -43,7 +43,29 @@
             display: none;
         }
         &__number {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+@media screen and(max-width: $phone-size) {
+    .basket-prev {
+        &__icon {
+            margin-bottom: 0;
+        }
+        &__title {
+            display: none;
+        }
+        &__count {
+            display: none;
+        }
+        &__number {
+            @include size(16px);
+            font-size: 12px;
+            top: -8px;
+            right: -8px;
         }
     }
 }
