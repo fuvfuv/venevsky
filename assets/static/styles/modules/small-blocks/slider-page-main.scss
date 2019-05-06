@@ -1,14 +1,14 @@
 .slider-nav {
     position: absolute;
-    top: 50%;
     z-index: 100;
-    transform: translateY(-50%);
+    top: 50%;
     transition: all linear .3s;
+    transform: translateY(-50%);
     &__icon {
-        cursor: pointer;
         opacity: .5;
-        fill: #333;
+        cursor: pointer;
 
+        fill: #333;
         @include size (35px);
 
         &:hover,&:focus {
@@ -22,36 +22,38 @@
         right: -35px;
     }
     &.slick-disabled {
-        cursor: default;
         opacity: .5;
+        cursor: default;
     }
 }
 
 $slider-break-point-tablet: 1239px;
 @media screen and(max-width: $slider-break-point-tablet) {
     .slick-dots {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
         & > * {
             &:not(:last-child) {
                 margin-right: 10px;
             }
         }
-        display: flex;
-        align-items: center;
-        justify-content: center;
         .slick-active {
             button {
                 background-color: $main-action-color;
             }
         }
         button {
-            @include size(13px);
-            background-color: $light-bg-color;
-            text-indent: -99999px;
-            background-color: #DEDEDE; // hex
             display: block;
-            border: 0;
             padding: 0;
+            border: 0;
             border-radius: 2px;
+            background-color: $light-bg-color;
+            background-color: #DEDEDE; // hex
+            text-indent: -99999px;
+
+            @include size(13px);
         }
     }
 }

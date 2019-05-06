@@ -9,24 +9,26 @@
     }
     &__subtitle {
         display: block;
+        margin-bottom: 20px;
         font-size: 18px;
         line-height: 1.44;
-        margin-bottom: 20px;
     }
     &__header {
         display: flex;
-        align-items: center;
         padding: 15px 25px 15px 40px;
         background-color: $light-bg-color;
+
+        align-items: center;
     }
     &__close {
-        @include size(25px);
         display: flex;
-        align-items: center;
-        justify-content: center;
         margin-left: auto;
-        cursor: pointer;
         opacity: .4;
+        cursor: pointer;
+
+        align-items: center;
+        @include size(25px);
+        justify-content: center;
         &:hover,&:focus {
             opacity: .8;
         }
@@ -41,6 +43,6 @@
 }
 
 .mfp-bg {
-    background-color: $base-text-color;
     opacity: .5;
+    background-color: $base-text-color;
 }

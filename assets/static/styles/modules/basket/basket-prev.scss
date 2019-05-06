@@ -5,67 +5,45 @@
     color: $white;
     &__icon {
         margin-bottom: 5px;
+
         fill: $white;
         @include size(25px);
+        @media screen and(max-width: $tablet-size) {
+            margin-bottom: 0;
+        }
     }
     &__title {
         font-weight: 600;
         line-height: 20px;
+        @media screen and(max-width: $tablet-size) {
+            display: none;
+        }
     }
     &__count {
         font-size: 14px;
         line-height: 18px;
+        @media screen and(max-width: $tablet-size) {
+            display: none;
+        }
     }
     &__number {
+        display: none;
         position: absolute;
-        right: -12px;
         top: -12px;
-        font-size: 14px;
+        right: -12px;
+        border-radius: 50%;
         color: $base-text-color;
         background-color: $main-action-color;
-        @include size(24px);
+        font-size: 14px;
         line-height: 24px;
         text-align: center;
-        border-radius: 50%;
-        display: none;
-    }
-}
 
-@media screen and(max-width: $tablet-size) {
-    .basket-prev {
-        &__icon {
-            margin-bottom: 0;
-        }
-        &__title {
-            display: none;
-        }
-        &__count {
-            display: none;
-        }
-        &__number {
+        @include size(24px);
+        @media screen and(max-width: $tablet-size) {
             display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-}
 
-@media screen and(max-width: $phone-size) {
-    .basket-prev {
-        &__icon {
-            margin-bottom: 0;
-        }
-        &__title {
-            display: none;
-        }
-        &__count {
-            display: none;
-        }
-        &__number {
-            @include size(16px);
-            font-size: 12px;
-            top: -8px;
-            right: -8px;
+            align-items: center;
+            justify-content: center;
         }
     }
 }

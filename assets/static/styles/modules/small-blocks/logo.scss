@@ -1,14 +1,14 @@
 .logo {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-      &__img {
-            margin-bottom: 5px;
-      }
+    &__img {
+        margin-bottom: 5px;
+    }
 
-      &__text {
-            font-size: 12px;
-            color: $white;
-      }
+    &__text {
+        color: $white;
+        font-size: 12px;
+    }
 }
 

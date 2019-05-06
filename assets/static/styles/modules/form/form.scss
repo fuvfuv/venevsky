@@ -36,6 +36,7 @@
     }
     &-line {
         display: flex;
+
         align-items: center;
         & > * {
             &:not(:last-child) {
@@ -81,8 +82,8 @@
             }
         }
         &__block {
-            background-color: $white;
             padding: 30px 40px;
+            background-color: $white;
         }
         &__row {
             display: flex;
@@ -93,10 +94,11 @@
             }
         }
         &__info {
-            align-items: center;
             display: flex;
-            font-size: 24px;
             margin-bottom: 15px;
+            font-size: 24px;
+
+            align-items: center;
             & > * {
                 &:not(:last-child) {
                     margin-right: 10px;
@@ -107,15 +109,15 @@
             font-size: 18px;
         }
         &__number {
-            font-weight: 700;
             font-size: 18px;
+            font-weight: 700;
         }
         &-contacts {
             display: flex;
             flex-direction: column;
             position: relative;
-            font-size: 14px;
             padding-left: 50px;
+            font-size: 14px;
             & > * {
                 &.link-green {
                     margin-bottom: 10px;
@@ -126,10 +128,11 @@
                 font-size: 12px;
             }
             &__icon {
-                @include size(35px);
                 position: absolute;
-                left: 0;
                 top: 0;
+                left: 0;
+
+                @include size(35px);
             }
         }
     }

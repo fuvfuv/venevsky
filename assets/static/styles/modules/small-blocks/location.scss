@@ -1,11 +1,13 @@
 .location {
     $locationWidth: 175px;
-    flex-basis: $locationWidth;
     position: relative;
+
+    flex-basis: $locationWidth;
     &__header {
         display: flex;
-        align-items: center;
         cursor: pointer;
+
+        align-items: center;
         & > * {
             &:not(:last-child) {
                 margin-right: 10px;
@@ -16,30 +18,32 @@
     &__icon {
         width: 15px;
         height: 14px;
+
         fill: $base-text-color;
         flex-shrink: 0;
     }
 
     &__current {
-        position: relative;
         display: flex;
-        align-items: center;
-        font-size: 14px;
-        padding-right: 15px;
-        white-space: nowrap;
         overflow: hidden;
+        position: relative;
+        padding-right: 15px;
+        font-size: 14px;
+        white-space: nowrap;
         text-overflow: ellipsis;
+
+        align-items: center;
         &:after {
             position: absolute;
             z-index: 1;
             right: 0;
-            content: "";
             width: 0;
             height: 0;
             margin-left: 10px;
             border-width: 4px 4.5px 0 4.5px;
             border-style: solid;
             border-color: #000 transparent transparent transparent;
+            content: "";
         }
     }
     &__body {
@@ -51,15 +55,20 @@
     }
     &-question {
         display: flex;
-        align-items: center;
         position: absolute;
-        left: 0;
-        top: calc(100% + 10px);
-        box-shadow: 0 0 5px 0 rgba(159, 197, 178, .5);
         z-index: 1;
-        background-color: $white;
+        top: calc(100% + 10px);
+        left: 0;
         padding: 6px 10px;
         border-radius: 4px;
+        background-color: $white;
+        box-shadow: 0 0 5px 0 rgba(159, 197, 178, .5);
+
+        align-items: center;
+
+        @media screen and (max-width:$tablet-size) {
+            max-width: 728px;
+        }
         & > * {
             &:not(:last-child) {
                 margin-right: 15px;
@@ -67,19 +76,20 @@
         }
 
         &::before {
-            border-color: transparent transparent $white transparent;
-            border-style: solid;
-            border-width: 0 10px 10px 10px;
-            content: "";
-            height: 0;
-            left: 100px;
             position: absolute;
-            top: -9px;
-            width: 0;
             z-index: 2;
+            top: -9px;
+            left: 100px;
+            width: 0;
+            height: 0;
+            border-width: 0 10px 10px 10px;
+            border-style: solid;
+            border-color: transparent transparent $white transparent;
+            content: "";
         }
         &__buttons {
             display: flex;
+
             align-items: center;
             & > * {
                 &:not(:last-child) {
@@ -89,21 +99,27 @@
         }
         &__text {
             font-size: 17px;
-            line-height: 1.44;
             font-weight: 600;
+            line-height: 1.44;
             white-space: nowrap;
+
+            @media screen and (max-width: $tablet-size) {
+                display: block;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
     }
     &-choose {
         display: none;
-        width: 218px;
         position: absolute;
+        z-index: 1;
         top: 10px;
         left: 20px;
-        background-color: $white;
-        z-index: 1;
-        box-shadow: 0 0 30px 0 rgba(0,0,0,.2);
+        width: 218px;
         border: 2px solid $main-action-color;
+        background-color: $white;
+        box-shadow: 0 0 30px 0 rgba(0,0,0,.2);
         &__header {
             border-bottom: 2px solid $main-action-color;
         }
@@ -111,10 +127,10 @@
             display: none;
         }
         &__item {
+            padding: 6px 15px;
             font-size: 14px;
             font-weight: 600;
             line-height: 18px;
-            padding: 6px 15px;
             cursor: pointer;
             transition: all linear .2s;
             &:hover,&:focus {
@@ -128,12 +144,12 @@
             height: auto;
             max-height: 240px;
             &:after,&:before {
-                content: "";
-                height: 30px;
                 display: block;
                 position: absolute;
-                left: 0;
                 right: 0;
+                left: 0;
+                height: 30px;
+                content: "";
             }
             &:before {
                 top: 0;
@@ -145,110 +161,10 @@
             }
         }
         &__list {
-            padding: 15px 0;
-            height: 100%;
             overflow: auto;
             height: 100%;
-        }
-    }
-}
-
-@media screen and(max-width: $tablet-size) {
-    .location {
-        &-question {
-            max-width: 728px;
-            &__text {
-                display: block;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-        }
-    }
-}
-
-@media screen and(max-width: $phone-size) {
-    .location {
-        &-question {
-            border: 2px solid $main-action-color;
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            top: auto;
-            max-width: 100%;
-            padding: 10px 20px 20px;
-            flex-direction: column;
-            & > * {
-                &:not(:last-child) {
-                    margin-right: 0;
-                    margin-bottom: 10px;
-                }
-            }
-
-            &__text {
-                color: $base-text-color;
-                display: block;
-                text-overflow: ellipsis;
-                overflow: hidden;
-            }
-            &::before {
-                display: none;
-            }
-        }
-        &-choose {
-            top: 60px;
-            left: 20px;
-            right: 20px;
-            bottom: 30px;
-            width: auto;
-            flex-direction: column;
-            &__close {
-                display: flex;
-                @include size(30px);
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                right: 0;
-                top: -35px;
-                cursor: pointer;
-                &-icon {
-                    @include size(16px);
-                    fill: $main-action-color;
-                }
-            }
-            &__item {
-                color: $base-text-color;
-            }
-            &__body {
-                max-height: 100%;
-            }
-        }
-        &__body {
-            &.is-location-choose {
-                background-color: rgba(#033,.2);
-                bottom: 0;
-                left: 0;
-                right: 0;
-                top: 0;
-                z-index: 3;
-                position: fixed;
-                .location-choose {
-                    display: flex;
-                }
-            }
-        }
-        &-mobile {
-            .location {
-                &__icon {
-                    fill: $link-color;
-                }
-                &__current {
-                    font-size: 16px;
-                    color: $link-color;
-                    &:after {
-                        display: none;
-                    }
-                }
-            }
+            height: 100%;
+            padding: 15px 0;
         }
     }
 }

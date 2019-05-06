@@ -1,15 +1,16 @@
 .btn {
     display: flex;
-    align-items: center;
     padding: 8px 20px;
-    font-weight: 600;
-    line-height: 20px;
-    background-color: $main-action-color;
     border: 0;
     border: 2px solid transparent;
     border-radius: 4px;
+    background-color: $main-action-color;
+    font-weight: 600;
+    line-height: 20px;
     white-space: nowrap;
     cursor: pointer;
+
+    align-items: center;
     & > * {
         &:not(:last-child) {
             margin-right: 10px;
@@ -26,21 +27,22 @@
     }
     &.btn {
         &--fill {
-            justify-content: center;
             width: 100%;
             border-radius: 0;
+
+            justify-content: center;
         }
         &--disabled {
             opacity: .5;
         }
         &--bg-green {
-            background-color: $button-green-color;
             color: $white;
+            background-color: $button-green-color;
         }
         &--border-green {
-            background-color: $white;
             border-color: $button-green-color;
             color: $button-green-color;
+            background-color: $white;
         }
         &--size {
             &-s {

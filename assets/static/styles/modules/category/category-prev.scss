@@ -7,24 +7,47 @@
 
 .js-categories-prev {
     display: flex;
+
     flex-wrap: wrap;
 
     & > * {
-        flex: 1;
-        flex-basis: calc(25% - 20px);
         max-width: 295px;
         margin-right: 20px;
         margin-bottom: 30px;
+
+        flex: 1;
+        flex-basis: calc(25% - 20px);
+        @media screen and(max-width: $tablet-size) {
+            max-width: 33%;
+            margin-right: 25px;
+            margin-bottom: 25px;
+
+            flex-basis: calc(33% - 25px);
+        }
+
         &:nth-child(4n+4) {
             margin-right: 0;
+            @media screen and(max-width: $tablet-size) {
+                margin-right: 25px;
+            }
+        }
+        @media screen and(max-width: $tablet-size) {
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
         }
     }
 }
 
 .category-prev {
     overflow: hidden;
-    background-color: $white;
     border-radius: 4px;
+    background-color: $white;
+    &.category-prev--tablet-hide {
+        @media screen and(max-width: $tablet-size) {
+            display: none;
+        }
+    }
     &__img {
         height: 180px;
         background-repeat: no-repeat;
@@ -38,40 +61,17 @@
     &__title {
         margin-bottom: 20px;
         &-text {
-            font-weight: 700;
             font-size: 22px;
+            font-weight: 700;
         }
     }
     &__item {
         margin-bottom: 10px;
-        font-weight: 500;
         font-size: 15px;
+        font-weight: 500;
         &:last-child {
             margin-top: 20px;
             margin-bottom: 0;
-        }
-    }
-}
-
-@media screen and(max-width: $tablet-size) {
-    .category-prev {
-        &.category-prev--tablet-hide {
-            display: none;
-        }
-    }
-
-    .js-categories-prev {
-        & > * {
-            flex-basis: calc(33% - 25px);
-            max-width: 33%;
-            margin-right: 25px;
-            margin-bottom: 25px;
-            &:nth-child(4n+4) {
-                margin-right: 25px;
-            }
-            &:nth-child(3n+3) {
-                margin-right: 0;
-            }
         }
     }
 }

@@ -8,8 +8,9 @@
         }
     }
     &__col {
-        flex-grow: 1;
         width: 50%;
+
+        flex-grow: 1;
     }
 }
 
@@ -19,9 +20,9 @@
     height: 240px;
     margin-bottom: 20px;
     padding: 20px;
-    background-color: $white;
     border: 2px solid transparent;
     border-radius: 4px;
+    background-color: $white;
     transition: all linear .3s;
     &:hover,&:focus {
         border-color: $main-action-color;
@@ -29,11 +30,26 @@
 
     &.sales-leader--big {
         height: 400px;
+
+        @media screen and (max-width: $tablet-size) {
+            height: 300px;
+        }
         .sales-leader {
+            @media screen and (max-width:$tablet-size) {
+                padding: 10px;
+            }
             &__img {
                 height: 280px;
                 img {
                     max-height: 280px;
+                }
+            }
+            @media screen and (max-width:$tablet-size) {
+                &__img {
+                    height: 180px;
+                    img {
+                        max-height: 180px;
+                    }
                 }
             }
             &__name {
@@ -43,10 +59,11 @@
     }
     &__img {
         display: flex;
-        justify-content: center;
-        align-items: center;
         height: 140px;
         margin-bottom: 10px;
+
+        align-items: center;
+        justify-content: center;
         img {
             max-width: 100%;
             max-height: 140px;
@@ -54,22 +71,5 @@
     }
     &__name {
         font-weight: 700;
-    }
-}
-
-@media screen and(max-width: $tablet-size) {
-    .sales-leader {
-        &.sales-leader--big {
-            height: 300px;
-            .sales-leader {
-                padding: 10px;
-                &__img {
-                    height: 180px;
-                    img {
-                        max-height: 180px;
-                    }
-                }
-            }
-        }
     }
 }

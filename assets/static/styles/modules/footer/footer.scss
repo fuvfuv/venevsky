@@ -1,9 +1,9 @@
 .footer {
     &__title {
         display: block;
+        margin-bottom: 10px;
         font-size: 17px;
         font-weight: 600;
-        margin-bottom: 10px;
     }
     &__block {
         margin-bottom: 25px;
@@ -12,15 +12,18 @@
         }
     }
     &-top {
-        background-color: $dark-bg-color;
-        color: $white;
         padding: 30px 0;
         padding-bottom: 40px;
+        color: $white;
+        background-color: $dark-bg-color;
     }
     &-main {
         display: flex;
         .footer-nav {
             flex: 2;
+            @media screen and(max-width: $tablet-size) {
+                flex: 1;
+            }
         }
         & > * {
             flex-basis: 0;
@@ -32,6 +35,7 @@
     }
     &-callback {
         display: flex;
+
         align-items: center;
         & > * {
             margin: 30px 0;
@@ -40,15 +44,15 @@
             }
         }
         &__img {
-            height: 62px;
             max-width: 88px;
+            height: 62px;
         }
     }
     &-bottom {
-        background-color: $darkest-bg-color;
-        color: rgba($white, .6);
-        font-size: 12px;
         padding: 10px 0;
+        color: rgba($white, .6);
+        background-color: $darkest-bg-color;
+        font-size: 12px;
         .container {
             & > * {
                 margin: 10px 0;
@@ -77,12 +81,20 @@
     }
     &-nav {
         display: flex;
-        //   flex-direction: column;
+        @media screen and(max-width: $tablet-size) {
+            display: flex;
+            flex-direction: column;
+        }
+
         & > * {
             flex-basis: 0;
             flex-grow: 1;
             &:not(:last-child) {
                 margin-right: 20px;
+                @media screen and(max-width: $tablet-size) {
+                    margin-right: 0;
+                    margin-bottom: 30px;
+                }
             }
         }
         &__list {
@@ -116,22 +128,22 @@
         }
     }
     &-contacts {
-        padding-left: 20px;
         position: relative;
+        padding-left: 20px;
 
         &__icon {
-            left: 0;
             position: absolute;
             top: 0;
-            fill: $white;
+            left: 0;
 
+            fill: $white;
             @include size(16px);
         }
         &__title {
             display: block;
+            margin-bottom: 5px;
             font-size: 15px;
             font-weight: 600;
-            margin-bottom: 5px;
         }
         &__text {
             font-size: 13px;
@@ -139,8 +151,8 @@
         }
     }
     &-action {
-        position: relative;
         display: inline-block;
+        position: relative;
     }
 }
 
@@ -166,8 +178,8 @@
 }
 
 .contacts-popup {
-    position: relative;
     display: inline-block;
+    position: relative;
     &.contacts-popup--active {
         .contacts-popup__body {
             display: flex;
@@ -175,50 +187,52 @@
     }
     &__toogle {
         padding: 0;
-        background-color: transparent;
         border: none;
+        outline: none;
         color: inherit;
+        background-color: transparent;
         text-decoration: underline;
         cursor: pointer;
-        outline: none;
     }
     &__body {
-        background-color: $white;
         display: none;
-        width: 690px;
         position: absolute;
-        bottom: 25px;
         right: -10px;
-        box-shadow: 0 0 30px 0 rgba(0,0,0, .2);
+        bottom: 25px;
+        width: 690px;
         color: $base-text-color;
+        background-color: $white;
+        box-shadow: 0 0 30px 0 rgba(0,0,0, .2);
         &:after {
-            content: "";
             position: absolute;
-            bottom: -12px;
             right: 20px;
+            bottom: -12px;
             width: 0;
             height: 0;
-            border-style: solid;
             border-width: 12px 12px 0 12px;
+            border-style: solid;
             border-color: $white transparent transparent transparent;
+            content: "";
         }
     }
     &__info {
-        flex-basis: 260px;
-        max-width: 260px;
         width: 260px;
+        max-width: 260px;
         padding: 40px 20px;
+
+        flex-basis: 260px;
     }
     &__close {
-        @include size(30px);
         display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
         position: absolute;
-        right: 15px;
         top: 15px;
+        right: 15px;
         opacity: .4;
+        cursor: pointer;
+
+        align-items: center;
+        @include size(30px);
+        justify-content: center;
         &:hover,&:focus {
             opacity: .7;
         }
@@ -227,16 +241,16 @@
         }
     }
     &__title {
-        font-size: 18px;
         display: block;
         margin-bottom: 10px;
+        font-size: 18px;
         line-height: 1.44;
     }
     &__text {
-        font-size: 14px;
-        line-height: 18px;
         display: block;
         margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 18px;
     }
     &__label {
         font-size: 14px;
@@ -255,22 +269,4 @@
     }
 }
 
-@media screen and(max-width: $tablet-size) {
-    .footer {
-        &-nav {
-            display: flex;
-            flex-direction: column;
-            & > * {
-                &:not(:last-child) {
-                    margin-right: 0;
-                    margin-bottom: 30px;
-                }
-            }
-        }
-        &-main {
-            .footer-nav {
-                flex: 1;
-            }
-        }
-    }
-}
+
