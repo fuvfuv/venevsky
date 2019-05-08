@@ -1,11 +1,19 @@
 .advantages {
     display: flex;
+
+    @media screen and(max-width: $phone-size) {
+        flex-direction: column;
+    }
     & > * {
         flex: 1;
         &:not(:last-child) {
             margin-right: 35px;
             @media screen and(max-width: $tablet-size) {
                 margin-right: 10px;
+            }
+            @media screen and(max-width: $phone-size) {
+                margin-right: 0;
+                margin-bottom: 30px;
             }
         }
     }
@@ -37,6 +45,7 @@
     }
     &__body {
         display: flex;
+        flex: 1;
         flex-direction: column;
         font-size: 14px;
         font-weight: 600;

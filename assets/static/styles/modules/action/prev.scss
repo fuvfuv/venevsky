@@ -1,11 +1,19 @@
 .actions-prev {
     display: flex;
+
+    @media screen and(max-width: $phone-size) {
+        flex-direction: column;
+    }
     & > * {
         flex: 1;
         &:not(:last-child) {
             margin-right: 30px;
             @media screen and(max-width: $tablet-size) {
                 margin-right: 20px;
+            }
+            @media screen and(max-width: $phone-size) {
+                margin-right: 0;
+                margin-bottom: 20px;
             }
         }
     }
@@ -17,6 +25,9 @@
     &.action-prev--tablet-hide {
         @media screen and(max-width: $tablet-size) {
             display: none;
+        }
+        @media screen and(max-width: $phone-size) {
+            display: block;
         }
     }
     &__header {

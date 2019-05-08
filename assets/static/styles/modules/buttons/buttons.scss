@@ -11,6 +11,11 @@
     cursor: pointer;
 
     align-items: center;
+    @media screen and (max-width:$phone-size) {
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
     & > * {
         &:not(:last-child) {
             margin-right: 10px;
@@ -31,6 +36,11 @@
             border-radius: 0;
 
             justify-content: center;
+        }
+        &--product {
+            @media screen and (max-width:$phone-size) {
+                display: flex;
+            }
         }
         &--disabled {
             opacity: .5;

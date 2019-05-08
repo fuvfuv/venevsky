@@ -8,7 +8,7 @@ footer.footer
    .footer-top
       .container
          .footer-callback
-            img(src="images/general/wiki.png", alt="фото иконки википедии").footer-callback__img
+            img(src="images/general/logo.svg", alt="фото иконки википедии").footer-callback__img
             .order-callback.footer-callback__order-callback
                span.order-callback__description Звоните круглосуточно
                a(href="tel:+74993348888").order-callback__phone +7 499 334-88-88
@@ -18,19 +18,19 @@ footer.footer
                .footer-col
                   span.footer__title О нас
                   ul.footer-nav__list
-                     +footerNavLink('', 'Оплата и доставка', '')
-                     +footerNavLink('', 'Гарантия', '')
-                     +footerNavLink('', 'Услуги по обработке металла', '')
-                     +footerNavLink('', 'Компания', '')
-                     +footerNavLink('', 'Контакты', 'Связь с директором')
+                     +footerNavLink('#', 'Оплата и доставка', '')
+                     +footerNavLink('#', 'Гарантия', '')
+                     +footerNavLink('#', 'Услуги по обработке металла', '')
+                     +footerNavLink('#', 'Компания', '')
+                     +footerNavLink('#', 'Контакты', 'Связь с директором')
                .footer-col
                   span.footer__title Каталог
                   ul.footer-nav__list
-                     +footerNavLink('', 'Все для кровли', '')
-                     +footerNavLink('', 'Фасад', '')
-                     +footerNavLink('', 'Профнастил', '')
-                     +footerNavLink('', 'Листовой прокат', '')
-                     +footerNavLink('', 'Рулонная сталь', '')
+                     +footerNavLink('#', 'Все для кровли', '')
+                     +footerNavLink('#', 'Фасад', '')
+                     +footerNavLink('#', 'Профнастил', '')
+                     +footerNavLink('#', 'Листовой прокат', '')
+                     +footerNavLink('#', 'Рулонная сталь', '')
             .footer-col
                .footer__block
                   span.footer__title Принимаем к оплате
@@ -58,19 +58,18 @@ footer.footer
                      .footer-contacts__text 111033, Москва, ул.Золоторожский вал, д. 11, стр. 9
                         .contacts-popup
                            button.contacts-popup__toogle.link.link-white на карте
-                           .contacts-popup__body
-                              .contacts-popup__map#popup-contacts-office
-                              .contacts-popup__info
-                                 .contacts-popup__close
-                                    +icon('close', 'contacts-popup__close-icon')
-                                 span.contacts-popup__title Центральный офис в Москве
-                                 span.contacts-popup__text 111033, Москва, ул. Золоторожский вал, дом 11, строение 9
-                                 .contacts-popup__block
-                                    span.contacts-popup__label Время работы:
-                                    span.contacts-popup__text пн-пт 9:00 - 18:00
-                                 .contacts-popup__qr
-                                    span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR-код
-                                    img(src="images/general/wiki.png", alt="qr код").contacts-popup__qr-img
+                           .contacts-popup__body-wrapper
+                              .contacts-popup__body
+                                 .contacts-popup__map#popup-contacts-office
+                                 .contacts-popup__info
+                                    .contacts-popup__close
+                                       +icon('close', 'contacts-popup__close-icon')
+                                    span.contacts-popup__title Центральный офис в Москве
+                                    span.contacts-popup__text 111033, Москва, ул. Золоторожский вал, дом 11, строение 9
+                                    .contacts-popup__block
+                                       span.contacts-popup__label Время работы:
+                                       span.contacts-popup__text пн-пт 9:00 - 18:00
+
                .footer__block
                   .footer-contacts
                      +icon('map','footer-contacts__icon')
@@ -78,19 +77,17 @@ footer.footer
                      .footer-contacts__text Московская обл., Ленинский р-н, г. Видное, Северная видновская промзона, ФГУП 'Комплекс'
                         .contacts-popup
                            button.contacts-popup__toogle.link.link-white на карте
-                           .contacts-popup__body
-                              .contacts-popup__map#popup-contacts-stock
-                              .contacts-popup__info
-                                 .contacts-popup__close
-                                    +icon('close', 'contacts-popup__close-icon')
-                                 span.contacts-popup__title Производство и склад
-                                 span.contacts-popup__text Московская обл., Ленинский р-н, г.Видное, Северная видновская промзона, ФГУП 'комплекс'
-                                 .contacts-popup__block
-                                    span.contacts-popup__label Время работы:
-                                    span.contacts-popup__text пн-пт 9:00 - 18:00
-                                 .contacts-popup__qr
-                                    span.contacts-popup__text Для построения маршрута наведите камеру телефона на QR-код
-                                    img(src="images/general/wiki.png", alt="qr код").contacts-popup__qr-img
+                           .contacts-popup__body-wrapper
+                              .contacts-popup__body
+                                 .contacts-popup__map#popup-contacts-stock
+                                 .contacts-popup__info
+                                    .contacts-popup__close
+                                       +icon('close', 'contacts-popup__close-icon')
+                                    span.contacts-popup__title Производство и склад
+                                    span.contacts-popup__text Московская обл., Ленинский р-н, г.Видное, Северная видновская промзона, ФГУП 'комплекс'
+                                    .contacts-popup__block
+                                       span.contacts-popup__label Время работы:
+                                       span.contacts-popup__text пн-пт 9:00 - 18:00
    .footer-bottom
       .container
          .footer-bottom__line

@@ -53,12 +53,18 @@
         font-size: 40px;
         font-weight: 500;
         line-height: 1.25;
+        @media screen and (max-width:$phone-size) {
+            font-size: 30px;
+        }
     }
     &-section {
         color: $base-text-color;
         font-size: 40px;
         font-weight: 500;
         line-height: 1.25;
+        @media screen and (max-width:$phone-size) {
+            font-size: 30px;
+        }
     }
 }
 .count-text {

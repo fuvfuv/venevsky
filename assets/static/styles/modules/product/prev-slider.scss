@@ -2,11 +2,8 @@ $slider-tablet-width: 1239px;
 
 .products-prev-slider {
     position: relative;
-}
-
-@media screen and(max-width: $slider-tablet-width) {
-    .products-prev-slider {
-        .slider-nav {
+    .slider-nav {
+        @media screen and(max-width: $slider-tablet-width) {
             display: none !important; // перебиваем инлайновые стили
         }
     }

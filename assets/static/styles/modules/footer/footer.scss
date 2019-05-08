@@ -19,6 +19,9 @@
     }
     &-main {
         display: flex;
+        @media screen and(max-width: $phone-size) {
+            flex-direction: column;
+        }
         .footer-nav {
             flex: 2;
             @media screen and(max-width: $tablet-size) {
@@ -30,6 +33,10 @@
             flex-grow: 1;
             &:not(:last-child) {
                 margin-right: 20px;
+                @media screen and (max-width: $phone-size) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
             }
         }
     }
@@ -153,6 +160,7 @@
     &-action {
         display: inline-block;
         position: relative;
+        height: 85px;
     }
 }
 
@@ -181,8 +189,8 @@
     display: inline-block;
     position: relative;
     &.contacts-popup--active {
-        .contacts-popup__body {
-            display: flex;
+        .contacts-popup__body-wrapper {
+            display: block;
         }
     }
     &__toogle {
@@ -195,14 +203,36 @@
         cursor: pointer;
     }
     &__body {
-        display: none;
+        display: flex;
         position: absolute;
         right: -10px;
         bottom: 25px;
-        width: 690px;
+        width: 780px;
+        height: 580px;
         color: $base-text-color;
         background-color: $white;
         box-shadow: 0 0 30px 0 rgba(0,0,0, .2);
+        @media screen and (max-width: $phone-size) {
+            flex-direction: column;
+            top: 60px;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+            width: auto;
+        }
+        &-wrapper {
+            display: none;
+            @media screen and (max-width: $phone-size) {
+                position: fixed;
+                z-index: 3;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(#033, .3);
+            }
+        }
+
         &:after {
             position: absolute;
             right: 20px;
@@ -213,6 +243,9 @@
             border-style: solid;
             border-color: $white transparent transparent transparent;
             content: "";
+            @media screen and (max-width: $phone-size) {
+                display: none;
+            }
         }
     }
     &__info {
@@ -221,6 +254,14 @@
         padding: 40px 20px;
 
         flex-basis: 260px;
+        @media screen and (max-width: $phone-size) {
+            width: auto;
+            max-width: 100%;
+            padding: 30px 20px;
+
+            flex: 1;
+            order: 1;
+        }
     }
     &__close {
         display: flex;
@@ -233,6 +274,12 @@
         align-items: center;
         @include size(30px);
         justify-content: center;
+        @media screen and (max-width:$phone-size) {
+            top: -30px;
+            right: 0;
+
+            fill: $main-action-color;
+        }
         &:hover,&:focus {
             opacity: .7;
         }
@@ -261,12 +308,10 @@
         flex-direction: column;
         margin-bottom: 20px;
     }
-    &__qr-img {
-        width: 100%;
-    }
     &__map {
         flex: 1;
+        @media screen and (max-width: $phone-size) {
+            order: 2;
+        }
     }
 }
-
-

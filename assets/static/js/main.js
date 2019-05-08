@@ -1,19 +1,34 @@
 $(document).ready(function() {
-   svg4everybody();
-
    var sandwich = function() {
       $(document).on('click', '.catalog-nav__header', function() {
          var sandwich = $(this).find('.sandwich');
          var catalog = $(this).parent();
-         sandwich.toggleClass('sandwich--active');
-         catalog.toggleClass('catalog-nav--active');
+         if ($(window).width() < 768) {
+            if ($('.mobile-nav__wrapper').hasClass('mobile-nav__wrapper--active')) {
+               $('.mobile-nav__wrapper').removeClass('mobile-nav__wrapper--active');
+               $('.sandwich').removeClass('sandwich--active');
+               catalog.toggleClass('catalog-nav--active');
+            } else {
+               catalog.toggleClass('catalog-nav--active');
+               $('body').toggleClass('fixed');
+            }
+         } else {
+            sandwich.toggleClass('sandwich--active');
+            catalog.toggleClass('catalog-nav--active');
+         }
       });
 
       if ($(window).width() < 768) {
          $(document).on('click', '.sandwich', function() {
-            $(this).toggleClass('sandwich--active');
-            $('body').toggleClass('fixed');
-            $('.mobile-nav__wrapper').toggleClass('mobile-nav__wrapper--active');
+            if ($('.catalog-nav').hasClass('catalog-nav--active')) {
+               $('.catalog-nav').removeClass('catalog-nav--active');
+               $(this).toggleClass('catalog-nav--active');
+               $('.mobile-nav__wrapper').toggleClass('mobile-nav__wrapper--active');
+            } else {
+               $(this).toggleClass('catalog-nav--active');
+               $('.mobile-nav__wrapper').toggleClass('mobile-nav__wrapper--active');
+               $('body').toggleClass('fixed');
+            }
          });
       }
    };
@@ -56,6 +71,14 @@ $(document).ready(function() {
    var popupLink = function() {
       $('.js-popup-link').magnificPopup({
          showCloseBtn: false,
+         callbacks: {
+            open: function () {
+               $('html').addClass('fixed');
+            },
+            close: function () {
+               $('html').removeClass('fixed');
+            }
+         }
       });
 
       $(document).on('click', '.popup__close', function() {
@@ -72,14 +95,14 @@ $(document).ready(function() {
                   phone: 'required',
                   // email: 'required',
                   password: 'required',
-                  comment: 'required',
+                  // comment: 'required',
                },
                messages: {
                   name: 'Введите корректное имя',
                   phone: 'Введите корректный номер',
                   // email: 'Введите корректный email',
                   password: 'Введите корректный пароль',
-                  comment: 'Заполните поле',
+                  // comment: 'Заполните поле',
                },
                errorPlacement: function(error, element) {
                   element.attr('placeholder', error[0].outerText);
@@ -129,6 +152,35 @@ $(document).ready(function() {
       });
    };
 
+   var simpleBar = function() {
+      if ($(window).width() > 768) {
+         $.each($('.catalog-subnav'), function (i, el) {
+            new SimpleBar(el);
+         });
+      }
+   }
+
+   var catalogNavHover = function () {
+      if ($(window).width() < 767) {
+         $(document).on('click', '.catalog-nav__item', function () {
+            $(this).addClass('catalog-nav__item--active');
+            $(this).siblings().removeClass('catalog-nav__item--active');
+         });
+
+         $(document).on('click', '.catalog-subnav__header', function () {
+            $('.catalog-subnav__block').removeClass('catalog-subnav__block--active');
+            $(this).closest('.catalog-subnav__block').addClass('catalog-subnav__block--active');
+         });
+      }
+   }
+
+   var fileUpload = function () {
+      $('.file-upload input[type="file"]').change(function () {
+         var fileName = $(this).val().replace(/.*\\/, "");
+         $(this).closest('.file-upload').find('.file-upload__text').html(fileName);
+      });
+   }
+
    // slick-slider
    var productPrevSlider = function() {
       var slideCount = $('.product-slider__count');
@@ -136,36 +188,31 @@ $(document).ready(function() {
 
       prodSlider.on('init afterChange', function(event, slick, currentSlide, nextSlide) {
          var i = (currentSlide ? currentSlide : 0) + 1;
-         slideCount.text('Страница ' + i + ' из ' + (slick.slideCount - 3));
+         slideCount.text('Страница ' + i + ' из ' + slick.slideCount);
       });
 
       prodSlider.slick({
          slidesToShow: 4,
          slidesToScroll: 1,
-         prevArrow: '.slider-nav--prev',
-         nextArrow: '.slider-nav--next',
-         infinite: false,
+         prevArrow: '.products-prev-slider__nav-prev',
+         nextArrow: '.products-prev-slider__nav-next',
+         infinite: true,
+         adaptiveHeight: true,
+         arrows: true,
          responsive: [
             {
                breakpoint: 1239,
                settings: {
                   slidesToShow: 3,
-                  arrow: false,
+                  arrows: true,
                   dots: true,
                },
             },
             {
-               breakpoint: 600,
-               settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2,
-               },
-            },
-            {
-               breakpoint: 480,
+               breakpoint: 768,
                settings: {
                   slidesToShow: 1,
-                  slidesToScroll: 1,
+                  dots: true,
                },
             },
          ],
@@ -177,8 +224,12 @@ $(document).ready(function() {
 
       if ($(window).width() < 768 && !sliderElement.hasClass('slick-initialized')) {
          sliderElement.slick({
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1,
+            adaptiveHeight: true,
+            infinite: false,
+            arrows: false,
+            dots: true
          });
       } else if ($(window).width() > 768 && sliderElement.hasClass('slick-initialized')) {
          sliderElement.slick('unslick');
@@ -187,8 +238,10 @@ $(document).ready(function() {
 
    $(window).on('resize', function() {
       popularCategoriesSlider();
+      simpleBar();
    });
 
+   svg4everybody();
    sandwich();
    popularCategoriesSlider();
    productPrevSlider();
@@ -197,4 +250,7 @@ $(document).ready(function() {
    formValidation();
    reviewLine();
    contactsPopup();
+   simpleBar();
+   catalogNavHover();
+   fileUpload();
 });

@@ -9,17 +9,17 @@
             .form__body
                .form-line
                   .form-group.form-group--width-m.form-group--required
-                     label.form-group__label(for="") Контактый телефон
-                     input(type="phone" name="phone" placeholder="+7(912)123-340-45").input-field
+                     label.form-group__label Контактый телефон
+                     input(type="tel" name="phone" placeholder="+7(912)123-340-45").input-field
                .form-line
                   .form-group
-                     label.form-group__label(for="") Вопрос или комментарий
+                     label.form-group__label Вопрос или комментарий
                      textarea(name="comment", cols="30", rows="10" placeholder="Здравствуйте, меня интересует..").textarea-field
                .form-line
                   .form-group
                      label.file-upload(for="file")
                         input(type="file" id="file")
-                        .file-upload__custom
+                        span.file-upload__custom
                            +icon('upload-folder', 'file-upload__icon')
                            span.file-upload__text Прикрепить файл
             .form__footer

@@ -3,6 +3,22 @@
 
     align-items: center;
     justify-content: space-between;
+
+    @media screen and (max-width:$phone-size) {
+        flex-direction: column;
+    }
+
+    & > * {
+        @media screen and (max-width:$phone-size) {
+            margin: 10px 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 .ask-your-question {
     display: flex;
@@ -43,7 +59,6 @@
     &__icon {
         fill: $base-text-color;
         @include size(24px);
-
         @media screen and (max-width: $tablet-size) {
             @include size(22px);
         }

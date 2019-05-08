@@ -55,6 +55,9 @@
             font-size: 12px;
             white-space: nowrap;
             content: attr(data-fast-review);
+            @media screen and (max-width: $phone-size) {
+                display: none;
+            }
         }
     }
     &__number {

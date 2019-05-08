@@ -3,6 +3,7 @@
     max-width: 520px;
     margin: 50px auto;
     border-radius: 8px;
+
     &__title {
         font-size: 18px;
         line-height: 1.44;
@@ -15,7 +16,7 @@
     }
     &__header {
         display: flex;
-        padding: 15px 25px 15px 40px;
+        padding: 15px 25px;
         background-color: $light-bg-color;
 
         align-items: center;
@@ -29,6 +30,14 @@
         align-items: center;
         @include size(25px);
         justify-content: center;
+        @media screen and (max-width:$phone-size) {
+            position: absolute;
+            top: -30px;
+            right: 0;
+            margin-left: 0;
+            opacity: 1;
+            fill: $main-action-color;
+        }
         &:hover,&:focus {
             opacity: .8;
         }
@@ -39,6 +48,9 @@
     &__body {
         padding: 40px;
         background-color: $white;
+        @media screen and (max-width:$phone-size) {
+            padding: 30px 20px;
+        }
     }
 }
 

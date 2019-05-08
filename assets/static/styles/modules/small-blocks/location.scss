@@ -14,7 +14,6 @@
             }
         }
     }
-
     &__icon {
         width: 15px;
         height: 14px;
@@ -22,7 +21,6 @@
         fill: $base-text-color;
         flex-shrink: 0;
     }
-
     &__current {
         display: flex;
         overflow: hidden;
@@ -33,9 +31,11 @@
         text-overflow: ellipsis;
 
         align-items: center;
+
         &:after {
             position: absolute;
             z-index: 1;
+            top: 50%;
             right: 0;
             width: 0;
             height: 0;
@@ -44,12 +44,22 @@
             border-style: solid;
             border-color: #000 transparent transparent transparent;
             content: "";
+            transform: translateY(-50%);
         }
     }
     &__body {
         &.is-location-choose {
+            @media screen and (max-width:$phone-size) {
+                position: fixed;
+                z-index: 3;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba($color: #0033, $alpha: .3);
+            }
             .location-choose {
-                display: block;
+                display: flex;
             }
         }
     }
@@ -58,20 +68,40 @@
         position: absolute;
         z-index: 1;
         top: calc(100% + 10px);
+        right: 0;
         left: 0;
+        min-width: 650px;
         padding: 6px 10px;
         border-radius: 4px;
         background-color: $white;
         box-shadow: 0 0 5px 0 rgba(159, 197, 178, .5);
 
         align-items: center;
+        flex: 1;
 
         @media screen and (max-width:$tablet-size) {
             max-width: 728px;
         }
+
+        @media screen and (max-width:$phone-size) {
+            flex-direction: column;
+            position: fixed;
+            top: auto;
+            right: 0;
+            bottom: 0;
+            min-width: auto;
+            max-width: 100%;
+            padding: 10px 20px 20px;
+            border: 2px solid $main-action-color;
+            box-shadow: 0 0 5px 0 rgba(159, 197, 178, .5);
+        }
         & > * {
             &:not(:last-child) {
                 margin-right: 15px;
+                @media screen and (max-width:$phone-size) {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
             }
         }
 
@@ -86,6 +116,9 @@
             border-style: solid;
             border-color: transparent transparent $white transparent;
             content: "";
+            @media screen and (max-width:$phone-size) {
+                display: none;
+            }
         }
         &__buttons {
             display: flex;
@@ -102,6 +135,9 @@
             font-weight: 600;
             line-height: 1.44;
             white-space: nowrap;
+            @media screen and (max-width: $phone-size) {
+                white-space: normal;
+            }
 
             @media screen and (max-width: $tablet-size) {
                 display: block;
@@ -112,6 +148,7 @@
     }
     &-choose {
         display: none;
+        flex-direction: column;
         position: absolute;
         z-index: 1;
         top: 10px;
@@ -120,11 +157,33 @@
         border: 2px solid $main-action-color;
         background-color: $white;
         box-shadow: 0 0 30px 0 rgba(0,0,0,.2);
+        @media screen and (max-width:$phone-size) {
+            top: 60px;
+            right: 20px;
+            bottom: 30px;
+            left: 20px;
+            width: auto;
+        }
         &__header {
             border-bottom: 2px solid $main-action-color;
         }
         &__close {
             display: none;
+            position: absolute;
+            top: -35px;
+            right: 0;
+            cursor: pointer;
+
+            align-items: center;
+            @include size(30px);
+            justify-content: center;
+            @media screen and (max-width:$phone-size) {
+                display: flex;
+            }
+            &-icon {
+                fill: $main-action-color;
+                @include size(16px);
+            }
         }
         &__item {
             padding: 6px 15px;
@@ -141,8 +200,11 @@
             display: flex;
             flex-direction: column;
             position: relative;
-            height: auto;
-            max-height: 240px;
+            height: 240px;
+            @media screen and (max-width:$phone-size) {
+                height: 100%;
+                max-height: 100%;
+            }
             &:after,&:before {
                 display: block;
                 position: absolute;
@@ -165,6 +227,22 @@
             height: 100%;
             height: 100%;
             padding: 15px 0;
+        }
+    }
+    &-mobile {
+        color: $base-text-color;
+        .location {
+            &__icon {
+                fill: $link-color;
+            }
+            &__current {
+                color: $link-color;
+                font-size: 16px;
+
+                &:after {
+                    display: none;
+                }
+            }
         }
     }
 }

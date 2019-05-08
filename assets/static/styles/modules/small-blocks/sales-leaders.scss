@@ -1,16 +1,21 @@
 .sales-leaders {
     &__row {
         display: flex;
+        @media screen and (max-width: $phone-size) {
+            flex-direction: column;
+        }
         & > * {
             &:not(:last-child) {
                 margin-right: 20px;
+                @media screen and (max-width: $phone-size) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
             }
         }
     }
     &__col {
-        width: 50%;
-
-        flex-grow: 1;
+        flex: 1;
     }
 }
 
@@ -24,6 +29,14 @@
     border-radius: 4px;
     background-color: $white;
     transition: all linear .3s;
+    @media screen and (max-width: $phone-size) {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 0;
+
+        align-items: center;
+    }
     &:hover,&:focus {
         border-color: $main-action-color;
     }
@@ -34,26 +47,43 @@
         @media screen and (max-width: $tablet-size) {
             height: 300px;
         }
+        @media screen and (max-width:$phone-size) {
+            display: block;
+            height: auto;
+            &:first-child {
+                margin-bottom: 20px;
+            }
+            &:last-child {
+                margin-top: 20px;
+            }
+        }
         .sales-leader {
-            @media screen and (max-width:$tablet-size) {
-                padding: 10px;
+            &__name {
+                font-size: 22px;
+                @media screen and (max-width:$phone-size) {
+                    font-size: 16px;
+                }
             }
             &__img {
                 height: 280px;
+                @media screen and (max-width:$tablet-size) {
+                    height: 180px;
+                }
+                @media screen and (max-width:$phone-size) {
+                    width: 100%;
+
+                    flex: 1;
+                }
+
                 img {
                     max-height: 280px;
-                }
-            }
-            @media screen and (max-width:$tablet-size) {
-                &__img {
-                    height: 180px;
-                    img {
-                        max-height: 180px;
+                    @media screen and (max-width:$tablet-size) {
+                        height: 180px;
                     }
                 }
             }
-            &__name {
-                font-size: 22px;
+            @media screen and (max-width:$tablet-size) {
+                padding: 10px;
             }
         }
     }
@@ -64,6 +94,11 @@
 
         align-items: center;
         justify-content: center;
+        @media screen and (max-width:$phone-size) {
+            width: 40%;
+
+            flex: 0 0 40%;
+        }
         img {
             max-width: 100%;
             max-height: 140px;

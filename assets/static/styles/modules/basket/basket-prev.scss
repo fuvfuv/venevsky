@@ -39,11 +39,19 @@
         text-align: center;
 
         @include size(24px);
+
         @media screen and(max-width: $tablet-size) {
             display: flex;
 
             align-items: center;
             justify-content: center;
+        }
+        @media screen and(max-width: $phone-size) {
+            top: -8px;
+            right: -8px;
+            font-size: 10px;
+
+            @include size(16px);
         }
     }
 }

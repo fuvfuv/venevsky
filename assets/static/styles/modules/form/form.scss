@@ -38,17 +38,24 @@
         display: flex;
 
         align-items: center;
+        //   flex-wrap: wrap;
+
         & > * {
             &:not(:last-child) {
                 margin-right: 20px;
             }
         }
         &__info {
+            padding-top: 10px;
             font-size: 14px;
             white-space: nowrap;
+            @media screen and (max-width:$phone-size) {
+                display: none;
+            }
             &.form-line__info {
                 &--color {
                     &-green {
+                        padding-top: 0;
                         color: #1FA349; // hex
                     }
                 }
@@ -84,12 +91,22 @@
         &__block {
             padding: 30px 40px;
             background-color: $white;
+            @media screen and (max-width: $phone-size) {
+                padding: 30px 20px;
+            }
         }
         &__row {
             display: flex;
+            @media screen and (max-width: $phone-size) {
+                flex-direction: column;
+            }
             & > * {
                 &:not(:last-child) {
                     margin-right: 25px;
+                    @media screen and (max-width: $phone-size) {
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                    }
                 }
             }
         }
@@ -99,6 +116,9 @@
             font-size: 24px;
 
             align-items: center;
+            @media screen and (max-width: $phone-size) {
+                font-size: 18px;
+            }
             & > * {
                 &:not(:last-child) {
                     margin-right: 10px;
@@ -141,6 +161,9 @@
 .fast-review-form {
     padding: 20px 40px 30px;
     background-color: $light-bg-color;
+    @media screen and (max-width: $phone-size) {
+        padding: 20px;
+    }
     & > * {
         margin: 20px 0;
         &:first-child {
@@ -152,9 +175,16 @@
     }
     &__line {
         display: flex;
+        @media screen and (max-width: $phone-size) {
+            flex-direction: column;
+        }
         & > * {
             &:not(:last-child) {
                 margin-right: 10px;
+                @media screen and (max-width: $phone-size) {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
             }
         }
     }
