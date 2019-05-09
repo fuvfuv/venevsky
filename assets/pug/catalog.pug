@@ -1,0 +1,72 @@
+extends template/main
+
+block variables
+   - var title = 'Каталог'
+   - var pageClass = 'catalog-page'
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item.breadcrumbs__item--show-nav
+                  span.breadcrumbs__link.breadcrumbs-nav__toggle Каталог
+                  ul.breadcrumbs-nav
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Рулонная сталь
+                           count.count-text 23
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Профнастил
+                           count.count-text 23
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Листовой прокат
+                           count.count-text 23
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Распродажа
+                           count.count-text 23
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Специальные предложения
+                           count.count-text 23
+            li.breadcrumbs__item
+               a(href="#").breadcrumbs__link Каталог металлопродукции
+               .breadcrumbs-tooltip
+                  span.breadcrumbs-tooltip__text Материалы для мягкой кровли и металлочерепицы в Нижнем Новгороде
+            li.breadcrumbs__item
+               span.breadcrumbs__current Материалы для мягкой кровли и металлочерепицы
+
+
+
+
+   section.s-categories-prev
+      .container
+         .section-header
+            h1.title-page Каталог стройматериалов
+         .categories-prev
+            .js-categories-prev
+               include ./modules/category/prev1
+               include ./modules/category/prev2
+               include ./modules/category/prev3
+               include ./modules/category/prev4
+               include ./modules/category/prev5
+               include ./modules/category/prev6
+               include ./modules/category/prev7
+               include ./modules/category/prev8
+
+   include pages/catalog/catalog-mobile-nav
+
+
+   include modules/sales-leader
+   include modules/product/you-see
+   include modules/questions
+
+block script
+   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+   script(src="js/ya-maps.js")
+

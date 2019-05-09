@@ -2,11 +2,11 @@
     &-bg-white {
         background-color: $white;
     }
-    &-popular-categories {
+    &-categories-prev {
         padding-bottom: 10px;
         @media screen and (max-width:$phone-size) {
-         padding-bottom: 30px;
-      }
+            padding-bottom: 30px;
+        }
     }
     &-sales-leaders {
         padding-bottom: 20px;

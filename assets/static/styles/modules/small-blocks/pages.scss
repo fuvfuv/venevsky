@@ -1,0 +1,7 @@
+.catalog-page {
+    .s-categories-prev {
+        @media screen and (max-width: $phone-size) {
+            display: none;
+        }
+    }
+}

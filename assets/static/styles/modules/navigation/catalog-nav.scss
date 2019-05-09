@@ -318,31 +318,85 @@
     }
 }
 
-// @media screen and(max-width: $phone-size) {
-//     .catalog-nav {
-//         &__header {
-//             .sandwich {
-//                 display: none;
-//             }
-//         }
-//         &__title {
-//             display: none;
-//         }
-//         &__title-mobile {
-//             display: block;
-//             position: relative;
-//             padding-right: 20px;
-//             &:after {
-//                 position: absolute;
-//                 top: 8px;
-//                 right: 0;
-//                 width: 0;
-//                 height: 0;
-//                 border-width: 5px 5px 0 5px;
-//                 border-style: solid;
-//                 border-color: $white transparent transparent transparent;
-//                 content: "";
-//             }
-//         }
-//     }
-// }
+.catalog-mobile-nav {
+    display: none;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    background-color: $white;
+    @media screen and (max-width:$phone-size) {
+        display: block;
+    }
+
+    &__item {
+        position: relative;
+        border: 1px solid #DEDEDE;
+        &:after {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            border-width: 5px 5px 0 5px;
+            border-style: solid;
+            border-color: $base-text-color transparent transparent transparent;
+            content: "";
+        }
+        &.catalog-mobile-nav__item--active {
+            border-color: $main-action-color;
+            .catalog-mobile-nav__label {
+                border-bottom: 1px solid #DEDEDE;
+            }
+            .catalog-mobile-subnav {
+                display: block;
+            }
+        }
+    }
+    &__label {
+        padding: 8px 25px 8px 15px;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        cursor: pointer;
+    }
+}
+
+.catalog-mobile-subnav {
+    display: none;
+    &__label {
+        padding: 8px 25px 8px 15px;
+        border-bottom: 1px solid #DEDEDE;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 24px;
+        cursor: pointer;
+        &:after {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            border-width: 5px 5px 0 5px;
+            border-style: solid;
+            border-color: $base-text-color transparent transparent transparent;
+            content: "";
+        }
+    }
+    &__item {
+        position: relative;
+    }
+    &__link {
+        display: block;
+        font-weight: 400;
+        &.catalog-mobile-subnav__link--main {
+            font-weight: 600;
+        }
+    }
+    .catalog-mobile-subnav {
+        .catalog-mobile-subnav {
+            &__label {
+                padding-left: 25px;
+                font-weight: 400;
+            }
+        }
+    }
+}

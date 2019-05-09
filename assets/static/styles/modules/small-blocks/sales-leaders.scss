@@ -50,6 +50,7 @@
         @media screen and (max-width:$phone-size) {
             display: block;
             height: auto;
+            text-align: center;
             &:first-child {
                 margin-bottom: 20px;
             }
@@ -106,5 +107,47 @@
     }
     &__name {
         font-weight: 700;
+    }
+}
+
+.sales-leaders-products {
+    overflow: hidden;
+    border-radius: 4px;
+    background-color: $white;
+    &__row {
+        display: flex;
+        border-bottom: 1px solid #F2F2F2;
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+    &__col {
+        border-right: 1px solid #F2F2F2;
+
+        flex: 1;
+        &:last-child {
+            border-right: 0;
+        }
+        &:first-child {
+            @media screen and (max-width: $tablet-size) {
+                display: none;
+            }
+        }
+        &.sales-leaders-products__col {
+            &--wide {
+                flex: 2;
+            }
+        }
+    }
+    .product-prev {
+        padding: 20px 0;
+        &__footer {
+            padding: 0 20px;
+            opacity: 1;
+            .btn {
+                width: auto;
+                border-radius: 4px;
+            }
+        }
     }
 }
