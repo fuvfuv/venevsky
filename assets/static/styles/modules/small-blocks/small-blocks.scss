@@ -9,6 +9,10 @@
 @import "slider-page-main";
 @import "questions";
 @import "bread-crumbs";
+@import "tag";
+@import "sort";
+@import "pagination";
+
 
 
 .search {
@@ -59,7 +63,7 @@
             font-size: 30px;
         }
         .count-text {
-           font-size: 27px;
+            font-size: 27px;
         }
     }
     &-section {
@@ -70,12 +74,64 @@
         @media screen and (max-width:$phone-size) {
             font-size: 30px;
         }
+        &--small {
+            font-size: 30px;
+        }
     }
 }
 .count-text {
     margin-left: 5px;
     color: $text-info-color;
     font-size: 14px;
+}
+
+.page-counter {
+    display: flex;
+    padding: 15px 20px;
+    font-size: 14px;
+
+    align-items: center;
+    & > * {
+        &:not(:last-child) {
+            margin-right: 5px;
+        }
+    }
+}
+
+.counter {
+    display: inline-flex;
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+
+    align-items: center;
+
+    &__btn {
+        display: flex;
+        background-color: #FAFAFA;
+
+        align-items: center;
+        @include size(40px);
+        justify-content: center;
+        cursor: pointer;
+    }
+    &__icon {
+        fill: #BABABA;
+        @include size(15px);
+    }
+    &__current {
+        display: flex;
+        width: 90px;
+        line-height: 40px;
+        padding: 0 10px;
+
+        align-items: center;
+        flex-basis: 90px;
+        & > * {
+            &:not(:last-child) {
+                margin-right: 5px;
+            }
+        }
+    }
 }
 
 .upgrade {

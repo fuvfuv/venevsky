@@ -1,0 +1,146 @@
+extends template/main
+
+block variables
+   - var title = 'Подкатегория'
+   - var pageClass = 'sub-category-page'
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item.breadcrumbs__item--show-nav
+                  span.breadcrumbs__link.breadcrumbs-nav__toggle Каталог
+                  ul.breadcrumbs-nav
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Рулонная сталь
+                           count.count-text 23
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Профнастил
+                           count.count-text 23
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Листовой прокат
+                           count.count-text 23
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Распродажа
+                           count.count-text 23
+                     li.breadcrumbs-nav__item
+                        a(href="#").breadcrumbs-nav__link
+                           span.breadcrums-nav__text Специальные предложения
+                           count.count-text 23
+            li.breadcrumbs__item
+               span.breadcrumbs__current Доборные элементы кровли
+
+
+   section.s-sub-category
+      .container
+         .section-header
+            h1.title-page Доборные элементы кровли
+               span.count-text 123
+         .sub-category
+            aside.sub-category__aside
+               include pages/sub-category/category-list
+               include pages/sub-category/filter
+            main.sub-category__main
+               include pages/sub-category/tags
+               .sub-category__status
+                  .sort
+                     .sort-item
+                        span.sort__title Упорядочить:
+                        .sort-action
+                           span.sort-action__current по популярности
+                     .sort-item
+                        span.sort__title Показывать по:
+                        .sort-action
+                           span.sort-action__current 30
+                  .page-counter
+                     span.page-counter__text Страница
+                     span.page-counter__number <b>1</b> из 7
+               .sub-category__products
+                  include modules/product/prev-counter/prev1
+                  include modules/product/prev-counter/prev2
+                  include modules/product/prev-counter/prev3
+                  include modules/product/prev-counter/prev4
+                  include modules/product/prev-counter/prev1
+                  include modules/product/prev-counter/prev2
+                  include modules/product/prev-counter/prev3
+                  include modules/product/prev-counter/prev4
+                  include modules/product/prev-counter/prev1
+                  include modules/product/prev-counter/prev2
+                  include modules/product/prev-counter/prev3
+                  include modules/product/prev-counter/prev4
+               .pagination
+                  ul.pagination__list
+                     each page in [1,2,3,4,5, '...']
+                        li.pagination__item
+                           a(href="#").pagination__link=page
+                     li.pagination__item.pagination__item--plus
+                        a(href="#").pagination__link +
+
+   section.s-often-looking
+      .container
+         .section-header
+            h3.title-section.title-section--small Часто ищут доборные элементы кровли
+         .often-looking
+            .category-list__wrapper
+               a(href="#").category-list__title
+                  span.category-list__title-text По материалу
+               ul.category-list
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли из оцинкованной стали
+                     span.count-text 23
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли из оцинкованной х/к стали
+                     span.count-text 98
+
+            .category-list__wrapper
+               a(href="#").category-list__title
+                  span.category-list__title-text По цвету
+               ul.category-list
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли зеленого цвета
+                     span.count-text 23
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли красного цвета
+                     span.count-text 98
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли желтого цвета
+                     span.count-text 14
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли белого цвета
+                     span.count-text 7
+
+            .category-list__wrapper
+               a(href="#").category-list__title
+                  span.category-list__title-text По толщине металла
+               ul.category-list
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли толщиной 0.4 мм
+                     span.count-text 23
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли толщиной 0.5 мм
+                     span.count-text 98
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли толщиной 0.6 мм
+                     span.count-text 14
+                  li.category-list__item
+                     a(href="#").link Доборные элементы кровли толщиной 0.8 мм
+                     span.count-text 7
+
+
+
+
+
+
+   include modules/product/you-see
+   include modules/questions
+
+block script
+   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+   script(src="js/ya-maps.js")

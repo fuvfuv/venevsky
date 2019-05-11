@@ -1,22 +1,28 @@
 .s-breadcrumbs {
     padding-bottom: 10px;
+    & + section {
+        padding-top: 0;
+        .section-header {
+            margin-bottom: 30px;
+        }
+    }
     @media screen and (max-width: $tablet-size) {
         padding-top: 20px;
     }
     @media screen and (max-width: $phone-size) {
         padding-top: 10px;
     }
-   //  & + * {
-   //      padding-top: 10px;
-   //  }
 }
 
 .breadcrumbs {
     display: flex;
+    font-size: 14px;
 
     align-items: center;
-    flex-wrap: wrap;
-    font-size: 14px;
+    @media screen and (max-width: $phone-size) {
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
     &__home {
         &-icon {
             @include size(17px);
@@ -47,12 +53,16 @@
         }
         &:hover,&:focus {
             .breadcrumbs-tooltip {
-                display: block;
+                @media screen and (min-width: $phone-size) {
+                    display: block;
+                }
             }
         }
         &.breadcrumbs__item--show-nav {
             .breadcrumbs-nav {
-                display: block;
+                @media screen and (min-width: $phone-size) {
+                    display: block;
+                }
             }
         }
     }
@@ -60,6 +70,9 @@
         position: relative;
         padding-right: 20px;
         cursor: pointer;
+        @media screen and (max-width: $phone-size) {
+            padding-right: 0;
+        }
         &:before {
             display: block;
             position: absolute;
@@ -71,12 +84,18 @@
             border-style: solid;
             border-color: $base-text-color transparent transparent transparent;
             content: "";
+            @media screen and (max-width: $phone-size) {
+                display: none;
+            }
         }
     }
     &__link {
         position: relative;
         padding-right: 20px;
         cursor: pointer;
+        @media screen and (max-width: $phone-size) {
+            padding-right: 0;
+        }
         &:before {
             display: block;
             position: absolute;
@@ -88,6 +107,9 @@
             border-style: solid;
             border-color: $base-text-color transparent transparent transparent;
             content: "";
+            @media screen and (max-width: $phone-size) {
+                display: none;
+            }
         }
         &:hover,&:focus {
             color: #D0021B;

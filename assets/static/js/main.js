@@ -33,10 +33,15 @@ $(document).ready(function() {
       }
    };
 
-   var catalogNavToggle = function (clickEl, curClass) {
-      $(document).on('click', clickEl, function () {
-      $(this).parent().toggleClass(curClass);
-      $(this).parent().siblings().removeClass(curClass);;
+   var catalogNavToggle = function(clickEl, curClass) {
+      $(document).on('click', clickEl, function() {
+         $(this)
+            .parent()
+            .toggleClass(curClass);
+         $(this)
+            .parent()
+            .siblings()
+            .removeClass(curClass);
       });
    };
 
@@ -180,8 +185,13 @@ $(document).ready(function() {
    };
 
    var breadCrumbsNav = function() {
-      $(document).on('click', '.breadcrumbs-nav__toggle, .breadcrumbs-nav__link', function() {
-         $('.breadcrumbs-nav__toggle').parent().toggleClass('breadcrumbs__item--show-nav');
+      $(document).on('click', '.breadcrumbs-nav__toggle, .breadcrumbs-nav__link', function(evt) {
+         if ($(window).width() > 767) {
+            evt.preventDefault();
+         }
+         $('.breadcrumbs-nav__toggle')
+            .parent()
+            .toggleClass('breadcrumbs__item--show-nav');
       });
    };
 
@@ -202,6 +212,95 @@ $(document).ready(function() {
          catalogNavToggle('.catalog-nav__label', 'catalog-nav__item--active');
          catalogNavToggle('.catalog-subnav__header', 'catalog-subnav__block--active');
       }
+   };
+
+   var counter = function() {
+      var newNumber;
+      $(document).on('click', '.counter__btn--minus', function() {
+         var number = +$(this)
+            .parent()
+            .find('.counter__current-text')
+            .text();
+         if (number != 0) {
+            newNumber = number - 1;
+         } else {
+            return false;
+         }
+         $(this)
+            .parent()
+            .find('.counter__current-text')
+            .text(newNumber);
+      });
+      $(document).on('click', '.counter__btn--plus', function() {
+         var number = +$(this)
+            .parent()
+            .find('.counter__current-text')
+            .text();
+         newNumber = number + 1;
+         $(this)
+            .parent()
+            .find('.counter__current-text')
+            .text(newNumber);
+      });
+   };
+
+   var filterItem = function() {
+      $(document).on('click', '.filter-item__header', function() {
+         $(this)
+            .parent()
+            .toggleClass('filter-item--active');
+      });
+   };
+
+   var filterSlider = function() {
+      $('.filter-slider__line').each(function() {
+         var slider = $(this)[0];
+         var sliderFrom = $(this)
+            .parent()
+            .find('.filter-slider__value--from')[0];
+         var sliderTo = $(this)
+            .parent()
+            .find('.filter-slider__value--to')[0];
+         var inputs = [sliderFrom, sliderTo];
+         var type = $(this).data('range-type');
+
+         if (type === 'price') {
+            noUiSlider.create(slider, {
+               start: [2500, 5900],
+               connect: true,
+               range: {
+                  min: 0,
+                  max: 10000,
+               },
+               format: wNumb({
+                  decimals: 0,
+                  thousand: '',
+               }),
+            });
+         } else if (type === 'mm') {
+            noUiSlider.create(slider, {
+               start: [0.5, 7],
+               connect: true,
+               range: {
+                  min: 0,
+                  max: 10,
+               },
+               format: wNumb({
+                  decimals: 2,
+               }),
+            });
+         }
+
+         slider.noUiSlider.on('update', function (values, handle) {
+            inputs[handle].value = values[handle];
+         });
+
+         inputs.forEach(function (input, handle) {
+            input.addEventListener('change', function () {
+               slider.noUiSlider.setHandle(handle, this.value);
+            });
+         });
+      });
    };
 
    // slick-slider
@@ -278,4 +377,7 @@ $(document).ready(function() {
    fileUpload();
    breadCrumbsNav();
    catalogMobileNav();
+   counter();
+   filterItem();
+   filterSlider();
 });

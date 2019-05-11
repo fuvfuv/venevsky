@@ -37,6 +37,10 @@
 
             justify-content: center;
         }
+        &--transparent-green {
+           background-color: transparent;
+           color: $button-green-color;
+        }
         &--product {
             @media screen and (max-width:$phone-size) {
                 display: flex;

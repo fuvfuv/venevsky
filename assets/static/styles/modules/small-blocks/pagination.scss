@@ -1,0 +1,35 @@
+.pagination {
+    &__list {
+        display: inline-flex;
+        overflow: hidden;
+        background-color: $white;
+    }
+    &__item {
+        border-left: 1px solid #F2F2F2;
+        &:first-child {
+            border-left: 0;
+        }
+        &:hover {
+            border-left-color: transparent;
+            background-color: $main-action-color;
+            & + .pagination__item {
+                border-left-color: transparent;
+            }
+        }
+        &.pagination__item--plus {
+            background-color: #DEDEDE;
+            &:hover {
+                border-left-color: transparent;
+                background-color: $main-action-color;
+            }
+        }
+    }
+    &__link {
+        display: flex;
+        font-size: 18px;
+
+        align-items: center;
+        @include size(45px);
+        justify-content: center;
+    }
+}
