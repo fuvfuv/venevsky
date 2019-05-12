@@ -21,7 +21,7 @@
     }
     &__custom {
         position: absolute;
-        top: 0;
+        top: 2px;
         left: 0;
         border: 1px solid #EDEDED;
         border-radius: 4px;
@@ -47,6 +47,8 @@
     }
     &__body {
         display: flex;
+
+        align-items: center;
         .color-block {
             margin-top: 3px;
         }
@@ -57,11 +59,17 @@
             }
         }
     }
-}
-
-
-.color-block {
-    display: block;
-
-    @include size(12px);
+    &.checkbox {
+        &--bold {
+            .checkbox__text {
+                font-weight: 600;
+            }
+        }
+        &--big {
+            .checkbox__text {
+                font-size: 18px;
+                line-height: 1.44;
+            }
+        }
+    }
 }

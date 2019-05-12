@@ -5,6 +5,9 @@
         padding: 15px;
         border-bottom: 1px solid #DEDEDE;
     }
+    &__body {
+        position: relative;
+    }
     &__title {
         font-size: 22px;
         font-weight: 600;
@@ -54,6 +57,52 @@
                 border-style: solid;
                 border-color: $link-color transparent transparent transparent;
                 content: "";
+            }
+        }
+    }
+    &-tooltip {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 5;
+        top: 100px;
+        left: 100%;
+        padding: 15px;
+        border: 2px solid $main-action-color;
+        border-radius: 4px;
+        background-color: $white;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, .2);
+        font-size: 14px;
+
+        align-items: flex-start;
+        & > * {
+            margin: 5px 0;
+            white-space: nowrap;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: -9px;
+            border-bottom: 2px solid $main-action-color;
+            border-left: 2px solid $main-action-color;
+            background-color: $white;
+            content: "";
+            transform: translateY(-50%) rotate(45deg);
+
+            @include size(16px);
+        }
+        &__btn {
+            color: $link-color;
+            font-weight: 600;
+            cursor: pointer;
+            &:hover {
+               text-decoration: underline;
             }
         }
     }

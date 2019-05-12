@@ -1,0 +1,201 @@
+mixin popColorCheckbox(text, color)
+   li.colors-catalog-list__item
+      label.checkbox.checkbox--bold
+         input(type="checkbox")
+         span.checkbox__custom
+         .checkbox__body
+            span.checkbox__text=text
+            .color-block.color-block--big(style=`background-color: ${color}`)
+               .colors-catalog-tooltip
+                  span.colors-catalog-tooltip__name=text
+                  span.colors-catalog-tooltip__descr Зеленый мох
+                  .color-block.color-block--xxl(style=`background-color: ${color}`)
+
+
+.popup.popup--big.mfp-hide#popup-colors-catalog
+      .popup__header
+         span.popup__title Каталог цветов
+         .popup__close
+            +icon('close', 'popup__close-icon')
+      .popup__body
+         .colors-catalog
+            .colors-catalog__block
+               .colors-catalog__item
+                  .colors-catalog__input
+                     input.input-field.input-field--size-s(type="text" placeholder="Введите код цвета")
+               .colors-catalog__item
+                  label.checkbox.checkbox--bold
+                     input(type="checkbox")
+                     span.checkbox__custom
+                     .checkbox__body
+                        span.checkbox__text Выбрать все 213 цветов
+            .colors-catalog__block
+               .colors-catalog__item
+                  label.checkbox.checkbox--big
+                     input(type="checkbox")
+                     span.checkbox__custom
+                     .checkbox__body
+                        span.checkbox__text Каталог цветов RAL
+               .colors-catalog__item
+                  .colors-catalog__title
+                     .colors-catalog__title
+                        label.checkbox.checkbox--bold
+                           input(type="checkbox")
+                           span.checkbox__custom
+                           .checkbox__body
+                              span.checkbox__text Все оттенки зеленого
+
+                  ul.colors-catalog-list
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+                     +popColorCheckbox('RAL 1000', '#417505')
+
+               .colors-catalog__item
+                  .colors-catalog__title
+                     .colors-catalog__title
+                        label.checkbox.checkbox--bold
+                           input(type="checkbox")
+                           span.checkbox__custom
+                           .checkbox__body
+                              span.checkbox__text Все оттенки желтого
+
+                  ul.colors-catalog-list
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+                     +popColorCheckbox('RAL 1000', '#FFC40F')
+
+               .colors-catalog__item
+                  .colors-catalog__title
+                     .colors-catalog__title
+                        label.checkbox.checkbox--bold
+                           input(type="checkbox")
+                           span.checkbox__custom
+                           .checkbox__body
+                              span.checkbox__text Все оттенки оранжевого
+
+                  ul.colors-catalog-list
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+                     +popColorCheckbox('RAL 1000', '#FF690F')
+
+               .colors-catalog__item
+                  .colors-catalog__title
+                     .colors-catalog__title
+                        label.checkbox.checkbox--bold
+                           input(type="checkbox")
+                           span.checkbox__custom
+                           .checkbox__body
+                              span.checkbox__text Все оттенки фиолетового
+
+                  ul.colors-catalog-list
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+                     +popColorCheckbox('RAL 1000', '#980FFF')
+
+               .colors-catalog__item
+                  .colors-catalog__title
+                     .colors-catalog__title
+                        label.checkbox.checkbox--bold
+                           input(type="checkbox")
+                           span.checkbox__custom
+                           .checkbox__body
+                              span.checkbox__text Все оттенки серого
+
+                  ul.colors-catalog-list
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+                     +popColorCheckbox('RAL 1000', '#ADADAD')
+
+               .colors-catalog__item
+                  .colors-catalog__title
+                     .colors-catalog__title
+                        label.checkbox.checkbox--bold
+                           input(type="checkbox")
+                           span.checkbox__custom
+                           .checkbox__body
+                              span.checkbox__text Все оттенки красного
+
+                  ul.colors-catalog-list
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+                     +popColorCheckbox('RAL 1000', '#DC0919')
+
+         .colors-catalog__footer
+            span.colors-catalog__count Выбрано <b>30</b> цветов
+            button(type="button").btn Добавить фильтр
+

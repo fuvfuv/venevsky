@@ -1,0 +1,121 @@
+.color-block {
+    display: block;
+    position: relative;
+
+    @include size(12px);
+    &.color-block {
+        &--big {
+            @include size(20px);
+        }
+        &--xxl {
+            @include size(160px);
+        }
+    }
+}
+
+.colors-catalog {
+    overflow: auto;
+    position: relative;
+    padding: 0 30px;
+
+    flex: 1;
+    & > * {
+        margin: 30px 0;
+        &:first-child {
+            margin-top: 0;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__block {
+        & > * {
+            margin: 20px 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+    &__footer {
+        display: flex;
+        padding: 20px 30px;
+
+        align-items: center;
+        flex-basis: auto;
+        & > * {
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+    &-list {
+        display: flex;
+
+        flex-wrap: wrap;
+        & > * {
+            width: calc(100% / 5);
+            margin: 5px 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__item {
+            &:hover,&:focus {
+               .checkbox__text {
+                  text-decoration: underline;
+               }
+                .colors-catalog-tooltip {
+                    display: flex;
+                }
+            }
+        }
+    }
+    &-tooltip {
+        display: flex;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        bottom: calc(100% + 15px);
+        left: 50%;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: $white;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, .2);
+        font-size: 14px;
+        transform: translateX(-50%);
+        &:after {
+            position: absolute;
+            z-index: -1;
+            bottom: -16px;
+            left: 50%;
+            background-color: $white;
+            content: "";
+            transform: translateX(-50%);
+            transform: translateY(-50%) rotate(45deg);
+
+            @include size(16px);
+        }
+        & > * {
+            margin: 3px 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__name {
+            font-weight: 600;
+        }
+    }
+}

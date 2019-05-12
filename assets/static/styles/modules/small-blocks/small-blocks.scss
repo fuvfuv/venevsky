@@ -12,6 +12,8 @@
 @import "tag";
 @import "sort";
 @import "pagination";
+@import "color";
+
 
 
 
@@ -102,17 +104,17 @@
     display: inline-flex;
     border: 1px solid $input-border-color;
     border-radius: 4px;
+    background-color: $white;
 
     align-items: center;
-
     &__btn {
         display: flex;
         background-color: #FAFAFA;
+        cursor: pointer;
 
         align-items: center;
         @include size(40px);
         justify-content: center;
-        cursor: pointer;
     }
     &__icon {
         fill: #BABABA;
@@ -121,8 +123,8 @@
     &__current {
         display: flex;
         width: 90px;
-        line-height: 40px;
         padding: 0 10px;
+        line-height: 40px;
 
         align-items: center;
         flex-basis: 90px;

@@ -46,29 +46,46 @@
         padding: 20px 5px 0;
         border-radius: 4px;
         background-color: $white;
+        transition: none;
 
         flex-wrap: wrap;
         .product-prev {
             position: relative;
             width: calc(100% / 3);
-
+            transition: none;
+            margin-bottom: 10px;
             flex-basis: calc(100% / 3);
-            &:nth-child(n + 4) {
-                margin-top: -110px;
-            }
             &:hover,&:focus {
                 z-index: 1;
+                border-bottom-color: transparent;
                 box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
-                .product-prev__counter {
-                    opacity: 1;
+                .product-prev {
+                    &__footer {
+                        top: 100%;
+                        opacity: 1;
+                    }
+                    &__body {
+                       background-color: $white;
+                       position: relative;
+                       z-index: 1;
+                    }
                 }
             }
             &__counter {
-                opacity: 0;
-                transition: all linear .3s;
+                margin: 0 20px 15px;
             }
-            &__price {
-                margin-bottom: 20px;
+            &__footer {
+                position: absolute;
+                top: calc(100% + 4px);
+                right: 0;
+                right: -2px;
+                left: -2px;
+                border: 2px solid $main-action-color;
+                border-top: 0;
+                opacity: 0;
+                background-color: $white;
+                box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+                transition: none;
             }
         }
     }

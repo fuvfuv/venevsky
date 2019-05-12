@@ -152,7 +152,6 @@ $(document).ready(function() {
 
    var contactsPopup = function() {
       $(document).on('click', '.contacts-popup__toogle', function() {
-         console.log('sd');
          $(this)
             .parent()
             .addClass('contacts-popup--active');
@@ -303,6 +302,32 @@ $(document).ready(function() {
       });
    };
 
+   var tagsToggle = function () {
+      $(document).on('click', '.tags__toggle', function () {
+         var el = $(this).parent();
+         if (el.hasClass('tags--active')) {
+            el.removeClass('tags--active');
+            $(this).text('Все запросы');
+         }  else {
+            el.addClass('tags--active');
+            $(this).text('Скрыть');
+         }
+      });
+   };
+
+   var sortToggle = function () {
+      $(document).on('click', '.sort-action__header, .sort-action__body', function () {
+         var el = $(this).parent();
+
+         if (el.hasClass('sort-action--active')) {
+            el.removeClass('sort-action--active');
+         } else {
+            $('.sort-action').removeClass('sort-action--active');
+            el.addClass('sort-action--active');
+         }
+      });
+   };
+
    // slick-slider
    var productPrevSlider = function() {
       var slideCount = $('.product-slider__count');
@@ -380,4 +405,6 @@ $(document).ready(function() {
    counter();
    filterItem();
    filterSlider();
+   tagsToggle();
+   sortToggle();
 });

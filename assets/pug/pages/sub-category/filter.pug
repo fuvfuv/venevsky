@@ -16,7 +16,11 @@ mixin checkboxLine(text, count, color)
    .filter__header
       span.filter__title Фильтр
    .filter__body
-      .filter-item.filter-item--active
+
+      .filter-tooltip
+         span.filter-tooltip__text Найдено <b>456 </b>товаров
+         span.filter-tooltip__btn Показать
+      .filter-item
          .filter-item__header
             span.filter-item__title Цена за шт.
          .filter-item__body
@@ -30,7 +34,7 @@ mixin checkboxLine(text, count, color)
                   .filter-slider__value
                   .filter-slider__value--to
                .filter-slider__line(data-range-type='price')
-      .filter-item.filter-item--active
+      .filter-item
          .filter-item__header
             span.filter-item__title Толщина металла
          .filter-item__body
@@ -41,7 +45,7 @@ mixin checkboxLine(text, count, color)
                   input.input-field.input-field--size-s.filter-slider__value.filter-slider__value--to
                .filter-slider__line(data-range-type='mm')
 
-      .filter-item.filter-item--active
+      .filter-item
          .filter-item__header
             span.filter-item__title Материал
          .filter-item__body
@@ -55,7 +59,7 @@ mixin checkboxLine(text, count, color)
                +checkboxLine('С рисунком под дерево','456')
                +checkboxLine('С рисунком под камень','456')
                +checkboxLine('С рисунком под кирпич','456')
-            a(href="#").filter__link Выбрать в каталоге
+            a(href="#popup-colors-catalog").filter__link.js-popup-link Выбрать в каталоге
                span.count-text 473
       .filter-item.filter-item--active
          .filter-item__header

@@ -50,15 +50,8 @@ block content
             main.sub-category__main
                include pages/sub-category/tags
                .sub-category__status
-                  .sort
-                     .sort-item
-                        span.sort__title Упорядочить:
-                        .sort-action
-                           span.sort-action__current по популярности
-                     .sort-item
-                        span.sort__title Показывать по:
-                        .sort-action
-                           span.sort-action__current 30
+                  include pages/sub-category/sort
+
                   .page-counter
                      span.page-counter__text Страница
                      span.page-counter__number <b>1</b> из 7
