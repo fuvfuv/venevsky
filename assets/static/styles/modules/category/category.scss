@@ -5,14 +5,27 @@
     display: flex;
     overflow: hidden;
     border-radius: 4px;
+    @media screen and (max-width: $phone-size) {
+        flex-direction: column;
+    }
     & > * {
         border-right: 1px solid #F2F2F2;
+
         flex: 1;
+        @media screen and (max-width: $phone-size) {
+            border-right: 0;
+            border-bottom: 1px solid #F2F2F2;
+        }
         &:last-child {
             border-right: 0;
+            @media screen and (max-width: $phone-size) {
+                border-bottom: 1px solid #F2F2F2;
+            }
         }
     }
     .category-list__wrapper {
         margin-bottom: 0;
     }
 }
+
+

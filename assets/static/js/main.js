@@ -328,6 +328,31 @@ $(document).ready(function() {
       });
    };
 
+   var scrollColorCatalog = function() {
+      $('.colors-catalog').scroll(function () {
+         var el = document.querySelector('#popup-colors-catalog');
+         if ($(this).scrollTop() > 0 && !$(this).hasClass('colors-catalog--scrolled')) {
+            $(el).addClass('colors-catalog--scrolled')
+         } else {
+            $(el).removeClass('colors-catalog--scrolled');
+         }
+      });
+   }
+
+   var tabs = function () {
+      $('.tabs-list__item').click(function () {
+         var tabName = $(this).attr('show-tab');
+         if ($(this).hasClass('js-tabs--aside')) {
+            $(this).closest('.sub-category__aside').addClass('sub-category__aside--active');
+            if ($(this).hasClass('tabs-list__item--active')) {
+               $(this).closest('.sub-category__aside').removeClass('sub-category__aside--active');
+            }
+         }
+         $(this).toggleClass('tabs-list__item--active').siblings().removeClass('tabs-list__item--active');
+         $('.tabs-content .' + tabName).toggleClass('tab--active').siblings().removeClass('tab--active');
+      });
+   }
+
    // slick-slider
    var productPrevSlider = function() {
       var slideCount = $('.product-slider__count');
@@ -407,4 +432,6 @@ $(document).ready(function() {
    filterSlider();
    tagsToggle();
    sortToggle();
+   scrollColorCatalog();
+   tabs();
 });

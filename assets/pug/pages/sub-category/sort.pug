@@ -6,7 +6,7 @@ mixin sortItem(title, descr)
 
 .sort
    .sort-item
-      span.sort__title Упорядочить:
+      span.sort-item__title Упорядочить:
       .sort-action
          .sort-action__header
             span.sort-action__current по популярности
@@ -17,7 +17,7 @@ mixin sortItem(title, descr)
             +sortItem('По названию', 'я А')
             +sortItem('По популярности')
 
-   .sort-item
+   .sort-item.sort-item--mobile-hide
       span.sort__title Показывать по:
       .sort-action
          .sort-action__header

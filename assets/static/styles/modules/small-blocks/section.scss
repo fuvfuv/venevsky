@@ -17,6 +17,14 @@
     &-often-looking {
         .container {
             padding-left: 335px;
+            @media screen and (max-width: $tablet-size) {
+               padding-left: 20px;
+            }
+        }
+    }
+    &-categories {
+        @media screen and (max-width:$phone-size) {
+            padding: 0;
         }
     }
 }

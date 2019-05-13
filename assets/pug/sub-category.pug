@@ -45,8 +45,18 @@ block content
                span.count-text 123
          .sub-category
             aside.sub-category__aside
-               include pages/sub-category/category-list
-               include pages/sub-category/filter
+               ul.sub-category-mobile-nav.tabs-list
+                  li.tabs-list__item.js-tabs--aside.sub-category-mobile-nav__item(show-tab = "tab-category")
+                     span.sub-category-mobile-nav__text Подразделы
+                  li.tabs-list__item.js-tabs--aside.sub-category-mobile-nav__item(show-tab = "tab-filter")
+                     span.sub-category-mobile-nav__text Фильтр
+                  li.tabs-list__item.js-tabs--aside.sub-category-mobile-nav__item(show-tab = "tab-often")
+                     span.sub-category-mobile-nav__text Часто ищут
+               .tabs-content
+                  include pages/sub-category/category-list
+                  include pages/sub-category/filter
+                  include pages/sub-category/often-looking-mobile
+
             main.sub-category__main
                include pages/sub-category/tags
                .sub-category__status
@@ -125,10 +135,6 @@ block content
                   li.category-list__item
                      a(href="#").link Доборные элементы кровли толщиной 0.8 мм
                      span.count-text 7
-
-
-
-
 
 
    include modules/product/you-see

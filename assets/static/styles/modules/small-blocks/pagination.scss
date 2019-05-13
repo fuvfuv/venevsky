@@ -26,10 +26,15 @@
     }
     &__link {
         display: flex;
+        width: 44px;
+        height: 45px;
         font-size: 18px;
 
         align-items: center;
-        @include size(45px);
         justify-content: center;
+        @media screen and (max-width: $phone-size) {
+            width: 39px;
+            height: 40px;
+        }
     }
 }

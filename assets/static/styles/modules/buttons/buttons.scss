@@ -11,6 +11,9 @@
     cursor: pointer;
 
     align-items: center;
+    @media screen and (max-width:$tablet-size) {
+        padding: 8px 10px;
+    }
     @media screen and (max-width:$phone-size) {
         display: block;
         overflow: hidden;
@@ -18,7 +21,7 @@
     }
     & > * {
         &:not(:last-child) {
-            margin-right: 10px;
+            margin-right: 5px;
         }
     }
     &:hover,&:focus {
@@ -28,7 +31,7 @@
         background-color: darken($main-action-color, 15%);
     }
     &__icon {
-        @include size(25px);
+        @include size(20px);
     }
     &.btn {
         &--fill {
@@ -38,8 +41,8 @@
             justify-content: center;
         }
         &--transparent-green {
-           background-color: transparent;
-           color: $button-green-color;
+            color: $button-green-color;
+            background-color: transparent;
         }
         &--product {
             @media screen and (max-width:$phone-size) {

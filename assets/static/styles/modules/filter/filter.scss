@@ -4,6 +4,9 @@
     &__header {
         padding: 15px;
         border-bottom: 1px solid #DEDEDE;
+        @media screen and (max-width: $phone-size) {
+            display: none;
+        }
     }
     &__body {
         position: relative;
@@ -19,9 +22,13 @@
         border-top: 1px solid #EDEDED;
 
         align-items: center;
+
         & > * {
             &:not(:last-child) {
                 margin-right: 10px;
+                @media screen and (max-width:$tablet-size) {
+                    margin-right: 7px;
+                }
             }
         }
     }
@@ -61,7 +68,7 @@
         }
     }
     &-tooltip {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: absolute;
         z-index: 5;
@@ -102,7 +109,7 @@
             font-weight: 600;
             cursor: pointer;
             &:hover {
-               text-decoration: underline;
+                text-decoration: underline;
             }
         }
     }

@@ -15,7 +15,7 @@
     }
 
     & > * {
-        max-width: 285px;
+        max-width: 265px;
         margin-right: 20px;
         margin-bottom: 30px;
 
@@ -77,6 +77,14 @@
             display: block;
         }
     }
+    &__title {
+        display: block;
+        margin-bottom: 20px;
+        &-text {
+            font-size: 22px;
+            font-weight: 700;
+        }
+    }
     &__img {
         height: 180px;
         background-repeat: no-repeat;
@@ -93,6 +101,7 @@
     &__title {
         display: block;
         margin-bottom: 20px;
+        word-break: break-word;
         &-text {
             font-size: 22px;
             font-weight: 700;

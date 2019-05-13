@@ -117,6 +117,9 @@
     &__row {
         display: flex;
         border-bottom: 1px solid #F2F2F2;
+        @media screen and (max-width: $phone-size) {
+            flex-direction: column;
+        }
         &:last-child {
             border-bottom: 0;
         }
@@ -125,12 +128,22 @@
         border-right: 1px solid #F2F2F2;
 
         flex: 1;
+        @media screen and (max-width: $phone-size) {
+            border-right: 0;
+            border-bottom: 1px solid #F2F2F2;
+        }
         &:last-child {
             border-right: 0;
+            @media screen and (max-width: $phone-size) {
+                border-bottom: 0;
+            }
         }
         &:first-child {
             @media screen and (max-width: $tablet-size) {
                 display: none;
+            }
+            @media screen and (max-width: $phone-size) {
+                display: block;
             }
         }
         &.sales-leaders-products__col {

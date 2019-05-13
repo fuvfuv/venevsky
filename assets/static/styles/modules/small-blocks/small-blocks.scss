@@ -11,10 +11,9 @@
 @import "bread-crumbs";
 @import "tag";
 @import "sort";
+@import "tab";
 @import "pagination";
 @import "color";
-
-
 
 
 .search {
@@ -78,6 +77,9 @@
         }
         &--small {
             font-size: 30px;
+            @media screen and (max-width: $phone-size) {
+               font-size: 26px;
+            }
         }
     }
 }
@@ -93,9 +95,18 @@
     font-size: 14px;
 
     align-items: center;
+    flex: 0 0 auto;
     & > * {
         &:not(:last-child) {
             margin-right: 5px;
+        }
+    }
+    &__text {
+        @media screen and (max-width: $tablet-size) {
+            display: none;
+        }
+        @media screen and (max-width: $phone-size) {
+            display: block;
         }
     }
 }
@@ -128,6 +139,11 @@
 
         align-items: center;
         flex-basis: 90px;
+        @media screen and (max-width: $tablet-size) {
+            width: 65px;
+
+            flex: 0 0 65px;
+        }
         & > * {
             &:not(:last-child) {
                 margin-right: 5px;
@@ -161,3 +177,4 @@
         }
     }
 }
+

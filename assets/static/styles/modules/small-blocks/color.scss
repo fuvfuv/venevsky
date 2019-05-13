@@ -16,7 +16,7 @@
 .colors-catalog {
     overflow: auto;
     position: relative;
-    padding: 0 30px;
+    padding-left: 30px;
 
     flex: 1;
     & > * {
@@ -27,6 +27,9 @@
         &:last-child {
             margin-bottom: 0;
         }
+    }
+    &__input {
+        width: 270px;
     }
     &__block {
         & > * {
@@ -39,13 +42,15 @@
             }
         }
     }
-
     &__title {
         margin-bottom: 15px;
     }
     &__footer {
         display: flex;
+        position: relative;
+        z-index: 6;
         padding: 20px 30px;
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
 
         align-items: center;
         flex-basis: auto;
@@ -62,6 +67,14 @@
         & > * {
             width: calc(100% / 5);
             margin: 5px 0;
+
+            break-inside: avoid;
+            @media screen and (max-width: $tablet-size) {
+                width: calc(100% / 3);
+            }
+            @media screen and (max-width: $phone-size) {
+                width: calc(100% / 2);
+            }
             &:first-child {
                 margin-top: 0;
             }
@@ -71,9 +84,9 @@
         }
         &__item {
             &:hover,&:focus {
-               .checkbox__text {
-                  text-decoration: underline;
-               }
+                .checkbox__text {
+                    text-decoration: underline;
+                }
                 .colors-catalog-tooltip {
                     display: flex;
                 }
@@ -116,6 +129,25 @@
         }
         &__name {
             font-weight: 600;
+        }
+    }
+}
+
+
+// Добавление тени при скролле попапа у каталога (выбор цветовой палитры)
+#popup-colors-catalog {
+    &.colors-catalog--scrolled {
+        .popup {
+            &__header {
+                box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, .3);
+            }
+        }
+
+        .colors-catalog {
+            padding-bottom: 30px;
+            &__footer {
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .3);
+            }
         }
     }
 }
