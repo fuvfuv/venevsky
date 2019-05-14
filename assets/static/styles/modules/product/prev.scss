@@ -64,9 +64,11 @@
     &__body {
         display: block;
         padding: 20px;
+        padding-top: 0;
     }
     &__footer {
         margin-top: auto;
+        border-radius: 0 0 4px 4px;
         opacity: 0;
         transition: all linear .3s;
         @media screen and (max-width:$phone-size) {
@@ -112,8 +114,11 @@
     }
     &__title {
         display: block;
-        height: 55px;
+        min-height: 55px;
         margin-bottom: 20px;
+        @media screen and (max-width: $tablet-size) {
+            min-height: 75px;
+        }
     }
     &__info {
         display: flex;

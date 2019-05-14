@@ -1,0 +1,95 @@
+extends template/main
+
+block variables
+   - var title = 'Карта сайта'
+   - var pageClass = 'site-map-page'
+
+mixin siteMapLink(link, text)
+   li.site-map-list__item
+      a(href="#").site-map-list__link.link-green=text
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item
+               span.breadcrumbs__current Карта сайта
+
+   section.s-site-map
+      .container
+         .section-header
+            h1.title-page Картасайта
+         .site-map
+            .site-map-block
+               .site-map-block__header
+                  span.site-map-block__title Название раздела
+               .site-map-block__body
+                  .site-map-item
+                     span.site-map-item__title Название подраздела
+                     ul.site-map-list
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+
+                  .site-map-item
+                     span.site-map-item__title Название подраздела
+                     ul.site-map-list
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+
+                  .site-map-item
+                     span.site-map-item__title Название подраздела
+                     ul.site-map-list
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                  .site-map-item
+                     span.site-map-item__title Название подраздела
+                     ul.site-map-list
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+                  .site-map-item
+                     span.site-map-item__title Название подраздела
+                     ul.site-map-list
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                  .site-map-item
+                     span.site-map-item__title Название подраздела
+                     ul.site-map-list
+                        +siteMapLink('#','Название страницы')
+            .site-map-block
+               .site-map-block__header
+                  span.site-map-block__title Название раздела
+               .site-map-block__body
+                  .site-map-item
+                     span.site-map-item__title Название подраздела
+                     ul.site-map-list
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+                        +siteMapLink('#','Другое название страницы')
+                  .site-map-item
+                     span.site-map-item__title Название подраздела
+                     ul.site-map-list
+                        +siteMapLink('#','Другое название страницы')
+                        +siteMapLink('#','Название страницы')
+
+
+block script
+   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+   script(src="js/ya-maps.js")
