@@ -1,0 +1,87 @@
+extends template/main
+
+block variables
+   - var title = 'Страница акции'
+   - var pageClass = 'action-page'
+
+block content
+   section.s-breadcrumbs.s-bg-white
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item.dropdown__toggle.dropdown
+                  span.breadcrumbs__link.dropdown-list__toggle Специальные предложения
+                  .dropdown__body
+                     ul.dropdown-list
+                        li.dropdown-list__item
+                           a(href="#").dropdown-list__link
+                              span.breadcrums-nav__text Рулонная сталь
+                              count.count-text 23
+                        li.dropdown-list__item
+                           a(href="#").dropdown-list__link
+                              span.breadcrums-nav__text Профнастил
+                              count.count-text 23
+            li.breadcrumbs__item
+               span.breadcrumbs__current Мультиварка в подарок при заказе водостока от 50 000 рублей
+
+   section.s-action.s-bg-white
+      .container
+         .section-header
+            h1.title-section-small Мультиварка в подарок при заказе водостока от 50 000 рублей
+         .action
+            .action__header
+               span.action__description Закажите товаров для водостока на сумму от 50 000 рублей и получите мультиварку Apple в подарок
+               .action__info
+                  .action-date
+                     span.action-date__text Срок проведения акции: 1 июля - 15 августа 2018 года
+                  .action-time
+                     +icon('hourglass', 'action-time__icon')
+                     span.action-time__text Закончится через 12 дней 17 часов
+            .action__body
+               .action-item
+                  span.action-item__title Условия акции
+                  .static-content
+                     p.static-text Подробный текст описания специального предложения. Далее вставлен бессмысленный ткст, чтобы показать объем.
+                     p.static-text Текст (от лат. textus — ткань; сплетение, сочетание) — зафиксированная на каком-либо материальном носителе человеческая мысль; в общем плане связная и полная последовательность символов.
+                     p.static-text Существуют две основные трактовки понятия «текст»: имманентная (расширенная, философски нагруженная) и репрезентативная (более частная). Имманентный подход подразумевает отношение к тексту как к автономной реальности, нацеленность на выявление его внутренней структуры. Репрезентативный — рассмотрение текста как особой формы представления знаний о внешней тексту действительности.
+                     p.static-text В лингвистике термин «текст» используется в широком значении, включая и образцы устной речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так, например, И. Р. Гальперин определяет текст следующим образом: «это письменное сообщение, объективированное в виде письменного документа, состоящее из ряда высказываний, объединённых разными типами лексической, грамматической и логической связи, имеющее определённый моральный характер, прагматическую установку и соответственно литературно обработанное».
+                     p.static-text В лингвистике термин «текст» используется в широком значении, включая и образцы устной речи. Восприятие текста изучается в рамках лингвистики текста и психолингвистики. Так, например, И. Р. Гальперин определяет текст следующим образом: «это письменное сообщение, объективированное в виде письменного документа, состоящее из ряда высказываний, объединённых разными типами лексической, грамматической и логической связи, имеющее определённый моральный характер, прагматическую установку и соответственно литературно обработанное».
+
+   section.s-action-goods.s-bg-white
+      .container
+         .section-header
+            h1.title-section-small Товары и акции
+         .action-goods
+            .action-goods-block
+               .action-goods-block__header
+                  span.action-goods-block__title Скидки на кровельные комплектующие
+               .products-prev-line
+                  include modules/product/prev/prev1
+                  include modules/product/prev/prev2
+                  include modules/product/prev/prev3
+                  include modules/product/prev/prev4
+               .action-goods-block__footer
+                  a(href="#").btn
+                     span.btn__text Все кровельные комплектующие со скидкой
+                     span.count-text 100
+
+            .action-goods-block
+               .action-goods-block__header
+                  span.action-goods-block__title Скидки на водосточные системы
+               .products-prev-line
+                  include modules/product/prev/prev1
+                  include modules/product/prev/prev2
+                  include modules/product/prev/prev3
+                  include modules/product/prev/prev4
+               .action-goods-block__footer
+                  a(href="#").btn
+                     span.btn__text Все для водосточных систем со скидкой
+                     span.count-text 100
+
+
+
+block script
+   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+   script(src="js/ya-maps.js")

@@ -1,0 +1,127 @@
+extends template/main
+
+block variables
+   - var title = 'Специальные предложения'
+   - var pageClass = 'actions-page'
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item
+               span.breadcrumbs__current Специальные предложения
+
+   section.s-actions
+      .container
+         .section-header
+            h1.title-page Специальные предложения
+         .actions
+            .actions-block
+               .actions-block__header
+                  h3.title-section-small.title--center Действующие предложения
+
+               .actions-block__body
+                  a(href="action.html").action-prev.action-prev--gift
+                     .action-prev__image(style="background-image:url('images/content/actions/action-prev-1.jpg')")
+                     .action-prev__body
+                        .action-prev__content
+                           span.action-prev__name Мультиварка в подарок при заказе водостока от 50 000 рублей
+                           p.action-prev__descr Закажите товаров для водостока на суммуу от 50 000 рублей и получите мультиварку Apple в подарок
+                           .action-time
+                              +icon('hourglass', 'action-time__icon')
+                              span.action-time__text Закончится через 12 дней 17 часов
+                        .action-prev__mark
+                           +icon('giftbox', 'action-prev__mark-icon')
+
+                  a(href="action.html").action-prev.action-prev--discount
+                     .action-prev__image(style="background-image:url('images/content/actions/action-prev-2.jpg')")
+                     .action-prev__body
+                        .action-prev__content
+                           span.action-prev__name Горячие скидки на продукцию "Венёвский"
+                           p.action-prev__descr Скидка 15 % при заказе продукции производителя "Венёвский" от 150 000 рублей
+                           .action-time
+                              +icon('hourglass', 'action-time__icon')
+                              span.action-time__text Закончится через 3 часа
+                        .action-prev__mark
+                           +icon('percent', 'action-prev__mark-icon')
+
+                  a(href="action.html").action-prev.action-prev--discount
+                     .action-prev__image(style="background-image:url('images/content/actions/action-prev-3.jpg')")
+                     .action-prev__body
+                        .action-prev__content
+                           span.action-prev__name Горячие скидки на продукцию "Венёвский"
+                           p.action-prev__descr Скидка 15 % при заказе продукции производителя "Венёвский" от 150 000 рублей
+                           .action-time
+                              +icon('hourglass', 'action-time__icon')
+                              span.action-time__text Закончится через 3 часа
+                        .action-prev__mark
+                           +icon('percent', 'action-prev__mark-icon')
+
+            .actions-block
+               .actions-block__header
+                  h3.title-section-small.title--center Завершённые предложения
+
+                  .actions-period.dropdown
+                     .actions-period__toggle.dropdown__toggle
+                        span.actions-period__text за 2018 год
+                     .dropdown__body
+                        ul.dropdown-list
+                           li.dropdown-list__item
+                              a(href="#").dropdown-list__link
+                                 span.breadcrums-nav__text 2019
+                                 count.count-text 23
+                           li.dropdown-list__item
+                              a(href="#").dropdown-list__link
+                                 span.breadcrums-nav__text 2018
+                                 count.count-text 23
+                           li.dropdown-list__item
+                              a(href="#").dropdown-list__link
+                                 span.breadcrums-nav__text 2016
+                                 count.count-text 23
+
+               .actions-block__body
+                  a(href="action.html").action-prev.action-prev--close
+                     .action-prev__image(style="background-image:url('images/content/actions/action-prev-1.jpg')")
+                     .action-prev__body
+                        .action-prev__content
+                           span.action-prev__name Мультиварка в подарок при заказе водостока от 50 000 рублей
+                           p.action-prev__descr Закажите товаров для водостока на суммуу от 50 000 рублей и получите мультиварку Apple в подарок
+                           .action-time
+                              +icon('hourglass', 'action-time__icon')
+                              span.action-time__text Закончится через 12 дней 17 часов
+                        .action-prev__mark
+                           +icon('giftbox', 'action-prev__mark-icon')
+
+                  a(href="action.html").action-prev.action-prev--close
+                     .action-prev__image(style="background-image:url('images/content/actions/action-prev-2.jpg')")
+                     .action-prev__body
+                        .action-prev__content
+                           span.action-prev__name Горячие скидки на продукцию "Венёвский"
+                           p.action-prev__descr Скидка 15 % при заказе продукции производителя "Венёвский" от 150 000 рублей
+                           .action-time
+                              +icon('hourglass', 'action-time__icon')
+                              span.action-time__text Закончится через 3 часа
+                        .action-prev__mark
+                           +icon('percent', 'action-prev__mark-icon')
+
+                  a(href="action.html").action-prev.action-prev--close
+                     .action-prev__image(style="background-image:url('images/content/actions/action-prev-3.jpg')")
+                     .action-prev__body
+                        .action-prev__content
+                           span.action-prev__name Горячие скидки на продукцию "Венёвский"
+                           p.action-prev__descr Скидка 15 % при заказе продукции производителя "Венёвский" от 150 000 рублей
+                           .action-time
+                              +icon('hourglass', 'action-time__icon')
+                              span.action-time__text Закончится через 3 часа
+                        .action-prev__mark
+                           +icon('percent', 'action-prev__mark-icon')
+
+               .actions-block__footer
+                  .btn.btn--transparent-green.btn--arrow-down.btn--size-l.btn--size-font-l
+                     span.btn__text Показать еще 25 акций
+block script
+   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+   script(src="js/ya-maps.js")

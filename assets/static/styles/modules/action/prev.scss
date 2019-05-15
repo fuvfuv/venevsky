@@ -1,55 +1,134 @@
-.actions-prev {
-    display: flex;
-
-    @media screen and(max-width: $phone-size) {
-        flex-direction: column;
-    }
-    & > * {
-        flex: 1;
-        &:not(:last-child) {
-            margin-right: 30px;
-            @media screen and(max-width: $tablet-size) {
-                margin-right: 20px;
-            }
-            @media screen and(max-width: $phone-size) {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-        }
-    }
-}
-
 .action-prev {
+    display: flex;
+    position: relative;
     overflow: hidden;
     border-radius: 4px;
-    &.action-prev--tablet-hide {
-        @media screen and(max-width: $tablet-size) {
-            display: none;
-        }
-        @media screen and(max-width: $phone-size) {
-            display: block;
+    background-color: $white;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+    @media screen and (max-width: $phone-size) {
+        flex-direction: column;
+    }
+    &:hover,&:focus {
+        .action-prev {
+            &__body {
+                @media screen and (min-width: $tablet-size) {
+                    border-color: $main-action-color;
+                }
+            }
         }
     }
-    &__header {
-        display: flex;
-        height: 185px;
-        padding: 20px;
+
+    &.action-prev {
+        &--gift {
+            .action-prev {
+                &__mark {
+                    background-color: #10AE42;
+                }
+            }
+        }
+        &--discount {
+            .action-prev {
+                &__mark {
+                    background-color: #FF001F;
+                }
+            }
+        }
+        &--close {
+            .action {
+                &-time {
+                    color: #FF001F;
+                    &__icon {
+                        fill: #FF001F;
+                    }
+                }
+                &-prev {
+                    &__mark {
+                        background-color: #BABABA;
+                    }
+                }
+            }
+        }
+    }
+    &__image {
+        display: block;
+        width: 230px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
 
-        align-items: flex-end;
+        flex-basis: 230px;
+        @media screen and (max-width: $phone-size) {
+            width: 100%;
+
+            flex-basis: 160px;
+        }
     }
     &__body {
-        padding: 15px 20px;
-        background-color: $white;
+        position: relative;
+        min-height: 160px;
+        padding-right: 40px;
+        border: 2px solid transparent;
+        border-left: 0;
+
+        flex: 1;
+        @media screen and (max-width: $phone-size) {
+            position: static;
+            padding-right: 0;
+        }
     }
-    &__text {
+    &__content {
         display: flex;
         flex-direction: column;
+        min-height: 160px;
+        padding: 20px;
+        @media screen and (max-width: $phone-size) {
+            padding: 20px 15px;
+        }
+
+
+        & > * {
+            margin: 5px 0;
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
     }
-    &__title {
-        font-size: 21px;
+    &__name {
+        font-size: 24px;
         font-weight: 600;
+        @media screen and (max-width: $phone-size) {
+            font-size: 18px;
+        }
+    }
+    &__descr {
+        font-size: 16px;
+        line-height: 1.44;
+    }
+    &__mark {
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 40px;
+        height: 60px;
+        padding: 10px;
+        &:before {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-width: 0 20px 15px 20px;
+            border-style: solid;
+            border-color: transparent transparent #FFF transparent;
+            content: "";
+        }
+        &-icon {
+            fill: $white;
+            @include size(20px);
+        }
     }
 }

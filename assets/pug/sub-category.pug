@@ -11,29 +11,30 @@ block content
             li.breadcrumbs__item
                a(href="index.html").breadcrumbs__home
                   +icon('home', 'breadcrumbs__home-icon')
-            li.breadcrumbs__item.breadcrumbs__item--show-nav
-                  span.breadcrumbs__link.breadcrumbs-nav__toggle Каталог
-                  ul.breadcrumbs-nav
-                     li.breadcrumbs-nav__item
-                        a(href="#").breadcrumbs-nav__link
-                           span.breadcrums-nav__text Рулонная сталь
-                           count.count-text 23
-                     li.breadcrumbs-nav__item
-                        a(href="#").breadcrumbs-nav__link
-                           span.breadcrums-nav__text Профнастил
-                           count.count-text 23
-                     li.breadcrumbs-nav__item
-                        a(href="#").breadcrumbs-nav__link
-                           span.breadcrums-nav__text Листовой прокат
-                           count.count-text 23
-                     li.breadcrumbs-nav__item
-                        a(href="#").breadcrumbs-nav__link
-                           span.breadcrums-nav__text Распродажа
-                           count.count-text 23
-                     li.breadcrumbs-nav__item
-                        a(href="#").breadcrumbs-nav__link
-                           span.breadcrums-nav__text Специальные предложения
-                           count.count-text 23
+            li.breadcrumbs__item.dropdown__toggle.dropdown
+                  span.breadcrumbs__link.dropdown-list__toggle Каталог
+                  .dropdown__body
+                     ul.dropdown-list
+                        li.dropdown-list__item
+                           a(href="#").dropdown-list__link
+                              span.breadcrums-nav__text Рулонная сталь
+                              count.count-text 23
+                        li.dropdown-list__item
+                           a(href="#").dropdown-list__link
+                              span.breadcrums-nav__text Профнастил
+                              count.count-text 23
+                        li.dropdown-list__item
+                           a(href="#").dropdown-list__link
+                              span.breadcrums-nav__text Листовой прокат
+                              count.count-text 23
+                        li.dropdown-list__item
+                           a(href="#").dropdown-list__link
+                              span.breadcrums-nav__text Распродажа
+                              count.count-text 23
+                        li.dropdown-list__item
+                           a(href="#").dropdown-list__link
+                              span.breadcrums-nav__text Специальные предложения
+                              count.count-text 23
             li.breadcrumbs__item
                span.breadcrumbs__current Доборные элементы кровли
 

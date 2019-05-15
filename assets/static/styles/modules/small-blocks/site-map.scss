@@ -33,13 +33,6 @@
                 }
             }
         }
-        &__title {
-            font-size: 30px;
-            font-weight: 600;
-            @media screen and (max-width: $phone-size) {
-                font-size: 26px;
-            }
-        }
     }
     &-item {
         break-inside: avoid;
