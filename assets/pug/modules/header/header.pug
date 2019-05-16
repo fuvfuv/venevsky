@@ -10,11 +10,16 @@ header.header
       .container
          include ../navigation/mobile-nav
 
-         .logo.header-main__logo
-            img(src="images/general/logo.svg", alt="logo" width="64" height="40").logo__img
-            span.logo__text Продажа строй материалов
-         include ../navigation/catalog-nav
+         if (pageClass === 'index-page')
+            .logo.header-main__logo
+               img(src="images/general/logo.svg", alt="logo" width="64" height="40").logo__img
+               span.logo__text Продажа строй материалов
+         else
+            a(href="index.html").logo.header-main__logo
+               img(src="images/general/logo.svg", alt="logo" width="64" height="40").logo__img
+               span.logo__text Продажа строй материалов
 
+         include ../navigation/catalog-nav
          .header-actions
             .search.header-main__search
                input(type="text" placeholder="Артикул или название товара").input-field.input-field--size-small

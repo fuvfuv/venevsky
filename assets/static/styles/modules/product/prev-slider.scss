@@ -1,10 +1,10 @@
 $slider-tablet-width: 1239px;
 
 .products-prev-slider {
-    position: relative;
-    .slider-nav {
-        @media screen and(max-width: $slider-tablet-width) {
-            display: none !important; // перебиваем инлайновые стили
-        }
-    }
-}
+   position: relative;
+   .slider-nav {
+      @media screen and(max-width: $slider-tablet-width) {
+         display: none !important; // перебиваем инлайновые стили
+         }
+      }
+   }

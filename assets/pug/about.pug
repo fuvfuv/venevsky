@@ -1,0 +1,54 @@
+extends template/main
+
+block variables
+   - var title = 'О компании'
+   - var pageClass = 'about-page'
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item.dropdown__toggle.dropdown
+                  span.breadcrumbs__link.dropdown-list__toggle Каталог
+            li.breadcrumbs__item
+               span.breadcrumbs__current О компании
+
+   section.s-about
+      .container
+         .section-header
+            h1.title-page Компания
+         .about
+            .about-block.about-block--width-small
+               p.about__text Предприятие "Венёвский" работает с 2008 года и специализируется на рулонной холоднокатаной стали:
+               ul.about-list
+                  li.about-list__item Производство металлопроката: штрипс, профнастил, доборные элементы для кровли и стеновых сэндвич-панелей, водосточные системы, лист оцинкованный с полимерным покрытием.
+                  li.about-list__item Услуги по обработке рулонной стали: отмотка от рулона, продольно-поперечный пропуск и наносим полимерные покрытия рулоны.
+                  li.about-list__item Под заказ работаем с материалом заказчика.
+                  p.about__text Вся производимая продукция сертифицирована и соотвествуеттребованиям ГОСТ и ТУ.
+            .about-block
+               .about-video
+                  .about-video__col
+                     h3.title-section-small Видеопрезентация
+                     a(href="#" style="background-image: url('images/general/video-prev-1.jpg')").about-video__content.js-popup-link
+                        +icon('play', 'about-video__icon')
+                  .about-video__col
+                     h3.title-section-small Виртуальный тур
+                     a(href="#" style="background-image: url('images/general/video-prev-2.jpg')").about-video__content.js-popup-link
+                        +icon('play', 'about-video__icon')
+
+            .about-block.about-block--border
+               h3.title-section-small Сертификаты
+
+            .about-block
+               h3.title-section-small Сотудники
+            .about-block
+               h3.title-section-small Нас рекомендуют
+
+
+
+block script
+   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+   script(src="js/ya-maps.js")
