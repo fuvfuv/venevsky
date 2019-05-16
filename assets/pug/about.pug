@@ -1,5 +1,12 @@
 extends template/main
 
+mixin employee(photo, name)
+   li.employee
+      .employee__img-wrapper
+         img(src=photo, alt="фото сотрудника").employee__img
+      span.employee__name=name
+
+
 block variables
    - var title = 'О компании'
    - var pageClass = 'about-page'
@@ -40,12 +47,92 @@ block content
                         +icon('play', 'about-video__icon')
 
             .about-block.about-block--border
-               h3.title-section-small Сертификаты
+               .slider
+                  .slider__header
+                     h3.title-section-small Сертификаты
+                     span.slider__count
+                  .slider__body
+                     .slider-nav
+                        .slider-nav__btn.slider-nav__btn--prev.js-slider-prev
+                           +icon('left-arrow', 'slider-nav__icon')
+                        .slider-nav__btn.slider-nav__btn--next.js-slider-next
+                           +icon('right-arrow', 'slider-nav__icon')
+                     .js-slider
+                        .slider__item
+                           a(href="#").certificate
+                              img(src="images/content/certificates/cert-1.png", alt="сертификат").certificate__img
+                              .certificate__hover
+                                 +icon('pdf', 'certificate__icon')
+                                 span.certificate__text Открыть PDF
+                        .slider__item
+                           a(href="#").certificate
+                              img(src="images/content/certificates/cert-1.png", alt="сертификат").certificate__img
+                              .certificate__hover
+                                 +icon('pdf', 'certificate__icon')
+                                 span.certificate__text Открыть PDF
+                        .slider__item
+                           a(href="#").certificate
+                              img(src="images/content/certificates/cert-1.png", alt="сертификат").certificate__img
+                              .certificate__hover
+                                 +icon('pdf', 'certificate__icon')
+                                 span.certificate__text Открыть PDF
+
+            .about-block.about-block--mb-0
+               h3.title-section-small Сотрудники
+               ul.employees-list
+                  +employee('images/general/employee/men.jpg', 'Пантелеймон Константинопольский')
+                  +employee('images/general/employee/girl.jpg', 'Ирина Белых')
+                  +employee('images/general/employee/girl.jpg', 'Алена Иванова')
+                  +employee('images/general/employee/men.jpg', 'Сергей Долгопрудников')
+                  +employee('images/general/employee/girl.jpg', 'Пантелеймон Константинопольский')
+                  +employee('images/general/employee/men.jpg', 'Ирина Белых')
+                  +employee('images/general/employee/girl.jpg', 'Алена Иванова')
+                  +employee('images/general/employee/men.jpg', 'Сергей Долгопрудников')
+                  +employee('images/general/employee/men.jpg', 'Владимир Путин')
+
 
             .about-block
-               h3.title-section-small Сотудники
-            .about-block
-               h3.title-section-small Нас рекомендуют
+               .slider
+                  .slider__header
+                     h3.title-section-small Нас рекомендуют
+                     span.slider__count
+                  .slider__body
+                     .slider-nav
+                        .slider-nav__btn.slider-nav__btn--prev.js-slider-prev
+                           +icon('left-arrow', 'slider-nav__icon')
+                        .slider-nav__btn.slider-nav__btn--next.js-slider-next
+                           +icon('right-arrow', 'slider-nav__icon')
+                     .js-slider
+                        .slider__item
+                           a(href="#").certificate
+                              img(src="images/content/certificates/cert-1.png", alt="сертификат").certificate__img
+                              .certificate__hover
+                                 +icon('pdf', 'certificate__icon')
+                                 span.certificate__text Открыть PDF
+                        .slider__item
+                           a(href="#").certificate
+                              img(src="images/content/certificates/cert-1.png", alt="сертификат").certificate__img
+                              .certificate__hover
+                                 +icon('pdf', 'certificate__icon')
+                                 span.certificate__text Открыть PDF
+                        .slider__item
+                           a(href="#").certificate
+                              img(src="images/content/certificates/cert-1.png", alt="сертификат").certificate__img
+                              .certificate__hover
+                                 +icon('pdf', 'certificate__icon')
+                                 span.certificate__text Открыть PDF
+                        .slider__item
+                           a(href="#").certificate
+                              img(src="images/content/certificates/cert-1.png", alt="сертификат").certificate__img
+                              .certificate__hover
+                                 +icon('pdf', 'certificate__icon')
+                                 span.certificate__text Открыть PDF
+                        .slider__item
+                           a(href="#").certificate
+                              img(src="images/content/certificates/cert-1.png", alt="сертификат").certificate__img
+                              .certificate__hover
+                                 +icon('pdf', 'certificate__icon')
+                                 span.certificate__text Открыть PDF
 
 
 

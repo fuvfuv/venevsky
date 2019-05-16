@@ -1,0 +1,38 @@
+$slider-tablet-width: 1239px;
+
+.slider-nav {
+   transition: all linear .3s;
+
+   &__icon {
+      opacity: .5;
+      cursor: pointer;
+
+      fill: #333;
+      @include size (30px);
+
+      &:hover,&:focus {
+         opacity: 1;
+      }
+   }
+   .slider-nav__btn {
+      position: absolute;
+      z-index: 100;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &.slider-nav__btn--prev {
+         left: -30px;
+      }
+      &.slider-nav__btn--next {
+         right: -30px;
+      }
+   }
+
+   &.slick-disabled {
+      opacity: .5;
+      cursor: default;
+   }
+   @media screen and(max-width: $slider-tablet-width) {
+      display: none !important; // перебиваем инлайновые стили
+   }
+}

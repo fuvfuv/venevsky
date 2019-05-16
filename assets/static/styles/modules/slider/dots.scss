@@ -1,32 +1,3 @@
-.slider-nav {
-    position: absolute;
-    z-index: 100;
-    top: 50%;
-    transition: all linear .3s;
-    transform: translateY(-50%);
-    &__icon {
-        opacity: .5;
-        cursor: pointer;
-
-        fill: #333;
-        @include size (35px);
-
-        &:hover,&:focus {
-            opacity: 1;
-        }
-    }
-    &.slider-nav--prev {
-        left: -35px;
-    }
-    &.slider-nav--next {
-        right: -35px;
-    }
-    &.slick-disabled {
-        opacity: .5;
-        cursor: default;
-    }
-}
-
 $slider-break-point-tablet: 1239px;
 @media screen and(max-width: $slider-break-point-tablet) {
     .slick-dots {

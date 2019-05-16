@@ -365,40 +365,46 @@ $(document).ready(function() {
    }
 
    // slick-slider
-   var productPrevSlider = function() {
+   var slider = function() {
       var slideCount = $('.product-slider__count');
-      var prodSlider = $('.js-product-slider');
+      var prodSlider = $('.js-slider');
 
-      prodSlider.on('init afterChange', function(event, slick, currentSlide, nextSlide) {
-         var i = (currentSlide ? currentSlide : 0) + 1;
-         slideCount.text('Страница ' + i + ' из ' + slick.slideCount);
-      });
-
-      prodSlider.slick({
-         slidesToShow: 4,
-         slidesToScroll: 1,
-         prevArrow: '.products-prev-slider__nav-prev',
-         nextArrow: '.products-prev-slider__nav-next',
-         infinite: true,
-         adaptiveHeight: true,
-         arrows: true,
-         responsive: [
-            {
-               breakpoint: 1239,
-               settings: {
-                  slidesToShow: 3,
-                  arrows: true,
-                  dots: true,
-               },
-            },
-            {
-               breakpoint: 768,
-               settings: {
-                  slidesToShow: 1,
-                  dots: true,
-               },
-            },
-         ],
+      $('.js-slider').each(function (idx) {
+         var sliderClass = "slider-" + idx;
+         var sliderCount = $(this).closest('.slider').find('.slider__count');
+         this.closest('.slider').classList.add(sliderClass);
+         $(this).on('init afterChange', function (event, slick, currentSlide) {
+            if (slick.slideCount > 4) {
+               var i = (currentSlide ? currentSlide : 0) + 1;
+               sliderCount.text('Страница ' + i + ' из ' + slick.slideCount);
+            }
+         });
+         $(this).slick({
+               slidesToShow: 4,
+               slidesToScroll: 1,
+               prevArrow: '.' + sliderClass + ' .js-slider-prev',
+               nextArrow: '.' + sliderClass + ' .js-slider-next',
+               infinite: true,
+               adaptiveHeight: true,
+               arrows: true,
+               responsive: [
+                  {
+                     breakpoint: 1239,
+                     settings: {
+                        slidesToShow: 3,
+                        arrows: true,
+                        dots: true,
+                     },
+                  },
+                  {
+                     breakpoint: 768,
+                     settings: {
+                        slidesToShow: 1,
+                        dots: true,
+                     },
+                  },
+               ],
+            });
       });
    };
 
@@ -427,7 +433,7 @@ $(document).ready(function() {
    svg4everybody();
    sandwich();
    popularCategoriesSlider();
-   productPrevSlider();
+   slider();
    locationChoose();
    popupLink();
    formValidation();

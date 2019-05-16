@@ -1,57 +1,57 @@
 .s {
-    &-bg-white {
-        background-color: $white;
-    }
-    &-categories-prev {
-        padding-bottom: 10px;
-        @media screen and (max-width:$phone-size) {
-            padding-bottom: 30px;
-        }
-    }
-    &-sales-leaders {
-        padding-bottom: 20px;
-    }
-    &-question {
-        padding: 10px 0;
-    }
-    &-often-looking {
-        .container {
-            padding-left: 335px;
-            @media screen and (max-width: $tablet-size) {
-                padding-left: 20px;
-            }
-        }
-    }
-    &-categories {
-        @media screen and (max-width:$phone-size) {
-            padding: 0;
-        }
-    }
-    &-action-goods {
-        border-top: 1px solid #ededed;
-        border-bottom: 1px solid #ededed;
-    }
+   &-bg-white {
+      background-color: $white;
+   }
+   &-categories-prev {
+      padding-bottom: 10px;
+      @media screen and (max-width:$phone-size) {
+         padding-bottom: 30px;
+      }
+   }
+   &-sales-leaders {
+      padding-bottom: 20px;
+   }
+   &-question {
+      padding: 10px 0;
+   }
+   &-often-looking {
+      .container {
+         padding-left: 335px;
+         @media screen and (max-width: $tablet-size) {
+            padding-left: 20px;
+         }
+      }
+   }
+   &-categories {
+      @media screen and (max-width:$phone-size) {
+         padding: 0;
+      }
+   }
+   &-action-goods {
+      border-top: 1px solid #EDEDED;
+      border-bottom: 1px solid #EDEDED;
+   }
 }
 
 .section-mobile-footer {
-    display: none;
-    margin-top: 40px;
-    text-align: center;
-    @media screen and (max-width:$phone-size) {
-        display: block;
-    }
+   display: none;
+   margin-top: 40px;
+   text-align: center;
+   @media screen and (max-width:$phone-size) {
+      display: block;
+   }
 }
 
 .section-header {
-    display: flex;
-    margin-bottom: 30px;
+   display: flex;
+   margin-bottom: 20px;
 
-    align-items: baseline;
+   align-items: baseline;
 
-    &__right {
-        margin-left: auto;
-        @media screen and (max-width: $phone-size) {
-            display: none;
-        }
-    }
+   &__right {
+      margin-left: auto;
+      @media screen and (max-width: $phone-size) {
+         display: none;
+      }
+   }
 }
