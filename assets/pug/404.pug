@@ -1,0 +1,32 @@
+extends template/main
+
+block variables
+   - var title = 'Страница не найдена'
+   - var pageClass = 'not-found-page'
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item
+               span.breadcrumbs__current Страница не найдена
+
+   section.s-not-found
+      .container
+         .not-found
+            span.not-found__number 404
+            h1.title-page Страница не найдена
+            p.not-found__text По ссылке, на которую вы попытались открыть, страницы не оказалось. <br> Попробуйте найти нужную страницу через поиск.
+            form(action="#" method="post").search-form
+               .search.search--not-found
+                  input(type="text" placeholder="Артикул или название товара").input-field
+                  button(type="submit").search__btn
+                     +icon('search', 'search__icon')
+
+block script
+   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+   script(src="js/ya-maps.js")
+

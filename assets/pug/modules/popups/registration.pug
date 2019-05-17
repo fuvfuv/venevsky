@@ -1,0 +1,48 @@
+.popup.mfp-hide#popup-registration
+   .popup__header
+      span.popup__title Регистрация
+      .popup__close
+         +icon('close', 'popup__close-icon')
+   .popup__body
+      form.form
+         .popup__row
+            .popup__col
+               .form__body
+                  .form-line
+                     .form-group
+                        .form-group__header
+                           label.form-group__label Электронная почта
+                        .form-group__body
+                           input(type="email" name="email" placeholder="email@email.com").input-field
+                  .form-line
+                     .form-group
+                        .form-group__header
+                           label.form-group__label Пароль
+                        .form-group__body
+                           input(type="password" name="password" placeholder="Введите пароль" minlength="8").input-field
+                        .form-group__footer
+                           .form-password-requirements
+                              span.form-password-requirements__name Укажите сильный пароль:
+                              ul.form-password-requirements__list
+                                 li.form-password-requirements__item Длина не менее 8 символов
+                                 li.form-password-requirements__item.form-password-requirements__item--success Включает буквы и цифры
+
+                  .form-line
+                     .form-group
+                        .form-group__header
+                           label.form-group__label Имя и фамилия
+                        .form-group__body
+                           input(type="text" name="fio" placeholder="Введите имя и фамилию").input-field
+            .popup__col.popup__col--small
+               .unregister
+                  span.unregister__text Уже зарегисрированы?
+                  a(href="#popup-login").link-green.link-underline.js-popup-link Вход в личный кабинет
+                  span.unregister__info Зарегистрированные пользователи получают скидку 3% на весь ассортимент
+         .form__footer
+            .form-line
+               .form-group.form-group--width-m
+                  input(type="submit", value="Зарегистрироваться").btn.btn--size-l.btn--fill
+               span.form-line__info Получить скидку 3%
+            .form__line
+               p.form-info Задавая вопрос, вы соглашаетесь с <a href="#" class="form-info__link">политикой конфидециальности</a>
+

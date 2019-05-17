@@ -1,0 +1,35 @@
+.popup.mfp-hide#popup-login
+   .popup__header
+      span.popup__title Войти в личный кабинет
+      .popup__close
+         +icon('close', 'popup__close-icon')
+   .popup__body
+      .popup__row
+         .popup__col
+            form.form
+               .form__body
+                  .form-line
+                     .form-group
+                        .form-group__header
+                           label.form-group__label Электронная почта
+                        .form-group__body
+                           input(type="email" name="email" placeholder="email@email.com").input-field
+                  .form-line
+                     .form-group
+                        .form-group__header
+                           label.form-group__label Пароль
+                           a(href="#").link-light-green.link-underline Забыли пароль
+                        .form-group__body
+                           input(type="password" name="password" placeholder="Введите пароль").input-field
+               .form__footer
+                  .form-line
+                     .form-group
+                        input(type="submit", value="Войти").btn.btn--size-l.btn--fill
+         .popup__col.popup__col--small
+            .unregister
+               span.unregister__text Нет личного кабинета?
+               a(href="#popup-registration").link-green.link-underline.js-popup-link Зарегистрироваться
+               span.unregister__info Зарегистрированные пользователи получают скидку 3% на весь ассортимент
+
+
+

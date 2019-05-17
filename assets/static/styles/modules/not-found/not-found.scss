@@ -1,0 +1,36 @@
+.not-found {
+   display: flex;
+   flex-direction: column;
+   max-width: 590px;
+   margin: 0 auto;
+
+   align-items: center;
+   @media screen and (max-width: $phone-size) {
+      align-items: flex-start;
+   }
+   & > * {
+      margin: 10px 0; &:first-child {
+         margin-top: 0;
+      } &:last-child {
+         margin-bottom: 0;
+      }
+   }
+   &__number {
+      color: #DEDEDE;
+      font-size: 150px;
+      font-weight: 600;
+      line-height: 1.25;
+      @media screen and (max-width: $phone-size) {
+         font-size: 90px;
+      }
+   }
+   &__text {
+      font-size: 18px;
+      line-height: 1.44;
+      text-align: center;
+      @media screen and (max-width: $phone-size) {
+         text-align: left;
+         font-size: 16px;
+      }
+   }
+}

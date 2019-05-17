@@ -55,6 +55,35 @@
       }
    }
 
+   &__row {
+      display: flex;
+      @media screen and (max-width:$phone-size) {
+         flex-direction: column;
+      }
+      & > * {
+         &:not(:last-child) {
+            margin-right: 30px;
+            @media screen and (max-width:$phone-size) {
+               margin-right: 0;
+               margin-bottom: 30px;
+            }
+         }
+      }
+   }
+   &__col {
+      flex: 1;
+      &.popup__col--small {
+         width: 165px;
+
+         flex: 0 0 165px;
+         @media screen and (max-width:$phone-size) {
+            width: auto;
+
+            flex: auto;
+         }
+      }
+   }
+
    &.popup {
       &--colors {
          .popup {

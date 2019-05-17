@@ -1,0 +1,26 @@
+extends template/main
+
+block variables
+   - var title = 'Контакты'
+   - var pageClass = 'contacts-page'
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item
+               span.breadcrumbs__current Контакты
+
+   section.s-contacts
+      .container
+         .section-header
+            h1.title-page Контакты
+         .contacts
+
+block script
+   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+   script(src="js/ya-maps.js")
+
