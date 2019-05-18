@@ -19,6 +19,106 @@ block content
          .section-header
             h1.title-page Контакты
          .contacts
+            .contacts-block
+               .contacts-places
+                  .contacts-place
+                     .contacts-place__info
+                        .contacts-place__group
+                           span.contacts__title Центральный офис в Москве
+                           span.contacts__text 111033, Москва, ул. Золоторожский вал, дом 11, строение 9
+                        .contacts-place__group
+                           .contatcts-place__time
+                              span.contacts__text <b>Время работы</b>
+                              span.contacts__text пн-пт 9:00 - 18:00
+                        .contacts-place__group
+                           .contacts-data
+                              +icon('envelope', 'contacts-data__icon')
+                              .contacts-data__main
+                                 a(href="mailto:zakaz@venevsky.ru").contacts-data__mail.link-green.link-underline zakaz@venevsky.ru
+                           .contacts-data
+                              +icon('phone', 'contacts-data__icon')
+                              .contacts-data__main
+                                 span.contacts__text Звоните круглосуточно
+                                 a(href="tel:+7493348888").contacts-data__phone.link-green +7 499 334-88-88
+                                 a(href="#").link-underline набрать номер по QR-коду
+                     .contacts-place__map#contact-map-office
+                  .contacts-place
+                     .contacts-place__info
+                        .contacts-place__group
+                           span.contacts__title Производство
+                           span.contacts__text Московская область, Ленинский р-н, г. Видное, Северная Виднодвинская промзона, ФГУП Комплекс
+                        .contacts-place__group
+                           .contacts-place__actions-map
+                              a(href="#").link-green.link-underline Скачать схему проезда
+                              a(href="#").link-underline Построить маршрут по QR-коду
+
+                        .contacts-place__group
+                           .contatcts-place__time
+                              span.contacts__text <b>Время работы</b>
+                              span.contacts__text пн-чт 9:00 - 17:00, время заезда до 16:00
+                              span.contacts__text пт 9:00 - 16:00, время заезда до 15:00
+                              span.contacts__text обед 12:00 - 12:45
+
+
+                     .contacts-place__map#contact-map-stock
+            .contacts-block
+               span.contacts__title Связь с директором
+               .contacts__form
+                  span.contacts__text Если при взаимодействии с найшей компанией возникли какие-либо сложности, вы можете наисать напрямую директору.
+
+                  form.form(action="#")
+                     .form__body
+                        .form-line
+                           .form-group
+                              .form-group__header
+                                 label.form-group__label Номер заказа
+                              .form-group__body
+                                 input(type="number" placeholder="321-123" name="order-number").input-field
+                        .form-line
+                           .form-group
+                              .form-group__header
+                                 label.form-group__label Сообщение директору
+                              .form-group__body
+                                 textarea(name="comment", cols="30", rows="10" placeholder="Здравствуйте, меня интересует..").textarea-field
+                        .form-line
+                           .form-group.form-group--width-m.form-group--required
+                              .form-group__header
+                                 label.form-group__label Контактый телефон
+                              .form-group__body
+                                 input(type="tel" name="phone" placeholder="+7(912)123-340-45").input-field
+                        .form-line
+                           .form-group
+                              .form-group__header
+                                 label.form-group__label Электронная почта
+                              .form-group__body
+                                 input(type="email" name="email" placeholder="email@email.com").input-field
+                     .form__footer
+                        .form-line
+                           .form-group.form-group--width-m
+                              input(type="submit", value="Написать директору").btn.btn--size-l.btn--fill
+                           span.form-line__info.form-line__info--color-green Ответим в течении 10 минут
+                        .form__line
+                           p.form-info Нажимая на кнопку, вы соглашаетесь с <a href="#" class="form-info__link">политикой конфидециальности</a>
+
+            .contacts-block
+               span.contacts__title Реквизиты компании
+               .contacts-requisites
+                  .contacts-requisites__item
+                     span.contacts__text Общество с ограниченной ответственностью "Венёвский"
+                  .contacts-requisites__item
+                     span.contacts__text Юридический адрес:
+                     span.contacts__text 121231, г. Москва, ул. Новый Арбат, дом 10, офис 20
+                  .contacts-requisites__item
+                     span.contacts__text Почтовый адрес:
+                     span.contacts__text ИНН: 770330654
+                     span.contacts__text КПП: 77040101
+                     span.contacts__text ОГРН: 115557443983
+                     span.contacts__text ОГПО: 711457443983
+                     span.contacts__text ОКЭВД: 51.12
+                  .contacts-requisites__item
+                     span.contacts__text Расчетный счёт: 400702810300564832123 в ВТБ24 (ПАО)
+                     span.contacts__text Корр. счёт: 30986583391232134932
+                     span.contacts__text БИК: 034455533234
 
 block script
    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")

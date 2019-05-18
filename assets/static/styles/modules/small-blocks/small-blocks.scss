@@ -227,7 +227,7 @@
    }
 }
 
-.unregister {
+.user-tips {
    display: flex;
    flex-direction: column;
    padding-top: 40px;
@@ -247,5 +247,14 @@
    &__info {
       color: $text-info-color;
       font-size: 12px;
+   }
+}
+
+.js-mobile-down {
+   .user-tips {
+      @media screen and (max-width: $phone-size) {
+         margin-top: 30px;
+         align-items: center;
+      }
    }
 }

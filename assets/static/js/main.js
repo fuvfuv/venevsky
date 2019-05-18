@@ -364,6 +364,15 @@ $(document).ready(function() {
       });
    }
 
+   var formAppendDown = function () {
+      var el = $('.js-mobile-down');
+      if (window.innerWidth < 768) {
+         el.appendTo(el.closest('.form'));
+      } else {
+         el.appendTo(el.closest('.form').find('.js-mobile-down--start'))
+      }
+   };
+
    // slick-slider
    var slider = function() {
       var slideCount = $('.product-slider__count');
@@ -428,6 +437,7 @@ $(document).ready(function() {
    $(window).on('resize', function() {
       popularCategoriesSlider();
       simpleBar();
+      formAppendDown();
    });
 
    svg4everybody();
@@ -452,4 +462,5 @@ $(document).ready(function() {
    sortToggle();
    scrollColorCatalog();
    tabs();
+   formAppendDown();
 });
