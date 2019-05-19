@@ -1,317 +1,324 @@
 .footer {
-    &__title {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 17px;
-        font-weight: 600;
-    }
-    &__block {
-        margin-bottom: 25px;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-    &-top {
-        padding: 30px 0;
-        padding-bottom: 40px;
-        color: $white;
-        background-color: $dark-bg-color;
-    }
-    &-main {
-        display: flex;
-        @media screen and(max-width: $phone-size) {
-            flex-direction: column;
-        }
-        .footer-nav {
-            flex: 2;
-            @media screen and(max-width: $tablet-size) {
-                flex: 1;
+   &__title {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 17px;
+      font-weight: 600;
+   }
+   &__block {
+      margin-bottom: 25px;
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+   &-top {
+      padding: 30px 0;
+      padding-bottom: 40px;
+      color: $white;
+      background-color: $dark-bg-color;
+   }
+   &-main {
+      display: flex;
+      @media screen and(max-width: $phone-size) {
+         flex-direction: column;
+      }
+      .footer-nav {
+         flex: 2;
+         @media screen and(max-width: $tablet-size) {
+            flex: 1;
+         }
+      }
+      & > * {
+         flex-basis: 0;
+         flex-grow: 1;
+         &:not(:last-child) {
+            margin-right: 20px;
+            @media screen and (max-width: $phone-size) {
+               margin-right: 0;
+               margin-bottom: 20px;
             }
-        }
-        & > * {
-            flex-basis: 0;
-            flex-grow: 1;
-            &:not(:last-child) {
-                margin-right: 20px;
-                @media screen and (max-width: $phone-size) {
-                    margin-right: 0;
-                    margin-bottom: 20px;
-                }
-            }
-        }
-    }
-    &-callback {
-        display: flex;
+         }
+      }
+   }
+   &-callback {
+      display: flex;
 
-        align-items: center;
-        & > * {
-            margin: 30px 0;
+      align-items: center;
+      & > * {
+         margin: 30px 0;
+         &:not(:last-child) {
+            margin-right: 20px;
+         }
+      }
+      &__img {
+         max-width: 88px;
+         height: 62px;
+      }
+   }
+   &-bottom {
+      padding: 10px 0;
+      color: rgba($white, .6);
+      background-color: $darkest-bg-color;
+      font-size: 12px;
+      .container {
+         & > * {
+            margin: 10px 0;
+            &:first-child {
+               margin-top: 0;
+            }
+            &:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+      &__line {
+         & > * {
             &:not(:last-child) {
-                margin-right: 20px;
+               margin-right: 30px;
             }
-        }
-        &__img {
-            max-width: 88px;
-            height: 62px;
-        }
-    }
-    &-bottom {
-        padding: 10px 0;
-        color: rgba($white, .6);
-        background-color: $darkest-bg-color;
-        font-size: 12px;
-        .container {
-            & > * {
-                margin: 10px 0;
-                &:first-child {
-                    margin-top: 0;
-                }
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-        &__line {
-            & > * {
-                &:not(:last-child) {
-                    margin-right: 30px;
-                }
-            }
-        }
-        &__link {
-            color: inherit;
-            text-decoration: underline;
-            &:hover,&:focus {
-                color: $white;
-            }
-        }
-    }
-    &-nav {
-        display: flex;
-        @media screen and(max-width: $tablet-size) {
-            display: flex;
-            flex-direction: column;
-        }
-
-        & > * {
-            flex-basis: 0;
-            flex-grow: 1;
-            &:not(:last-child) {
-                margin-right: 20px;
-                @media screen and(max-width: $tablet-size) {
-                    margin-right: 0;
-                    margin-bottom: 30px;
-                }
-            }
-        }
-        &__list {
-            & > * {
-                margin: 10px 0;
-                &:first-child {
-                    margin-top: 0;
-                }
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-        &__item {
-            font-size: 15px;
-            & > * {
-                &:not(:last-child) {
-                    margin-right: 10px;
-                }
-            }
-        }
-        &__description {
-            color: rgba($white, .6);
-            font-size: 12px;
-        }
-        &__link {
+         }
+      }
+      &__link {
+         color: inherit;
+         text-decoration: underline;
+         &:hover,&:focus {
             color: $white;
-            &:hover,&:focus {
-                color: darken($white, 20%);
+         }
+      }
+   }
+   &-nav {
+      display: flex;
+      @media screen and(max-width: $tablet-size) {
+         display: flex;
+         flex-direction: column;
+      }
+
+      & > * {
+         flex-basis: 0;
+         flex-grow: 1;
+         &:not(:last-child) {
+            margin-right: 20px;
+            @media screen and(max-width: $tablet-size) {
+               margin-right: 0;
+               margin-bottom: 30px;
             }
-        }
-    }
-    &-contacts {
-        position: relative;
-        padding-left: 20px;
+         }
+      }
+      &__list {
+         & > * {
+            margin: 10px 0;
+            &:first-child {
+               margin-top: 0;
+            }
+            &:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+      &__item {
+         font-size: 15px;
+         & > * {
+            &:not(:last-child) {
+               margin-right: 10px;
+            }
+         }
+      }
+      &__description {
+         color: rgba($white, .6);
+         font-size: 12px;
+      }
+      &__link {
+         color: $white;
+         &:hover,&:focus {
+            color: darken($white, 20%);
+         }
+      }
+   }
+   &-contacts {
+      position: relative;
+      padding-left: 20px;
 
-        &__icon {
-            position: absolute;
-            top: 0;
-            left: 0;
+      &__icon {
+         position: absolute;
+         top: 0;
+         left: 0;
 
-            fill: $white;
-            @include size(16px);
-        }
-        &__title {
-            display: block;
-            margin-bottom: 5px;
-            font-size: 15px;
-            font-weight: 600;
-        }
-        &__text {
-            font-size: 13px;
-            line-height: 1.35;
-        }
-    }
-    &-action {
-        display: inline-block;
-        position: relative;
-        height: 85px;
-    }
+         fill: $white;
+         @include size(16px);
+      }
+      &__title {
+         display: block;
+         margin-bottom: 5px;
+         font-size: 15px;
+         font-weight: 600;
+      }
+      &__text {
+         font-size: 13px;
+         line-height: 1.35;
+      }
+   }
+   &-action {
+      display: inline-block;
+      position: relative;
+      height: 85px;
+   }
 }
 
 .payment-types {
-    & > * {
-        margin: 5px 0;
-        &:not(:last-child) {
+   & > * {
+      margin: 5px 0;
+      &:not(:last-child) {
+         margin-right: 10px;
+      }
+   }
+   &__list {
+      display: flex;
+      & > * {
+         &:not(:last-child) {
             margin-right: 10px;
-        }
-    }
-    &__list {
-        display: flex;
-        & > * {
-            &:not(:last-child) {
-                margin-right: 10px;
-            }
-        }
-    }
-    &__icon {
-        fill: $white;
-        @include size(40px);
-    }
+         }
+      }
+   }
+   &__icon {
+      fill: $white;
+      @include size(40px);
+   }
 }
 
 .contacts-popup {
-    display: inline-block;
-    position: relative;
-    &.contacts-popup--active {
-        .contacts-popup__body-wrapper {
-            display: block;
-        }
-    }
-    &__toogle {
-        padding: 0;
-        border: none;
-        outline: none;
-        color: inherit;
-        background-color: transparent;
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    &__body {
-        display: flex;
-        position: absolute;
-        right: -10px;
-        bottom: 25px;
-        width: 780px;
-        height: 580px;
-        color: $base-text-color;
-        background-color: $white;
-        box-shadow: 0 0 30px 0 rgba(0,0,0, .2);
-        @media screen and (max-width: $phone-size) {
-            flex-direction: column;
-            top: 60px;
-            right: 20px;
-            bottom: 20px;
-            left: 20px;
-            width: auto;
-        }
-        &-wrapper {
-            display: none;
-            @media screen and (max-width: $phone-size) {
-                position: fixed;
-                z-index: 3;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-                background-color: rgba(#033, .3);
-            }
-        }
-
-        &:after {
-            position: absolute;
-            right: 20px;
-            bottom: -12px;
-            width: 0;
-            height: 0;
-            border-width: 12px 12px 0 12px;
-            border-style: solid;
-            border-color: $white transparent transparent transparent;
-            content: "";
-            @media screen and (max-width: $phone-size) {
-                display: none;
-            }
-        }
-    }
-    &__info {
-        width: 260px;
-        max-width: 260px;
-        padding: 40px 20px;
-
-        flex-basis: 260px;
-        @media screen and (max-width: $phone-size) {
-            width: auto;
-            max-width: 100%;
-            padding: 30px 20px;
-
-            flex: 1;
-            order: 1;
-        }
-    }
-    &__close {
-        display: flex;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        opacity: .4;
-        cursor: pointer;
-
-        align-items: center;
-        @include size(30px);
-        justify-content: center;
-        @media screen and (max-width:$phone-size) {
-            top: -30px;
+   display: inline-block;
+   position: relative;
+   &.contacts-popup--active {
+      .contacts-popup__body-wrapper {
+         display: block;
+      }
+   }
+   &__toogle {
+      padding: 0;
+      border: none;
+      outline: none;
+      color: inherit;
+      background-color: transparent;
+      text-decoration: underline;
+      cursor: pointer;
+   }
+   &__body {
+      display: flex;
+      position: absolute;
+      right: -10px;
+      bottom: 25px;
+      width: 890px;
+      height: 580px;
+      color: $base-text-color;
+      background-color: $white;
+      box-shadow: 0 0 30px 0 rgba(0,0,0, .2);
+      @media screen and (max-width:$tablet-size) {
+         width: 780px;
+      }
+      @media screen and (max-width: $phone-size) {
+         flex-direction: column;
+         top: 60px;
+         right: 20px;
+         bottom: 20px;
+         left: 20px;
+         width: auto;
+      }
+      &-wrapper {
+         display: none;
+         @media screen and (max-width: $phone-size) {
+            position: fixed;
+            z-index: 3;
+            top: 0;
             right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(#033, .3);
+         }
+      }
 
-            fill: $main-action-color;
-        }
-        &:hover,&:focus {
-            opacity: .7;
-        }
-        &-icon {
-            @include size(16px);
-        }
-    }
-    &__title {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 18px;
-        line-height: 1.44;
-    }
-    &__text {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 14px;
-        line-height: 18px;
-    }
-    &__label {
-        font-size: 14px;
-        font-weight: 700;
-    }
-    &__block {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-    &__map {
-        flex: 1;
-        @media screen and (max-width: $phone-size) {
-            order: 2;
-        }
-    }
+      &:after {
+         position: absolute;
+         right: 20px;
+         bottom: -12px;
+         width: 0;
+         height: 0;
+         border-width: 12px 12px 0 12px;
+         border-style: solid;
+         border-color: $white transparent transparent transparent;
+         content: "";
+         @media screen and (max-width: $phone-size) {
+            display: none;
+         }
+      }
+   }
+   &__info {
+      width: 260px;
+      max-width: 260px;
+      padding: 40px 20px;
+
+      flex-basis: 260px;
+      @media screen and (max-width: $phone-size) {
+         width: auto;
+         max-width: 100%;
+         padding: 30px 20px;
+
+         flex-basis: auto;
+         order: 1;
+      }
+   }
+   &__close {
+      display: flex;
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      opacity: .4;
+      cursor: pointer;
+
+      align-items: center;
+      @include size(30px);
+      justify-content: center;
+      @media screen and (max-width:$phone-size) {
+         top: -30px;
+         right: 0;
+
+         fill: $main-action-color;
+      }
+      &:hover,&:focus {
+         opacity: .7;
+      }
+      &-icon {
+         @include size(16px);
+      }
+   }
+   &__title {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.44;
+   }
+   &__text {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 18px;
+   }
+   &__label {
+      font-size: 14px;
+      font-weight: 700;
+   }
+   &__block {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      @media screen and (max-width: $phone-size) {
+         margin-bottom: 0;
+      }
+   }
+   &__map {
+      flex: 1;
+      @media screen and (max-width: $phone-size) {
+         order: 2;
+      }
+   }
 }

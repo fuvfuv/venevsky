@@ -1,0 +1,100 @@
+extends template/main
+
+block variables
+   - var title = 'Личный кабинет - мой профиль'
+   - var pageClass = 'cabinet-page'
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item
+               span.breadcrumbs__current Личный кабинет
+
+   section.s-cabinet
+      .container
+         .section-header
+            h1.title-page Личный кабинет
+         .cabinet
+            include pages/cabinet/navigation
+            .cabinet__main
+               form.profile-form.form(action="#" method="#")
+                  .form__body
+                     .profile-form__item
+                        span.profile-form__title Личные данные
+                        .form-line
+                           .form-group.form-group--width-xl
+                              .form-group__header
+                                 label.form-group__label Имя и Фамилия
+                              .form-group__body
+                                 input(type="text" name="fio" value="Понтелеймон Иванович").input-field
+                        .form-line
+                           .form-group
+                              .form-group__header
+                                 label.form-group__label Контактый телефон
+                              .form-group__body
+                                 input(type="tel" name="tel" value="+7(912)123-340-45").input-field
+                           .form-group
+                              .form-group__header
+                                 label.form-group__label Электронная почта
+                              .form-group__body
+                                 input(type="text" name="fio" value="Понтелеймон Иванович").input-field
+
+
+                     .profile-form__item
+                        span.profile-form__title Данные оплаты и доставки
+
+
+                        .form-line
+                           .form-group
+                              .form-group__header
+                                 label.form-group__label Предпочтительный способ получения
+                              .form-group__body
+                                 .select
+                                    .select__header
+                                       span.select__current Доставка до дома
+                                       .select__input
+                                          input(type="text" name="select-field" placeholder="Доставка до дома").input-field
+                                    .select__body
+                                       ul.select__list
+                                          li.select__item
+                                             span.select__value Доставка курьером
+                                             span.count-text 80 руб.
+                                          li.select__item
+                                             span.select__value Доставка почтой
+                                             span.count-text 10 руб.
+
+                           .form-group
+                              .form-group__header
+                                 label.form-group__label Предпочтительный способ оплаты
+                              .form-group__body
+                                 .select
+                                    .select__header
+                                       span.select__current Кредитной картой
+                                       .select__input
+                                          input(type="text" name="select-field" placeholder="Кредитной картой").input-field
+                                    .select__body
+                                       ul.select__list
+                                          li.select__item
+                                             span.select__value Кредитной картой
+                                          li.select__item
+                                             span.select__value Наличными
+
+                        .form-line
+                           .form-group.form-group--width-xl
+                              .form-group__header
+                                 label.form-group__label Адрес доставки
+                              .form-group__body
+                                 input(type="text" name="delivery-adress" value="Буларусь, Минск, Московский р-н, ул 1").input-field
+                  .form__footer
+                     .form-line
+                        .form-group
+                           input(type="submit", value="Сохранить изменения").btn.btn--size-l
+
+block script
+   script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+   script(src="js/ya-maps.js")
+

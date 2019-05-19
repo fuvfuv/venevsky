@@ -1,5 +1,4 @@
 .popup.mfp-hide#popup-upgrade
-   .hide-on-success
       .popup__header
          span.popup__title Что можно улучшить на этой странице ?
          .popup__close
@@ -9,17 +8,23 @@
             .form__body
                .form-line
                   .form-group.form-group--required
-                     label.form-group__label Вопрос или комментарий
-                     textarea(name="comment", cols="30", rows="10" placeholder="Здравствуйте, на этой странице можно..").textarea-field
+                     .form-group__header
+                        label.form-group__label Вопрос или комментарий
+                     .form-group__body
+                        textarea(name="comment", cols="30", rows="10" placeholder="Здравствуйте, на этой странице можно..").textarea-field
                .form-line
                   .form-group.form-group--width-m
-                     label.form-group__label Электронная почта
-                     input(type="email" name="email" placeholder="Введите свой email").input-field
+                     .form-group__header
+                        label.form-group__label Электронная почта
+                     .form-group__body
+                        input(type="email" name="email-non" placeholder="Введите свой email").input-field
                   span.form-line__info.form-line__info--size-s Мы быстрее исправим ошибку, если сможем связаться с вами для уточнения информации
                .form-line
                   .form-group.form-group--width-m.form-group--required
-                     label.form-group__label Контактый телефон
-                     input(type="tel" name="tel" placeholder="+7(912)123-340-45").input-field
+                     .form-group__header
+                        label.form-group__label Контактый телефон
+                     .form-group__body
+                        input(type="tel" name="tel" placeholder="+7(912)123-340-45").input-field
             .form__footer
                .form-line
                   .form-group.form-group--width-m

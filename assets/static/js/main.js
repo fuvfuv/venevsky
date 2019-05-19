@@ -78,6 +78,13 @@ $(document).ready(function() {
             .siblings('.location__body')
             .addClass('is-location-choose');
       });
+
+      $('body').click(function () {
+         var locationBody = $('.location__body');
+         if (locationBody.hasClass('is-location-choose')) {
+            locationBody.removeClass('is-location-choose');
+         }
+      });
    };
 
    var popupLink = function() {
@@ -98,17 +105,17 @@ $(document).ready(function() {
             $(this).validate({
                rules: {
                   name: 'required',
-                  phone: 'required',
-                  // email: 'required',
+                  tel: 'required',
+                  email: 'required',
                   password: 'required',
-                  // comment: 'required',
+                  comment: 'required',
                },
                messages: {
                   name: 'Введите корректное имя',
-                  phone: 'Введите корректный номер',
-                  // email: 'Введите корректный email',
+                  tel: 'Введите корректный номер',
+                  email: 'Введите корректный email',
                   password: 'Введите корректный пароль',
-                  // comment: 'Заполните поле',
+                  comment: 'Заполните поле',
                },
                errorPlacement: function(error, element) {
                   element.attr('placeholder', error[0].outerText);
@@ -198,7 +205,6 @@ $(document).ready(function() {
             });
          }
       }
-
 
       var catalogMobileNav = function() {
       catalogNavToggle('.catalog-mobile-nav__label', 'catalog-mobile-nav__item--active');
@@ -373,6 +379,25 @@ $(document).ready(function() {
       }
    };
 
+   var customSelect = function () {
+      $(document).on('click', '.select__header', function () {
+         var sel = $(this).parent();
+         if (sel.hasClass('select--active')) {
+            sel.removeClass('select--active');
+         } else {
+            $('.select').removeClass('select--active');
+            sel.addClass('select--active');
+         }
+        
+      });
+      $(document).on('click', '.select__item', function () {
+         var val = $(this).find('.select__value').text();
+         var sel = $(this).closest('.select');
+         sel.removeClass('select--active');
+         sel.find('.select__current').text(val);
+      });
+   }
+
    // slick-slider
    var slider = function() {
       var slideCount = $('.product-slider__count');
@@ -463,4 +488,5 @@ $(document).ready(function() {
    scrollColorCatalog();
    tabs();
    formAppendDown();
+   customSelect();
 });

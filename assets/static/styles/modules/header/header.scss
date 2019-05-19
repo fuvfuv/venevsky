@@ -1,132 +1,135 @@
 .header {
-    color: $white;
-    .container {
-        display: flex;
+   color: $white;
+   .container {
+      display: flex;
 
-        align-items: center;
-        justify-content: space-between;
-        @media screen and(max-width: $phone-size) {
-            justify-content: initial;
-        }
-    }
-    &-top {
-        padding: 12px 0;
-        color: $base-text-color;
-        @media screen and (max-width:$phone-size) {
-            display: none;
-        }
-        &__user-nav {
-            margin-left: auto;
-        }
-        &__main-nav {
-            margin-left: 100px;
-            @media screen and(max-width: $tablet-size) {
-                margin-left: 40px;
-            }
-        }
-    }
+      align-items: center;
 
-    &-main {
-        position: relative;
-        padding: 20px 0;
-        color: $white;
-        background-color: $dark-bg-color;
-        @media screen and(max-width: $phone-size) {
-            padding: 13px 0;
-        }
-        .container {
-            position: relative;
-            & > * {
-                &:not(:last-child) {
-                    margin-right: 40px;
-                    @media screen and(max-width: $tablet-size) {
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
-        &__search {
-            @media screen and(max-width: $tablet-size) {
-                order: 1;
-            }
-            @media screen and(max-width: $phone-size) {
-                order: 0;
-            }
-        }
-        &__header-mobile-phone {
-            @media screen and(max-width: $tablet-size) {
-                order: 1;
-            }
-        }
-        &__basket-prev {
-            margin-left: auto;
-            @media screen and(max-width: $tablet-size) {
-                margin-right: 30px;
-                margin-left: 0;
+      @media screen and(max-width: $phone-size) {
+         justify-content: initial;
+      }
+   }
+   &-top {
+      padding: 12px 0;
+      color: $base-text-color;
+      @media screen and (max-width:$phone-size) {
+         display: none;
+      }
+      &__user-nav {
+         margin-left: auto;
+      }
+      &__main-nav {
+         margin-left: 100px;
+         @media screen and(max-width: $tablet-size) {
+            margin-left: 40px;
+         }
+      }
+   }
 
-                order: 2;
-            }
-            @media screen and(max-width: $phone-size) {
-                margin-right: 0;
-            }
-        }
-        &__order-callback {
-            @media screen and(max-width: $tablet-size) {
-                order: 3;
-                &.order-callback {
-                    @media screen and(max-width: $phone-size) {
-                        display: none;
-                    }
-                }
-            }
-        }
-        &__logo {
-            &.logo {
-                @media screen and(max-width: $phone-size) {
-                    display: none;
-                }
-            }
-        }
-        @media screen and(max-width: $phone-size) {
-            &__catalog-nav {
-                margin-right: auto;
-                margin-left: 20px;
-            }
-        }
-    }
-    &-actions {
-        display: flex;
-
-        align-items: center;
-        @media screen and(max-width: $tablet-size) {
-            order: 3;
-        }
-        @media screen and(max-width: $phone-size) {
-            margin-left: auto;
-        }
-        & > * {
+   &-main {
+      position: relative;
+      padding: 20px 0;
+      color: $white;
+      background-color: $dark-bg-color;
+      @media screen and(max-width: $phone-size) {
+         padding: 13px 0;
+      }
+      .container {
+         position: relative;
+         & > * {
             &:not(:last-child) {
-                margin-right: 40px;
-                @media screen and(max-width: $tablet-size) {
-                    margin-right: 30px;
-                }
-                @media screen and(max-width: $tablet-size) {
-                    &.order-callback {
-                        margin-right: 0;
-                    }
-                }
+               margin-right: 40px;
+               @media screen and(max-width: $phone-size) {
+                  margin-right: 10px;
+               }
             }
-        }
-    }
+         }
+      }
+      &__search {
+         @media screen and(max-width: $tablet-size) {
+            order: 1;
+         }
+         @media screen and(max-width: $phone-size) {
+            order: 0;
+         }
+      }
+      &__header-mobile-phone {
+         @media screen and(max-width: $tablet-size) {
+            order: 1;
+         }
+      }
+      &__basket-prev {
+         margin-left: auto;
 
-    &-phone-mobile {
-        display: none;
-        @media screen and(max-width: $phone-size) {
-            display: block;
-        }
-        &__icon {
-            fill: $white;
-            @include size(23px);
-        }
-    }
+         flex-shrink: 0;
+         @media screen and(max-width: $tablet-size) {
+            margin-right: 30px;
+            margin-left: 0;
+
+            order: 2;
+         }
+         @media screen and(max-width: $phone-size) {
+            margin-right: 0;
+         }
+      }
+      &__order-callback {
+         @media screen and(max-width: $tablet-size) {
+            order: 3;
+            &.order-callback {
+               @media screen and(max-width: $phone-size) {
+                  display: none;
+               }
+            }
+         }
+      }
+      &__logo {
+         &.logo {
+            @media screen and(max-width: $phone-size) {
+               display: none;
+            }
+         }
+      }
+      @media screen and(max-width: $phone-size) {
+         &__catalog-nav {
+            margin-right: auto;
+            margin-left: 20px;
+         }
+      }
+   }
+   &-actions {
+      display: flex;
+      margin-left: auto;
+
+      align-items: center;
+      @media screen and(max-width: $tablet-size) {
+         order: 3;
+      }
+      @media screen and(max-width: $phone-size) {
+         margin-left: auto;
+      }
+      & > * {
+         &:not(:last-child) {
+            margin-right: 40px;
+            @media screen and(max-width: $tablet-size) {
+               margin-right: 30px;
+            }
+            @media screen and(max-width: $tablet-size) {
+               &.order-callback {
+                  margin-right: 0;
+               }
+            }
+         }
+      }
+   }
+
+   &-phone-mobile {
+      display: none;
+      @media screen and(max-width: $phone-size) {
+         display: block;
+      }
+      &__icon {
+         fill: $white;
+         @include size(23px);
+      }
+   }
 }

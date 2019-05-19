@@ -37,6 +37,16 @@
                flex-shrink: 0;
             }
          }
+         &-xl {
+            max-width: 400px;
+
+            flex: 0 0 400px;
+            @media screen and (max-width: $phone-size) {
+               max-width: 100%;
+
+               flex: 1;
+            }
+         }
       }
    }
    &__label {

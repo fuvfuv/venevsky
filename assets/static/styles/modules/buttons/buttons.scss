@@ -39,6 +39,7 @@
         &--fill {
             width: 100%;
             justify-content: center;
+            align-items: center;
         }
         &--transparent-green {
             color: $button-green-color;
@@ -74,6 +75,7 @@
             }
         }
         &--product {
+           border-radius: 0;
             @media screen and (max-width:$phone-size) {
                 display: flex;
             }

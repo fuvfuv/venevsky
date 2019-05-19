@@ -4,9 +4,6 @@
 .slider {
    &__body {
       position: relative;
-      @media screen and (max-width: $phone-size) {
-         padding: 0 20px;
-      }
    }
    &__header {
       display: flex;
@@ -16,7 +13,7 @@
    }
    &__count {
       margin-left: auto;
-      font-size: 14px;
+      font-size: 15px;
       @media screen and (max-width: $phone-size) {
          display: none;
       }

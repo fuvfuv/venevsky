@@ -1,0 +1,15 @@
+@import 'navigation';
+@import 'profile-form';
+
+
+.cabinet {
+   display: flex;
+   align-items: flex-start;
+   & > * {&:not(:last-child) {margin-right: 20px;}}
+   &__main {
+      background-color: $white;
+      border-radius: 4px;
+      padding: 40px;
+      flex: 1;
+   }
+}
