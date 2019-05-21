@@ -1,284 +1,284 @@
 .sub-category {
-    display: flex;
-    @media screen and (max-width: $phone-size) {
-        flex-direction: column;
-    }
-    & > * {
-        &:not(:last-child) {
-            margin-right: 20px;
-            @media screen and (max-width: $phone-size) {
-                margin-right: 0;
-                margin-bottom: 20px;
-            }
-        }
-    }
-    &__aside {
-        $asideWidth: 255px;
-        width: $asideWidth;
-        max-width: $asideWidth;
+   display: flex;
+   @media screen and (max-width: $phone-size) {
+       flex-direction: column;
+   }
+   & > * {
+       &:not(:last-child) {
+           margin-right: 20px;
+           @media screen and (max-width: $phone-size) {
+               margin-right: 0;
+               margin-bottom: 20px;
+           }
+       }
+   }
+   &__aside {
+       $asideWidth: 255px;
+       width: $asideWidth;
+       max-width: $asideWidth;
 
-        flex-basis: $asideWidth;
-        @media screen and (max-width:$tablet-size) {
-            $asideWidth: 225px;
-            width: $asideWidth;
-            max-width: $asideWidth;
+       flex-basis: $asideWidth;
+       @media screen and (max-width:$tablet-size) {
+           $asideWidth: 225px;
+           width: $asideWidth;
+           max-width: $asideWidth;
 
-            flex-basis: $asideWidth;
-        }
+           flex-basis: $asideWidth;
+       }
 
-        @media screen and (max-width: $phone-size) {
-            position: relative;
-            width: auto;
-            max-width: 100%;
+       @media screen and (max-width: $phone-size) {
+           position: relative;
+           width: auto;
+           max-width: 100%;
 
-            flex: 1;
-        }
-        &.sub-category__aside--active {
-            .sub-category-mobile-nav {
-                border-bottom: 1px solid #EDEDED;
-                border-radius: 4px 4px 0 0;
-                box-shadow: 0 0 30px 0 rgba(0, 0, 0, .2);
-            }
-            .tab--active {
-                box-shadow: 0 20px 30px -2px rgba(0, 0, 0, .2);
-            }
-        }
-        .tabs-content {
-            & > * {
-                margin: 20px 0;
-                @media screen and (max-width: $phone-size) {
-                    margin: 0;
-                }
-                &:first-child {
-                    margin-top: 0;
-                }
-                &:last-child {
-                    margin-bottom: 10px;
-                }
-            }
-        }
-        .tab {
-            &.often-looking-mobile {
-                display: none;
-                &.tab--active {
-                    @media screen and (max-width: $phone-size) {
-                        display: block;
-                    }
-                }
-            }
-            @media screen and (min-width: $phone-size) {
-                display: block;
-            }
-            @media screen and (max-width: $phone-size) {
-                position: absolute;
-                z-index: 10;
-                top: 100%;
-                right: 0;
-                left: 0;
-                background-color: $white;
-            }
-        }
-        .category-list {
-            &__wrapper {
-                @media screen and (max-width: $phone-size) {
-                    margin-bottom: 0;
-                }
-            }
-            &__title {
-                @media screen and (max-width: $phone-size) {
-                    display: none;
-                }
-            }
-        }
-    }
-    &__main {
-        flex: 1;
-        & > * {
-            margin: 20px 0;
-            &:first-child {
-                margin-top: 0;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-    &__status {
-        display: flex;
-        border-radius: 4px;
-        background-color: $white;
+           flex: 1;
+       }
+       &.sub-category__aside--active {
+           .sub-category-mobile-nav {
+               border-bottom: 1px solid #EDEDED;
+               border-radius: 4px 4px 0 0;
+               box-shadow: 0 0 30px 0 rgba(0, 0, 0, .2);
+           }
+           .tab--active {
+               box-shadow: 0 20px 30px -2px rgba(0, 0, 0, .2);
+           }
+       }
+       .tabs-content {
+           & > * {
+               margin: 20px 0;
+               @media screen and (max-width: $phone-size) {
+                   margin: 0;
+               }
+               &:first-child {
+                   margin-top: 0;
+               }
+               &:last-child {
+                   margin-bottom: 10px;
+               }
+           }
+       }
+       .tab {
+           &.often-looking-mobile {
+               display: none;
+               &.tab--active {
+                   @media screen and (max-width: $phone-size) {
+                       display: block;
+                   }
+               }
+           }
+           @media screen and (min-width: $phone-size) {
+               display: block;
+           }
+           @media screen and (max-width: $phone-size) {
+               position: absolute;
+               z-index: 10;
+               top: 100%;
+               right: 0;
+               left: 0;
+               background-color: $white;
+           }
+       }
+       .category-list {
+           &__wrapper {
+               @media screen and (max-width: $phone-size) {
+                   margin-bottom: 0;
+               }
+           }
+           &__title {
+               @media screen and (max-width: $phone-size) {
+                   display: none;
+               }
+           }
+       }
+   }
+   &__main {
+       flex: 1;
+       & > * {
+           margin: 20px 0;
+           &:first-child {
+               margin-top: 0;
+           }
+           &:last-child {
+               margin-bottom: 0;
+           }
+       }
+   }
+   &__status {
+       display: flex;
+       border-radius: 4px;
+       background-color: $white;
 
-        align-items: center;
-        justify-content: space-between;
-    }
-    &__tags {
-        &.tags {
-            @media screen and (max-width: $phone-size) {
-                display: none;
-            }
-        }
-    }
-    &__products {
-        display: flex;
-        padding: 20px 5px 0;
-        border-radius: 4px;
-        background-color: $white;
-        transition: none;
+       align-items: center;
+       justify-content: space-between;
+   }
+   &__tags {
+       &.tags {
+           @media screen and (max-width: $phone-size) {
+               display: none;
+           }
+       }
+   }
+   &__products {
+       display: flex;
+       padding: 20px 5px 0;
+       border-radius: 4px;
+       background-color: $white;
+       transition: none;
 
-        flex-wrap: wrap;
-        @media screen and (max-width: $tablet-size) {
-            flex-direction: column;
-            padding: 20px 15px;
-        }
-        & > * {
-            margin-bottom: 10px;
-            @media screen and (max-width: $tablet-size) {
-                margin: 15px 0;
-            }
-            &:first-child {
-                margin-top: 0;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-        .product-prev {
-            position: relative;
-            width: calc(100% / 3);
-            transition: none;
+       flex-wrap: wrap;
+       @media screen and (max-width: $tablet-size) {
+           flex-direction: column;
+           padding: 20px 15px;
+       }
+       & > * {
+           margin-bottom: 10px;
+           @media screen and (max-width: $tablet-size) {
+               margin: 15px 0;
+           }
+           &:first-child {
+               margin-top: 0;
+           }
+           &:last-child {
+               margin-bottom: 0;
+           }
+       }
+       .product-prev {
+           position: relative;
+           width: calc(100% / 3);
+           transition: none;
 
-            flex-basis: calc(100% / 3);
-            @media screen and (max-width: $tablet-size) {
-                width: 100%;
-                padding-left: 170px;
+           flex-basis: calc(100% / 3);
+           @media screen and (max-width: $tablet-size) {
+               width: 100%;
+               padding-left: 170px;
 
-                flex: 1;
-            }
-            @media screen and (max-width: $phone-size) {
-                padding-left: 0;
-            }
-            &:hover,&:focus {
-                z-index: 1;
-                border-bottom-color: transparent;
-                box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
-                @media screen and (max-width: $tablet-size) {
-                    border-bottom: 0;
-                    box-shadow: none;
-                }
-                .product-prev {
-                    &__footer {
-                        display: block;
-                    }
-                    &__body {
-                        position: relative;
-                        z-index: 1;
-                        background-color: $white;
-                    }
-                }
-            }
-            &__header {
-                @media screen and (max-width: $tablet-size) {
-                    position: absolute;
-                    left: 0;
-                    width: 170px;
-                    height: 100%;
-                    margin-bottom: 0;
-                    padding: 0 10px 0 0;
-                }
-                @media screen and (max-width: $phone-size) {
-                    position: static;
-                    width: 100%;
-                    padding-right: 0;
-                }
-            }
-            &__img {
-                @media screen and (max-width: $tablet-size) {
-                    max-height: 100%;
-                }
-                @media screen and (max-width: $phone-size) {
-                    max-height: 140px;
-                }
-            }
-            &__title {
-                @media screen and (max-width: $tablet-size) {
-                    height: auto;
-                    margin-bottom: 10px;
-                }
-            }
-            &__body {
-                @media screen and (max-width: $tablet-size) {
-                    padding: 0;
-                }
-            }
-            &__counter {
-                margin: 0 20px 15px;
-                @media screen and (max-width: $tablet-size) {
-                    margin: 0;
-                }
-            }
-            &__footer {
-                display: none;
-                position: absolute;
-                top: calc(100% + 4px);
-                top: 100%;
-                right: 0;
-                right: -2px;
-                left: -2px;
-                border: 2px solid $main-action-color;
-                border-top: 0;
-                opacity: 0;
-                background-color: $white;
-                box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
-                transition: none;
-                @media screen and (max-width: $tablet-size) {
-                    display: flex;
-                    position: static;
-                    margin-top: 15px;
-                    border: none;
-                    opacity: 1;
-                    box-shadow: none;
+               flex: 1;
+           }
+           @media screen and (max-width: $phone-size) {
+               padding-left: 0;
+           }
+           &:hover,&:focus {
+               z-index: 1;
+               border-bottom-color: transparent;
+               box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+               @media screen and (max-width: $tablet-size) {
+                   border-bottom: 0;
+                   box-shadow: none;
+               }
+               .product-prev {
+                   &__footer {
+                       display: block;
+                   }
+                   &__body {
+                       position: relative;
+                       z-index: 1;
+                       background-color: $white;
+                   }
+               }
+           }
+           &__header {
+               @media screen and (max-width: $tablet-size) {
+                   position: absolute;
+                   left: 0;
+                   width: 170px;
+                   height: 100%;
+                   margin-bottom: 0;
+                   padding: 0 10px 0 0;
+               }
+               @media screen and (max-width: $phone-size) {
+                   position: static;
+                   width: 100%;
+                   padding-right: 0;
+               }
+           }
+           &__img {
+               @media screen and (max-width: $tablet-size) {
+                   max-height: 100%;
+               }
+               @media screen and (max-width: $phone-size) {
+                   max-height: 140px;
+               }
+           }
+           &__title {
+               @media screen and (max-width: $tablet-size) {
+                   height: auto;
+                   margin-bottom: 10px;
+               }
+           }
+           &__body {
+               @media screen and (max-width: $tablet-size) {
+                   padding: 0;
+               }
+           }
+           &__counter {
+               margin: 0 20px 15px;
+               @media screen and (max-width: $tablet-size) {
+                   margin: 0;
+               }
+           }
+           &__footer {
+               display: none;
+               position: absolute;
+               top: calc(100% + 4px);
+               top: 100%;
+               right: 0;
+               right: -2px;
+               left: -2px;
+               border: 2px solid $main-action-color;
+               border-top: 0;
+               opacity: 0;
+               background-color: $white;
+               box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
+               transition: none;
+               @media screen and (max-width: $tablet-size) {
+                   display: flex;
+                   position: static;
+                   margin-top: 15px;
+                   border: none;
+                   opacity: 1;
+                   box-shadow: none;
 
-                    align-items: center;
-                    & > * {
-                        &:not(:last-child) {
-                            margin-right: 10px;
-                            @media screen and (max-width: $phone-size) {
-                                margin-right: 0;
-                                margin-bottom: 10px;
-                            }
-                        }
-                    }
-                }
-                @media screen and (max-width: $phone-size) {
-                    flex-direction: column;
-                }
-            }
-        }
-    }
-    &-mobile-nav {
-        display: none;
-        overflow: hidden;
-        border-radius: 4px;
-        @media screen and (max-width: $phone-size) {
-            display: flex;
-        }
-        & > * {
-            &:not(:last-child) {
-                border-right: 1px solid #EDEDED;
-            }
-        }
-        &__item {
-            padding: 10px 15px;
-            background-color: $white;
-            font-size: 14px;
-            white-space: nowrap;
-            cursor: pointer;
+                   align-items: center;
+                   & > * {
+                       &:not(:last-child) {
+                           margin-right: 10px;
+                           @media screen and (max-width: $phone-size) {
+                               margin-right: 0;
+                               margin-bottom: 10px;
+                           }
+                       }
+                   }
+               }
+               @media screen and (max-width: $phone-size) {
+                   flex-direction: column;
+               }
+           }
+       }
+   }
+   &-mobile-nav {
+       display: none;
+       overflow: hidden;
+       border-radius: 4px;
+       @media screen and (max-width: $phone-size) {
+           display: flex;
+       }
+       & > * {
+           &:not(:last-child) {
+               border-right: 1px solid #EDEDED;
+           }
+       }
+       &__item {
+           padding: 10px 15px;
+           background-color: $white;
+           font-size: 14px;
+           white-space: nowrap;
+           cursor: pointer;
 
-            flex: 1;
+           flex: 1;
 
-            &.tabs-list__item--active {
-                background-color: $main-action-color;
-            }
-        }
-    }
+           &.tabs-list__item--active {
+               background-color: $main-action-color;
+           }
+       }
+   }
 }

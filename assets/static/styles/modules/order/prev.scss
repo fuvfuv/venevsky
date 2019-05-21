@@ -4,8 +4,14 @@
    border-radius: 4px;
    font-size: 14px;
    line-height: 18px;
+   @media screen and (max-width: $phone-size) {
+      padding: 15px;
+   }
    & > * {
       margin: 20px 0;
+      @media screen and (max-width: $phone-size) {
+         margin: 15px 0;
+      }
       &:first-child {
          margin-top: 0;
       }
@@ -15,17 +21,46 @@
    }
    &__header {
       display: flex;
+      position: relative;
 
       align-items: baseline;
+      @media screen and (max-width: $tablet-size) {
+         flex-wrap: wrap;
+      }
+      @media screen and (max-width: $phone-size) {
+         flex-direction: column;
+         padding-right: 80px;
+      }
       & > * {
          &:not(:last-child) {
-            margin-right: 20px;
+            margin-right: 10px;
+         }
+      }
+   }
+   &__status {
+      &.order-status {
+         @media screen and (max-width: $tablet-size) {
+            width: 50%;
+            margin-top: 10px;
+         }
+         @media screen and (max-width: $phone-size) {
+            position: absolute;
+            top: 5px;
+            right: -15px;
+            width: 95px;
+            margin-right: 0;
+            margin-bottom: 10px;
+            font-size: 12px;
+            text-align: right;
          }
       }
    }
    &__body {
       & > * {
          margin: 20px 0;
+         @media screen and (max-width: $phone-size) {
+            margin: 15px 0;
+         }
          &:first-child {
             margin-top: 0;
          }
@@ -37,24 +72,43 @@
    &__number {
       font-size: 24px;
       line-height: 1.44;
+      @media screen and (max-width: $phone-size) {
+         font-size: 18px;
+      }
    }
    &__link {
       margin-left: auto;
+      @media screen and (max-width: $tablet-size) {
+         margin-left: 0;
+      }
    }
    &__block {
       display: flex;
 
       align-items: flex-start;
+      @media screen and (max-width: $tablet-size) {
+         flex-direction: column;
+      }
       & > * {
          &:not(:last-child) {
             margin-right: 15px;
+            @media screen and (max-width: $tablet-size) {
+               margin-right: 0;
+               margin-bottom: 15px;
+            }
          }
       }
    }
    &__item {
       flex: 1;
+      @media screen and (max-width: $tablet-size) {
+         width: 100%;
+      }
       & > * {
          margin: 10px 0;
+         @media screen and (max-width: $tablet-size) {
+            width: 100%;
+         }
          &:first-child {
             margin-top: 0;
          }
@@ -67,6 +121,12 @@
       margin-left: auto;
 
       flex: 0 0 auto;
+      @media screen and (max-width: $tablet-size) {
+         width: 100%;
+         margin-left: 0;
+
+         flex: 1;
+      }
       & > * {
          margin: 10px 0;
          &:first-child {
@@ -81,9 +141,19 @@
       display: flex;
 
       align-items: baseline;
+      @media screen and (max-width: $phone-size) {
+         flex-wrap: wrap;
+      }
       & > * {
          &:not(:last-child) {
             margin-right: 10px;
+            @media screen and (max-width: $phone-size) {
+               margin-right: 0;
+            }
+            @media screen and (max-width: $phone-size) {
+               margin-right: 0;
+               margin-bottom: 10px;
+            }
          }
       }
       &__label {
@@ -94,6 +164,11 @@
          text-transform: uppercase;
 
          flex: 0 0 135px;
+         @media screen and (max-width: $phone-size) {
+            width: 100%;
+
+            flex: 1;
+         }
       }
       &__body {
          display: flex;

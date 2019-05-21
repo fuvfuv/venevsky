@@ -1,2 +1,35 @@
 .tab.tab-cabinet-goods
-   p 2
+   .my-goods
+      .my-goods__status
+         .sort
+            .sort-item.sort-item--border-none
+               span.sort-item__title Сортировать:
+               .sort-action
+                  .sort-action__header
+                     span.sort-action__current сначала недавно закаанные
+                  .sort-action__body
+                     +sortItem('Ожидает подтверждения')
+                     +sortItem('Готовится к отправке')
+                     +sortItem('Отменен')
+         .page-counter
+            span.page-counter__text Страница
+            span.page-counter__number <b>1</b> из 7
+      .my-goods__body
+         include ../../../modules/product/prev-my-order/prev1
+         include ../../../modules/product/prev-my-order/prev1
+         include ../../../modules/product/prev-my-order/prev2
+         include ../../../modules/product/prev-my-order/prev2
+         include ../../../modules/product/prev-my-order/prev1
+         include ../../../modules/product/prev-my-order/prev1
+         include ../../../modules/product/prev-my-order/prev2
+         include ../../../modules/product/prev-my-order/prev2
+         include ../../../modules/product/prev-my-order/prev1
+         include ../../../modules/product/prev-my-order/prev1
+         include ../../../modules/product/prev-my-order/prev2
+         include ../../../modules/product/prev-my-order/prev1
+
+      .pagination
+         ul.pagination__list
+            each page in [1,2,3,4,5]
+               li.pagination__item
+                  a(href="#").pagination__link=page

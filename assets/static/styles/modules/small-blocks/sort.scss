@@ -22,6 +22,11 @@
          @media screen and (max-width: $phone-size) {
             display: none;
          }
+         &.sort-item__title--mobile-show {
+            @media screen and (max-width: $phone-size) {
+               display: block;
+            }
+         }
       }
       @media screen and (max-width: $tablet-size) {
          padding: 15px 10px;

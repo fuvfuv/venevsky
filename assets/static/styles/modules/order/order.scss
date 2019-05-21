@@ -28,6 +28,7 @@
       border-radius: 4px;
       font-size: 14px;
       line-height: 18px;
+      text-align: center;
       &.order-status {
          &--waiting {
             background-color: $order-status-waiting;
@@ -37,9 +38,11 @@
          }
          &--success {
             background-color: $order-status-success;
+            color: $white;
          }
          &--decline {
             background-color: $order-status-decline;
+            color: $white;
          }
       }
    }

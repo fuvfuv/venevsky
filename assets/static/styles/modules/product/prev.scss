@@ -2,35 +2,35 @@
    display: flex;
    @media screen and(max-width: $phone-size) {
       flex-direction: column;
-      }
+   }
 
    & > * {
       &:not(:last-child) {
          @media screen and(max-width: $phone-size) {
             margin-bottom: 50px;
-            }
          }
       }
+   }
 
    .product-prev {
       @media screen and(max-width: $tablet-size) {
          max-width: 33%;
-         }
+      }
 
       @media screen and(max-width: $phone-size) {
          max-width: 100%;
-         }
+      }
       &:nth-child(4n) {
          @media screen and(max-width: $tablet-size) {
             display: none;
-            }
+         }
 
          @media screen and(max-width: $phone-size) {
             display: block;
-            }
          }
       }
    }
+}
 
 .product-prev {
    border: 2px solid transparent;
@@ -43,14 +43,17 @@
       @media screen and(min-width: $tablet-size) {
          border-color: $main-action-color;
          box-shadow: 0 0 30px 0 rgba(0, 0, 0, .1);
-         }
+      }
 
       .product-prev {
          &__footer {
             opacity: 1;
-            }
          }
       }
+   }
+   &.product-prev--adaptive {
+
+   }
    &__header {
       display: flex;
       overflow: hidden;
@@ -60,12 +63,12 @@
       padding: 10px;
 
       align-items: center;
-      }
+   }
    &__body {
       display: block;
       padding: 20px;
       padding-top: 0;
-      }
+   }
    &__footer {
       margin-top: auto;
       border-radius: 0 0 4px 4px;
@@ -73,12 +76,12 @@
       transition: all linear .3s;
       @media screen and (max-width:$phone-size) {
          opacity: 1;
-         }
       }
+   }
    &__img {
       max-width: 100%;
       // max-height: 140px;
-      }
+   }
    &__marks {
       display: flex;
       position: absolute;
@@ -87,9 +90,9 @@
       & > * {
          &:not(:last-child) {
             margin-right: 10px;
-            }
          }
       }
+   }
    &__mark {
       height: 30px;
       padding: 0 4px;
@@ -100,26 +103,26 @@
          &--bg {
             &-yellow {
                background-color: $main-action-color;
-               }
+            }
             &-green {
                color: $white;
                background-color: #1FA349;
-               }
             }
          }
       }
+   }
    &__name {
       font-size: 14px;
       font-weight: 600;
-      }
+   }
    &__title {
       display: block;
       min-height: 55px;
       margin-bottom: 20px;
       @media screen and (max-width: $tablet-size) {
          min-height: 75px;
-         }
       }
+   }
    &__info {
       display: flex;
       margin-bottom: 15px;
@@ -133,7 +136,7 @@
 
          align-items: flex-start;
          flex-basis: 33%;
-         }
+      }
 
       &--wrapper {
          @media screen and (max-width: $tablet-size) {
@@ -141,10 +144,10 @@
             & > * {
                &:not(:last-child) {
                   margin-right: 5px;
-                  }
                }
             }
          }
+      }
 
       &.product-prev__info--wide {
          @media screen and (max-width:$tablet-size) {
@@ -153,8 +156,8 @@
 
             align-items: flex-start;
             flex: 1;
-            }
          }
+      }
       & > * {
          &:not(:last-child) {
             margin-right: 10px;
@@ -162,32 +165,32 @@
             @media screen and (max-width:$tablet-size) {
                margin-right: 0;
                margin-bottom: 10px;
-               }
             }
          }
+      }
       &-label {
          color: #1FA349;
          font-size: 12px;
          text-transform: uppercase;
-         }
       }
+   }
    &__price {
       display: flex;
       & > * {
          &:not(:last-child) {
             margin-right: 10px;
-            }
          }
+      }
       &-old {
          margin-left: 5px;
          padding: 0 5px;
          color: $text-info-color;
          font-size: 14px;
          text-decoration: line-through;
-         }
+      }
       &-current {
          font-size: 18px;
          font-weight: 800;
-         }
       }
    }
+}

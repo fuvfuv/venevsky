@@ -1,12 +1,9 @@
-.product-prev.product-prev--adaptive
+.product-order
    a(href="#").product-prev__header
-      .product-prev__marks
-         .product-prev__mark.product-prev__mark--bg-yellow -30%
-         .product-prev__mark.product-prev__mark--bg-green Хит
       img(src="images/content/products/product-prev-1.png", alt="превью товара").product-prev__img
 
-   .product-prev__body
-      a(href="#").product-prev__title
+   a(href="#").product-order__body
+      .product-prev__title
          span.product-prev__name Планка стыковачная 30x30x2000 мм, толщина 0.4, цвет грифтовый
          span.count-text 10
       .product-prev__info--wrapper
@@ -21,14 +18,6 @@
          span.product-prev__price-current 70 руб. за шт
 
    .product-prev__footer
-      .counter.product-prev__counter
-         .counter__btn.counter__btn--minus
-            +icon('minus', 'counter__icon')
-         .counter__current
-            span.counter__current-text 1
-            span.counter__current-descr шт.
-         .counter__btn.counter__btn--plus
-            +icon('plus', 'counter__icon')
       button.btn.btn--fill.btn--product
          +icon('shopping-cart', 'btn__icon')
          span В корзину

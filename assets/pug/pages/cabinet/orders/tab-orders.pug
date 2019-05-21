@@ -10,7 +10,7 @@ mixin sortItem(title, descr)
       .orders__header
          .sort
             .sort-item.sort-item--border-none
-               span.sort-item__title Cтатус:
+               span.sort-item__title.sort-item__title--mobile-show Cтатус:
                .sort-action
                   .sort-action__header
                      span.sort-action__current любой
@@ -27,11 +27,8 @@ mixin sortItem(title, descr)
          include ../../../modules/order/prev3
          include ../../../modules/order/prev4
 
-      .orders__footer
-         .pagination
-            ul.pagination__list
-               each page in [1,2,3,4,5, '...']
-                  li.pagination__item
-                     a(href="#").pagination__link=page
-               li.pagination__item.pagination__item--plus
-                  a(href="#").pagination__link +
+      .pagination
+         ul.pagination__list
+            each page in [1,2,3,4,5]
+               li.pagination__item
+                  a(href="#").pagination__link=page

@@ -49,7 +49,7 @@ $(document).ready(function() {
       if ($(window).width() < 768) {
          $('.js-categories-prev').slick({
             slidesToShow: 2,
-            slidesToScroll: 1,
+            slidesToScroll: 1
          });
       }
    };
@@ -91,7 +91,7 @@ $(document).ready(function() {
       $('.js-popup-link').magnificPopup({
          showCloseBtn: false,
          fixedBgPos: true,
-         fixedContentPos: true,
+         fixedContentPos: true
       });
 
       $(document).on('click', '.popup__close', function() {
@@ -108,14 +108,14 @@ $(document).ready(function() {
                   tel: 'required',
                   email: 'required',
                   password: 'required',
-                  comment: 'required',
+                  comment: 'required'
                },
                messages: {
                   name: 'Введите корректное имя',
                   tel: 'Введите корректный номер',
                   email: 'Введите корректный email',
                   password: 'Введите корректный пароль',
-                  comment: 'Заполните поле',
+                  comment: 'Заполните поле'
                },
                errorPlacement: function(error, element) {
                   element.attr('placeholder', error[0].outerText);
@@ -281,11 +281,11 @@ $(document).ready(function() {
                connect: true,
                range: {
                   min: 0,
-                  max: 10000,
+                  max: 10000
                },
                format: wNumb({
                   decimals: 0,
-                  thousand: '',
+                  thousand: ''
                }),
             });
          } else if (type === 'mm') {
@@ -294,10 +294,10 @@ $(document).ready(function() {
                connect: true,
                range: {
                   min: 0,
-                  max: 10,
+                  max: 10
                },
                format: wNumb({
-                  decimals: 2,
+                  decimals: 2
                }),
             });
          }
@@ -404,7 +404,6 @@ $(document).ready(function() {
       $(document).on('click', '.cabinet-nav__item--active', function (evt) {
          evt.preventDefault();
          $(this).closest('.cabinet-nav__list').toggleClass('cabinet-nav__list--active');
-
       });
    }
 
@@ -437,17 +436,17 @@ $(document).ready(function() {
                      settings: {
                         slidesToShow: 3,
                         arrows: true,
-                        dots: true,
-                     },
+                        dots: true
+                     }
                   },
                   {
                      breakpoint: 768,
                      settings: {
                         slidesToShow: 1,
-                        dots: true,
-                     },
-                  },
-               ],
+                        dots: true
+                     }
+                  }
+               ]
             });
       });
    };
@@ -462,7 +461,7 @@ $(document).ready(function() {
             adaptiveHeight: true,
             infinite: false,
             arrows: false,
-            dots: true,
+            dots: true
          });
       } else if ($(window).width() > 768 && sliderElement.hasClass('slick-initialized')) {
          sliderElement.slick('unslick');

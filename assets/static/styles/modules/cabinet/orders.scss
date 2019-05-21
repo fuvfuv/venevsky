@@ -3,9 +3,18 @@
       display: flex;
       padding: 0 40px;
       border-bottom: 1px solid #DEDEDE;
+      @media screen and (max-width: $tablet-size) {
+         padding: 0 30px;
+      }
+      @media screen and (max-width: $phone-size) {
+         padding: 0 15px;
+      }
       & > * {
          &:not(:last-child) {
             margin-right: 40px;
+            @media screen and (max-width: $phone-size) {
+               margin-right: 30px;
+            }
          }
       }
       &__item {
@@ -14,6 +23,10 @@
          font-size: 18px;
          line-height: 1.44;
          cursor: pointer;
+         @media screen and (max-width: $phone-size) {
+            padding: 10px 0;
+            font-size: 14px;
+         }
          &.tabs-list__item--active {
             border-bottom-color: $main-action-color;
             font-weight: 600;
@@ -25,4 +38,10 @@
 
 .tab-cabinet-orders {
    padding: 30px 40px;
+   @media screen and (max-width: $tablet-size) {
+      padding: 20px 30px;
+   }
+   @media screen and (max-width: $phone-size) {
+      padding: 15px 20px;
+   }
 }
