@@ -65,6 +65,9 @@
       align-items: baseline;
       justify-content: space-between;
    }
+   &--password {
+      position: relative;
+   }
 }
 
 .form-group-submit {

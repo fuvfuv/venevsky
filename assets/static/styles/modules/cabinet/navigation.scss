@@ -2,7 +2,22 @@
    width: 255px;
 
    flex: 0 0 255px;
+   @media screen and (max-width: $tablet-size) {
+      width: 225px;
+
+      flex: 0 0 225px;
+   }
+   @media screen and (max-width: $phone-size) {
+      width: 100%;
+      font-size: 100%;
+
+      flex: 1;
+   }
    &__list {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      border-radius: 4px;
       background-color: $white;
       & > * {
          &:first-child {
@@ -13,32 +28,67 @@
             border-radius: 0 0 4px 4px;
          }
       }
+      &:before {
+         display: none;
+         position: absolute;
+         top: 20px;
+         right: 10px;
+         width: 0;
+         height: 0;
+         border-width: 5px 5px 0 5px;
+         border-style: solid;
+         border-color: #000 transparent transparent transparent;
+         content: "";
+         @media screen and (max-width: $phone-size) {
+            display: block;
+         }
+      }
+      &.cabinet-nav__list--active {
+         &:before {
+            transform: rotate(180deg);
+         }
+         .cabinet-nav__item {
+            display: block;
+            border-bottom: 1px solid #dedede;
+         }
+      }
    }
    &__item {
       position: relative;
-      border: 1px solid transparent;
-      border-bottom-color: #DEDEDE;
+      width: 100%;
+
+      order: 1;
+      @media screen and (max-width: $phone-size) {
+         display: none;
+         border-bottom-color: transparent;
+      }
       &:after {
+         display: none;
          overflow: hidden;
          position: absolute;
          z-index: 1;
-         right: -10px;
-         display: none;
          top: 50%;
+         right: -10px;
          border-top: 2px solid $main-action-color;
          border-right: 2px solid $main-action-color;
          background-color: $white;
+         background-color: $white;
          content: "";
          transform: translateY(-50%) rotate(45deg);
-         background-color: $white;
 
          @include size(20px);
       }
       &.cabinet-nav__item--active {
-         border: 2px solid;
-         border-color: $main-action-color;
-         &:after {
+         @media screen and (min-width: $phone-size) {
+            border: 2px solid $main-action-color;
+            &:after {
+               display: block;
+            }
+         }
+         @media screen and (max-width: $phone-size) {
             display: block;
+
+            order: 0;
          }
       }
    }
@@ -47,5 +97,9 @@
       padding: 20px;
       font-size: 18px;
       line-height: 1.44;
+      @media screen and (max-width: $phone-size) {
+         padding: 10px 35px 10px 15px;
+         font-size: 16px;
+      }
    }
 }

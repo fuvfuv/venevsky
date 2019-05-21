@@ -365,8 +365,10 @@ $(document).ready(function() {
                $(this).closest('.sub-category__aside').removeClass('sub-category__aside--active');
             }
          }
-         $(this).toggleClass('tabs-list__item--active').siblings().removeClass('tabs-list__item--active');
-         $('.tabs-content .' + tabName).toggleClass('tab--active').siblings().removeClass('tab--active');
+         if (!$(this).hasClass('tabs-list__item--active')) {
+            $(this).toggleClass('tabs-list__item--active').siblings().removeClass('tabs-list__item--active');
+            $('.tabs-content .' + tabName).toggleClass('tab--active').siblings().removeClass('tab--active');
+         }
       });
    }
 
@@ -388,13 +390,21 @@ $(document).ready(function() {
             $('.select').removeClass('select--active');
             sel.addClass('select--active');
          }
-        
+
       });
       $(document).on('click', '.select__item', function () {
          var val = $(this).find('.select__value').text();
          var sel = $(this).closest('.select');
          sel.removeClass('select--active');
          sel.find('.select__current').text(val);
+      });
+   }
+
+   var cabinetMobileNav = function () {
+      $(document).on('click', '.cabinet-nav__item--active', function (evt) {
+         evt.preventDefault();
+         $(this).closest('.cabinet-nav__list').toggleClass('cabinet-nav__list--active');
+
       });
    }
 
@@ -489,4 +499,5 @@ $(document).ready(function() {
    tabs();
    formAppendDown();
    customSelect();
+   cabinetMobileNav();
 });

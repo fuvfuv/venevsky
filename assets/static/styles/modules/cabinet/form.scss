@@ -1,0 +1,60 @@
+.cabinet-form {
+   padding: 40px;
+
+   @media screen and (max-width: $phone-size) {
+      padding: 30px 15px;
+   }
+   .form {
+      max-width: 530px;
+      @media screen and (max-width: $phone-size) {
+         max-width: 100%;
+      }
+
+      &__body {
+         & > * {
+            margin: 50px 0;
+            @media screen and (max-width: $phone-size) {
+               margin: 40px 0;
+            }
+            &:first-child {
+               margin-top: 0;
+            }
+            &:last-child {
+               margin-bottom: 0;
+            }
+         }
+      }
+      &-group {
+         &:not(.form-group--width-xl) {
+            width: 255px;
+
+            flex: 1;
+            @media screen and (max-width: $phone-size) {
+               width: 100%;
+            }
+         }
+      }
+   }
+   &__title {
+      display: block;
+      font-size: 24px;
+      line-height: 1.44;
+      @media screen and (max-width: $phone-size) {
+         font-size: 18px;
+      }
+   }
+   &__item {
+      & > * {
+         margin: 20px 0;
+         &.profile-form__title {
+            margin-bottom: 30px;
+         }
+         &:first-child {
+            margin-top: 0;
+         }
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+}

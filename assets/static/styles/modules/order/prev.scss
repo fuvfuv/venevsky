@@ -1,0 +1,117 @@
+.order-prev {
+   padding: 20px;
+   border: 1px solid #EDEDED;
+   border-radius: 4px;
+   font-size: 14px;
+   line-height: 18px;
+   & > * {
+      margin: 20px 0;
+      &:first-child {
+         margin-top: 0;
+      }
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+   &__header {
+      display: flex;
+
+      align-items: baseline;
+      & > * {
+         &:not(:last-child) {
+            margin-right: 20px;
+         }
+      }
+   }
+   &__body {
+      & > * {
+         margin: 20px 0;
+         &:first-child {
+            margin-top: 0;
+         }
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+   &__number {
+      font-size: 24px;
+      line-height: 1.44;
+   }
+   &__link {
+      margin-left: auto;
+   }
+   &__block {
+      display: flex;
+
+      align-items: flex-start;
+      & > * {
+         &:not(:last-child) {
+            margin-right: 15px;
+         }
+      }
+   }
+   &__item {
+      flex: 1;
+      & > * {
+         margin: 10px 0;
+         &:first-child {
+            margin-top: 0;
+         }
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+   &__total {
+      margin-left: auto;
+
+      flex: 0 0 auto;
+      & > * {
+         margin: 10px 0;
+         &:first-child {
+            margin-top: 0;
+         }
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+   &-line {
+      display: flex;
+
+      align-items: baseline;
+      & > * {
+         &:not(:last-child) {
+            margin-right: 10px;
+         }
+      }
+      &__label {
+         width: 135px;
+         color: $label-color;
+         font-size: 12px;
+         letter-spacing: .5px;
+         text-transform: uppercase;
+
+         flex: 0 0 135px;
+      }
+      &__body {
+         display: flex;
+         flex-direction: column;
+      }
+      &__descr {
+         color: $text-info-color;
+      }
+   }
+   &-total-price {
+      display: flex;
+      padding-top: 10px;
+      border-top: 1px solid rgb(243, 237, 243);
+
+      justify-content: space-between;
+      &-number {
+         font-size: 16px;
+         font-weight: 600;
+      }
+   }
+}

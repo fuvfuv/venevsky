@@ -1,0 +1,28 @@
+.cabinet-orders {
+   &-nav {
+      display: flex;
+      padding: 0 40px;
+      border-bottom: 1px solid #DEDEDE;
+      & > * {
+         &:not(:last-child) {
+            margin-right: 40px;
+         }
+      }
+      &__item {
+         padding: 20px 0 15px;
+         border-bottom: 3px solid transparent;
+         font-size: 18px;
+         line-height: 1.44;
+         cursor: pointer;
+         &.tabs-list__item--active {
+            border-bottom-color: $main-action-color;
+            font-weight: 600;
+            cursor: default;
+         }
+      }
+   }
+}
+
+.tab-cabinet-orders {
+   padding: 30px 40px;
+}

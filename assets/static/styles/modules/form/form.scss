@@ -40,7 +40,6 @@
       display: flex;
 
       align-items: center;
-      //   flex-wrap: wrap;
 
       & > * {
          &:not(:last-child) {
@@ -69,6 +68,19 @@
             }
          }
       }
+      &.form-line--tablet-column {
+         @media screen and (max-width: $tablet-size) {
+            flex-direction: column;
+
+            align-items: flex-start;
+            & > * {
+               &:not(:last-child) {
+                  margin-right: 0;
+                  margin-bottom: 20px;
+               }
+            }
+         }
+      }
    }
    &-info {
       color: $text-info-color;
@@ -78,7 +90,6 @@
          text-decoration: underline;
       }
    }
-
    &-success {
       background-color: $light-bg-color;
       & > * {
@@ -158,6 +169,15 @@
          }
       }
    }
+   &-message {
+      &.form-message--success {
+         color: $link-color;
+      }
+      &__text {
+         font-size: 12px;
+         line-height: 1.44;
+      }
+   }
 }
 
 .fast-review-form {
@@ -195,39 +215,52 @@
 .form-password-requirements {
    display: flex;
    flex-direction: column;
-   font-size: 12px;
    margin-top: 10px;
-   & > * {margin: 5px 0; &:first-child {margin-top: 0;} &:last-child {margin-bottom: 0;}}
+   font-size: 12px;
+   & > * {
+      margin: 5px 0; &:first-child {
+         margin-top: 0;
+      } &:last-child {
+         margin-bottom: 0;
+      }
+   }
    &__list {
-      & > * {margin: 8px 0; &:first-child {margin-top: 0;} &:last-child {margin-bottom: 0;}}
+      & > * {
+         margin: 8px 0; &:first-child {
+            margin-top: 0;
+         } &:last-child {
+            margin-bottom: 0;
+         }
+      }
    }
    &__item {
       position: relative;
       padding-left: 10px;
       color: $label-text-color;
       &.form-password-requirements__item--success {
-         color: #10ae42;
+         color: #10AE42;
          &:before {
             top: 2px;
             left: 0;
             width: 6px;
             height: 9px;
-            background-color: transparent;
-            border: solid #10ae42;
+            border: solid #10AE42;
             border-width: 0 2px 2px 0;
+            background-color: transparent;
             content: "";
             transform: rotate(45deg);
          }
       }
       &:before {
-         content: "";
          display: block;
          position: absolute;
-         border-radius: 50%;
-         left: 0;
-         @include size(4px);
-         background-color: $label-text-color;
          top: 4px;
+         left: 0;
+         border-radius: 50%;
+         background-color: $label-text-color;
+         content: "";
+
+         @include size(4px);
       }
    }
 }

@@ -1,0 +1,39 @@
+extends template/main
+
+block variables
+   - var title = 'Личный кабинет - заказы'
+   - var pageClass = 'cabinet-page'
+   - var navPage = 'orders'
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item
+               span.breadcrumbs__current Личный кабинет
+
+   section.s-cabinet
+      .container
+         .section-header
+            h1.title-page Личный кабинет
+         .cabinet
+            include pages/cabinet/navigation
+            .cabinet__main
+               .cabinet-orders
+                  .cabinet-orders__header
+                     ul.cabinet-orders-nav.tabs-list
+                        li.tabs-list__item.tabs-list__item--active.cabinet-orders-nav__item(show-tab = "tab-cabinet-orders")
+                           span.cabinet-orders-nav__text Заказы
+                           span.count-text 25
+                        li.tabs-list__item.cabinet-orders-nav__item(show-tab = "tab-cabinet-goods")
+                           span.cabinet-orders-nav__text Купленные товары
+                           span.count-text 12
+                  .cabinet-orders__body.tabs-content
+                     include pages/cabinet/orders/tab-orders
+                     include pages/cabinet/orders/tab-goods
+
+
+

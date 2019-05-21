@@ -1,0 +1,46 @@
+@import "prev";
+
+.orders {
+   &__header {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+   }
+   &__body {
+      margin-bottom: 20px;
+      & > * {
+         margin: 20px 0;
+         &:first-child {
+            margin-top: 0;
+         }
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+}
+
+.order {
+   &-status {
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 14px;
+      line-height: 18px;
+      &.order-status {
+         &--waiting {
+            background-color: $order-status-waiting;
+         }
+         &--ready {
+            background-color: $order-status-ready;
+         }
+         &--success {
+            background-color: $order-status-success;
+         }
+         &--decline {
+            background-color: $order-status-decline;
+         }
+      }
+   }
+}

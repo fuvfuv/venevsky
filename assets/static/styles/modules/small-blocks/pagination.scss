@@ -3,6 +3,7 @@
         display: inline-flex;
         overflow: hidden;
         background-color: $white;
+        border: 1px solid #dedede;
     }
     &__item {
         border-left: 1px solid #F2F2F2;

@@ -1,0 +1,68 @@
+extends template/main
+
+block variables
+   - var title = 'Личный кабинет - настройки'
+   - var pageClass = 'cabinet-page'
+   - var navPage = 'settings'
+
+block content
+   section.s-breadcrumbs
+      .container
+         ul.breadcrumbs
+            li.breadcrumbs__item
+               a(href="index.html").breadcrumbs__home
+                  +icon('home', 'breadcrumbs__home-icon')
+            li.breadcrumbs__item
+               span.breadcrumbs__current Личный кабинет
+
+   section.s-cabinet
+      .container
+         .section-header
+            h1.title-page Личный кабинет
+         .cabinet
+            include pages/cabinet/navigation
+            .cabinet__main
+               .cabinet-form
+                  form.form(action="#" method="#")
+                     .form__body
+                        .cabinet-form__item
+                           span.cabinet-form__title Изменить пароль
+                           .form-line
+                              .form-group.form-group--width-m
+                                 .form-group__header
+                                    label(for="#").form-group__label Текущий пароль
+                                 .form-group__body
+                                    //- +icon('eye', 'form-password-icon-toggle')
+                                    input(type="password", placeholder="Введите пароль" name="password" minlength="8").input-field
+
+
+                           .form-line.form-line--tablet-column
+                              .form-group.form-group--width-m
+                                 .form-group__header
+                                    label(for="#").form-group__label Новый пароль
+                                 .form-group__body
+                                    //- +icon('eye', 'form-password-icon-toggle')
+                                    input(type="password", placeholder="Введите пароль" name="password" minlength="8").input-field
+                              .form-password-requirements
+                                 span.form-password-requirements__name Укажите сильный пароль:
+                                 ul.form-password-requirements__list
+                                    li.form-password-requirements__item Длина не менее 8 символов
+                                    li.form-password-requirements__item.form-password-requirements__item--success Включает буквы и цифры
+
+
+                        .cabinet-form__item
+                           .form-line
+                              .form-group.form-group--width-m
+                                 .form-group__header
+                                    label(for="#").form-group__label Повторить пароль
+                                 .form-group__body
+                                    //- +icon('eye', 'form-password-icon-toggle')
+                                    input(type="password", placeholder="Введите пароль" name="password" minlength="8").input-field
+                                 .form-group__footer
+                                    .form-message.form-message--success
+                                       span.form-message__text Пароли совпадают
+
+                     .form__footer
+                        .form-line
+                           .form-group
+                              input(type="submit", value="Изменить пароль").btn.btn--size-l

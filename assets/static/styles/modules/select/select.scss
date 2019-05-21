@@ -6,6 +6,10 @@
          &__header {
             border-color: $main-action-color;
             border-radius: 4px 4px 0 0;
+            &:after {
+               top: 50%;
+               transform: translateY(-50%) rotate(180deg);
+            }
          }
          &__body {
             display: block;

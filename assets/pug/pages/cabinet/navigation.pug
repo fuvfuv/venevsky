@@ -1,8 +1,15 @@
+mixin cabinetNavLink(link, text, page)
+   if (page === navPage)
+      li.cabinet-nav__item.cabinet-nav__item--active
+         a(href=link).cabinet-nav__link=text
+   else
+      li.cabinet-nav__item
+         a(href=link).cabinet-nav__link=text
+
+
 .cabinet-nav
    ul.cabinet-nav__list
-      li.cabinet-nav__item.cabinet-nav__item--active
-         a(href="#").cabinet-nav__link Мой профиль
-      li.cabinet-nav__item
-         a(href="#").cabinet-nav__link Мой заказы
-      li.cabinet-nav__item
-         a(href="#").cabinet-nav__link Мой настройки
+      +cabinetNavLink('cabinet.html', 'Мой профиль', 'profile')
+      +cabinetNavLink('cabinet-orders.html', 'Мой заказы', 'orders')
+      +cabinetNavLink('cabinet-settings.html', 'Настройки', 'settings')
+

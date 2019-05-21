@@ -1,0 +1,37 @@
+mixin sortItem(title, descr)
+   .sort-action__item
+      span.sort-action__name=title
+      if (descr)
+         span.sort-action__description=descr
+
+
+.tab.tab--active.tab-cabinet-orders
+   .orders
+      .orders__header
+         .sort
+            .sort-item.sort-item--border-none
+               span.sort-item__title Cтатус:
+               .sort-action
+                  .sort-action__header
+                     span.sort-action__current любой
+                  .sort-action__body
+                     +sortItem('Ожидает подтверждения')
+                     +sortItem('Готовится к отправке')
+                     +sortItem('Отменен')
+         .page-counter
+            span.page-counter__text Страница
+            span.page-counter__number <b>1</b> из 7
+      .orders__body
+         include ../../../modules/order/prev1
+         include ../../../modules/order/prev2
+         include ../../../modules/order/prev3
+         include ../../../modules/order/prev4
+
+      .orders__footer
+         .pagination
+            ul.pagination__list
+               each page in [1,2,3,4,5, '...']
+                  li.pagination__item
+                     a(href="#").pagination__link=page
+               li.pagination__item.pagination__item--plus
+                  a(href="#").pagination__link +
