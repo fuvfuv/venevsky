@@ -1,153 +1,154 @@
 .color-block {
-    display: block;
-    position: relative;
+   display: block;
+   position: relative;
 
-    @include size(12px);
-    &.color-block {
-        &--big {
-            @include size(20px);
-        }
-        &--xxl {
-            @include size(160px);
-        }
-    }
+@include size(12px);
+
+   &.color-block {
+      &--big {
+         @include size(20px);
+      }
+      &--xxl {
+         @include size(160px);
+      }
+   }
 }
 
 .colors-catalog {
-    overflow: auto;
-    position: relative;
-    padding-left: 30px;
+   overflow: auto;
+   position: relative;
+   padding-left: 30px;
 
-    flex: 1;
-    & > * {
-        margin: 30px 0;
-        &:first-child {
+   flex: 1;
+   & > * {
+      margin: 30px 0;
+      &:first-child {
+         margin-top: 0;
+      }
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+   &__input {
+      width: 270px;
+   }
+   &__block {
+      & > * {
+         margin: 20px 0;
+         &:first-child {
             margin-top: 0;
-        }
-        &:last-child {
+         }
+         &:last-child {
             margin-bottom: 0;
-        }
-    }
-    &__input {
-        width: 270px;
-    }
-    &__block {
-        & > * {
-            margin: 20px 0;
-            &:first-child {
-                margin-top: 0;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
-    &__title {
-        margin-bottom: 15px;
-    }
-    &__footer {
-        display: flex;
-        position: relative;
-        z-index: 6;
-        padding: 20px 30px;
-        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+         }
+      }
+   }
+   &__title {
+      margin-bottom: 15px;
+   }
+   &__footer {
+      display: flex;
+      position: relative;
+      z-index: 6;
+      padding: 20px 30px;
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
 
-        align-items: center;
-        flex-basis: auto;
-        & > * {
-            &:not(:last-child) {
-                margin-right: 30px;
-            }
-        }
-    }
-    &-list {
-        display: flex;
+      align-items: center;
+      flex-basis: auto;
+      & > * {
+         &:not(:last-child) {
+            margin-right: 30px;
+         }
+      }
+   }
+   &-list {
+      display: flex;
 
-        flex-wrap: wrap;
-        & > * {
-            width: calc(100% / 5);
-            margin: 5px 0;
+      flex-wrap: wrap;
+      & > * {
+         width: calc(100% / 5);
+         margin: 5px 0;
 
-            break-inside: avoid;
-            @media screen and (max-width: $tablet-size) {
-                width: calc(100% / 3);
+         break-inside: avoid;
+         @media screen and (max-width: $tablet-size) {
+            width: calc(100% / 3);
+         }
+         @media screen and (max-width: $phone-size) {
+            width: calc(100% / 2);
+         }
+         &:first-child {
+            margin-top: 0;
+         }
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+      &__item {
+         &:hover,&:focus {
+            .checkbox__text {
+               text-decoration: underline;
             }
-            @media screen and (max-width: $phone-size) {
-                width: calc(100% / 2);
+            .colors-catalog-tooltip {
+               display: flex;
             }
-            &:first-child {
-                margin-top: 0;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-        &__item {
-            &:hover,&:focus {
-                .checkbox__text {
-                    text-decoration: underline;
-                }
-                .colors-catalog-tooltip {
-                    display: flex;
-                }
-            }
-        }
-    }
-    &-tooltip {
-        display: flex;
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        bottom: calc(100% + 15px);
-        left: 50%;
-        padding: 10px;
-        border-radius: 4px;
-        background-color: $white;
-        box-shadow: 0 0 30px 0 rgba(0, 0, 0, .2);
-        font-size: 14px;
-        transform: translateX(-50%);
-        &:after {
-            position: absolute;
-            z-index: -1;
-            bottom: -16px;
-            left: 50%;
-            background-color: $white;
-            content: "";
-            transform: translateX(-50%);
-            transform: translateY(-50%) rotate(45deg);
+         }
+      }
+   }
+   &-tooltip {
+      display: flex;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      bottom: calc(100% + 15px);
+      left: 50%;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: $white;
+      box-shadow: 0 0 30px 0 rgba(0, 0, 0, .2);
+      font-size: 14px;
+      transform: translateX(-50%);
+      &:after {
+         position: absolute;
+         z-index: -1;
+         bottom: -16px;
+         left: 50%;
+         background-color: $white;
+         content: "";
+         transform: translateX(-50%);
+         transform: translateY(-50%) rotate(45deg);
 
-            @include size(16px);
-        }
-        & > * {
-            margin: 3px 0;
-            &:first-child {
-                margin-top: 0;
-            }
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-        &__name {
-            font-weight: 600;
-        }
-    }
+@include size(16px);
+      }
+      & > * {
+         margin: 3px 0;
+         &:first-child {
+            margin-top: 0;
+         }
+         &:last-child {
+            margin-bottom: 0;
+         }
+      }
+      &__name {
+         font-weight: 600;
+      }
+   }
 }
 
 
 // Добавление тени при скролле попапа у каталога (выбор цветовой палитры)
 #popup-colors-catalog {
-    &.colors-catalog--scrolled {
-        .popup {
-            &__header {
-                box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, .3);
-            }
-        }
+   &.colors-catalog--scrolled {
+      .popup {
+         &__header {
+            box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, .3);
+         }
+      }
 
-        .colors-catalog {
-            padding-bottom: 30px;
-            &__footer {
-                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .3);
-            }
-        }
-    }
+      .colors-catalog {
+         padding-bottom: 30px;
+         &__footer {
+            box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .3);
+         }
+      }
+   }
 }

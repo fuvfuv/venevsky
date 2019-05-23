@@ -1,166 +1,166 @@
 .sales-leaders {
-    &__row {
-        display: flex;
-        @media screen and (max-width: $phone-size) {
-            flex-direction: column;
-        }
-        & > * {
-            &:not(:last-child) {
-                margin-right: 20px;
-                @media screen and (max-width: $phone-size) {
-                    margin-right: 0;
-                    margin-bottom: 20px;
-                }
+   &__row {
+      display: flex;
+      @media screen and (max-width: $phone-size) {
+         flex-direction: column;
+      }
+      & > * {
+         &:not(:last-child) {
+            margin-right: 20px;
+            @media screen and (max-width: $phone-size) {
+               margin-right: 0;
+               margin-bottom: 20px;
             }
-        }
-    }
-    &__col {
-        flex: 1;
-    }
+         }
+      }
+   }
+   &__col {
+      flex: 1;
+   }
 }
 
 .sales-leader {
-    display: block;
-    width: 100%;
-    height: 240px;
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 2px solid transparent;
-    border-radius: 4px;
-    background-color: $white;
-    transition: all linear .3s;
-    @media screen and (max-width: $phone-size) {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        margin-bottom: 0;
+   display: block;
+   width: 100%;
+   height: 240px;
+   margin-bottom: 20px;
+   padding: 20px;
+   border: 2px solid transparent;
+   border-radius: 4px;
+   background-color: $white;
+   transition: all linear .3s;
+   @media screen and (max-width: $phone-size) {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      margin-bottom: 0;
 
-        align-items: center;
-    }
-    &:hover,&:focus {
-        border-color: $main-action-color;
-    }
+      align-items: center;
+   }
+   &:hover,&:focus {
+      border-color: $main-action-color;
+   }
 
-    &.sales-leader--big {
-        height: 400px;
+   &.sales-leader--big {
+      height: 400px;
 
-        @media screen and (max-width: $tablet-size) {
-            height: 300px;
-        }
-        @media screen and (max-width:$phone-size) {
-            display: block;
-            height: auto;
-            text-align: center;
-            &:first-child {
-                margin-bottom: 20px;
+      @media screen and (max-width: $tablet-size) {
+         height: 300px;
+      }
+      @media screen and (max-width:$phone-size) {
+         display: block;
+         height: auto;
+         text-align: center;
+         &:first-child {
+            margin-bottom: 20px;
+         }
+         &:last-child {
+            margin-top: 20px;
+         }
+      }
+      .sales-leader {
+         &__name {
+            font-size: 22px;
+            @media screen and (max-width:$phone-size) {
+               font-size: 16px;
             }
-            &:last-child {
-                margin-top: 20px;
-            }
-        }
-        .sales-leader {
-            &__name {
-                font-size: 22px;
-                @media screen and (max-width:$phone-size) {
-                    font-size: 16px;
-                }
-            }
-            &__img {
-                height: 280px;
-                @media screen and (max-width:$tablet-size) {
-                    height: 180px;
-                }
-                @media screen and (max-width:$phone-size) {
-                    width: 100%;
-
-                    flex: 1;
-                }
-
-                img {
-                    max-height: 280px;
-                    @media screen and (max-width:$tablet-size) {
-                        height: 180px;
-                    }
-                }
-            }
+         }
+         &__img {
+            height: 280px;
             @media screen and (max-width:$tablet-size) {
-                padding: 10px;
+               height: 180px;
             }
-        }
-    }
-    &__img {
-        display: flex;
-        height: 140px;
-        margin-bottom: 10px;
+            @media screen and (max-width:$phone-size) {
+               width: 100%;
 
-        align-items: center;
-        justify-content: center;
-        @media screen and (max-width:$phone-size) {
-            width: 40%;
+               flex: 1;
+            }
 
-            flex: 0 0 40%;
-        }
-        img {
-            max-width: 100%;
-            max-height: 140px;
-        }
-    }
-    &__name {
-        font-weight: 700;
-    }
+            img {
+               max-height: 280px;
+               @media screen and (max-width:$tablet-size) {
+                  height: 180px;
+               }
+            }
+         }
+         @media screen and (max-width:$tablet-size) {
+            padding: 10px;
+         }
+      }
+   }
+   &__img {
+      display: flex;
+      height: 140px;
+      margin-bottom: 10px;
+
+      align-items: center;
+      justify-content: center;
+      @media screen and (max-width:$phone-size) {
+         width: 40%;
+
+         flex: 0 0 40%;
+      }
+      img {
+         max-width: 100%;
+         max-height: 140px;
+      }
+   }
+   &__name {
+      font-weight: 700;
+   }
 }
 
 .sales-leaders-products {
-    overflow: hidden;
-    border-radius: 4px;
-    background-color: $white;
-    &__row {
-        display: flex;
-        border-bottom: 1px solid #F2F2F2;
-        @media screen and (max-width: $phone-size) {
-            flex-direction: column;
-        }
-        &:last-child {
-            border-bottom: 0;
-        }
-    }
-    &__col {
-        border-right: 1px solid #F2F2F2;
+   overflow: hidden;
+   border-radius: 4px;
+   background-color: $white;
+   &__row {
+      display: flex;
+      border-bottom: 1px solid #F2F2F2;
+      @media screen and (max-width: $phone-size) {
+         flex-direction: column;
+      }
+      &:last-child {
+         border-bottom: 0;
+      }
+   }
+   &__col {
+      border-right: 1px solid #F2F2F2;
 
-        flex: 1;
-        @media screen and (max-width: $phone-size) {
-            border-right: 0;
-            border-bottom: 1px solid #F2F2F2;
-        }
-        &:last-child {
-            border-right: 0;
-            @media screen and (max-width: $phone-size) {
-                border-bottom: 0;
-            }
-        }
-        &:first-child {
-            @media screen and (max-width: $tablet-size) {
-                display: none;
-            }
-            @media screen and (max-width: $phone-size) {
-                display: block;
-            }
-        }
-        &.sales-leaders-products__col {
-            &--wide {
-                flex: 2;
-            }
-        }
-    }
-    .product-prev {
-        padding: 20px 0;
-        &__footer {
-            padding: 0 20px;
-            opacity: 1;
-            .btn {
-                width: auto;
-                border-radius: 4px;
-            }
-        }
-    }
+      flex: 1;
+      @media screen and (max-width: $phone-size) {
+         border-right: 0;
+         border-bottom: 1px solid #F2F2F2;
+      }
+      &:last-child {
+         border-right: 0;
+         @media screen and (max-width: $phone-size) {
+            border-bottom: 0;
+         }
+      }
+      &:first-child {
+         @media screen and (max-width: $tablet-size) {
+            display: none;
+         }
+         @media screen and (max-width: $phone-size) {
+            display: block;
+         }
+      }
+      &.sales-leaders-products__col {
+         &--wide {
+            flex: 2;
+         }
+      }
+   }
+   .product-prev {
+      padding: 20px 0;
+      &__footer {
+         padding: 0 20px;
+         opacity: 1;
+         .btn {
+            width: auto;
+            border-radius: 4px;
+         }
+      }
+   }
 }

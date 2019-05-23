@@ -1,59 +1,59 @@
 .tags {
-    display: flex;
-    font-size: 15px;
-    line-height: 18px;
+   display: flex;
+   font-size: 15px;
+   line-height: 18px;
 
-    align-items: flex-start;
-    &.tags--active {
-        .tags__body {
-            height: auto;
-        }
-    }
-    & > * {
-        &:not(:last-child) {
+   align-items: flex-start;
+   &.tags--active {
+      .tags__body {
+         height: auto;
+      }
+   }
+   & > * {
+      &:not(:last-child) {
+         margin-right: 10px;
+      }
+   }
+   &__title {
+      padding-top: 15px;
+      font-weight: 600;
+
+      flex-shrink: 0;
+   }
+   &__body {
+      display: flex;
+      overflow: hidden;
+      height: 46px;
+
+      align-items: flex-start;
+      flex-wrap: wrap;
+      & > * {
+         &:not(:last-child) {
             margin-right: 10px;
-        }
-    }
-    &__title {
-        padding-top: 15px;
-        font-weight: 600;
+            margin-bottom: 10px;
+         }
+         &.tags__title {
+            margin-right: 15px;
+         }
+      }
+   }
+   &__toggle {
+      margin-left: auto;
+      padding-top: 12px;
+      border-bottom: 1px solid $link-color;
+      color: $link-color;
+      font-weight: 600;
+      cursor: pointer;
 
-        flex-shrink: 0;
-    }
-    &__body {
-        display: flex;
-        overflow: hidden;
-        height: 46px;
-
-        align-items: flex-start;
-        flex-wrap: wrap;
-        & > * {
-            &:not(:last-child) {
-                margin-right: 10px;
-                margin-bottom: 10px;
-            }
-            &.tags__title {
-                margin-right: 15px;
-            }
-        }
-    }
-    &__toggle {
-        margin-left: auto;
-        padding-top: 12px;
-        border-bottom: 1px solid $link-color;
-        color: $link-color;
-        font-weight: 600;
-        cursor: pointer;
-
-        flex-shrink: 0;
-    }
+      flex-shrink: 0;
+   }
 }
 
 .tag {
-    display: inline-block;
-    max-width: 185px;
-    padding: 5px 10px;
-    border-radius: 4px;
-    background-color: $white;
-    cursor: pointer;
+   display: inline-block;
+   max-width: 185px;
+   padding: 5px 10px;
+   border-radius: 4px;
+   background-color: $white;
+   cursor: pointer;
 }

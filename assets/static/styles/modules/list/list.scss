@@ -1,0 +1,15 @@
+.preview-list {
+   padding: 20px;
+   & > * {
+      &:not(:last-child) {
+         margin-bottom: 10px;
+      }
+   }
+}
+
+.preview-list li a {
+   font-size: 18px;
+   &:hover {
+      text-decoration: underline;
+   }
+}

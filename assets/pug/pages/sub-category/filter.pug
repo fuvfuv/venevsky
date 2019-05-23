@@ -47,10 +47,6 @@ mixin checkboxLine(text, count, color)
 
          .filter-item
             .filter-item__header
-               span.filter-item__title Материал
-            .filter-item__body
-         .filter-item.filter-item--active
-            .filter-item__header
                span.filter-item__title Полимерное покрытие
             .filter-item__body
                ul.filter-list
@@ -59,9 +55,7 @@ mixin checkboxLine(text, count, color)
                   +checkboxLine('С рисунком под дерево','456')
                   +checkboxLine('С рисунком под камень','456')
                   +checkboxLine('С рисунком под кирпич','456')
-               a(href="#popup-colors-catalog").filter__link.js-popup-link Выбрать в каталоге
-                  span.count-text 473
-         .filter-item.filter-item--active
+         .filter-item
             .filter-item__header
                span.filter-item__title Цвет
             .filter-item__body
@@ -72,7 +66,7 @@ mixin checkboxLine(text, count, color)
                   +checkboxLine('Красный','456', '#ff4d63')
                   +checkboxLine('Серый','456', '#bababa')
                   +checkboxLine('Черный','456', '#000000')
-         .filter-item.filter-item--active
+         .filter-item
             .filter-item__header
                span.filter-item__title Коллекция
             .filter-item__body
@@ -85,7 +79,7 @@ mixin checkboxLine(text, count, color)
                   +checkboxLine('Времена года','456')
                .filter__toggle
                   span.filter__toggle-text Показать еще
-         .filter-item.filter-item--active
+         .filter-item
             .filter-item__header
                span.filter-item__title Спецпредложения
             .filter-item__body

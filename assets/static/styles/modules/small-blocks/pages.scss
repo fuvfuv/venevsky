@@ -1,7 +1,7 @@
 .categories-page {
-    .categories {
-        @media screen and (max-width: $phone-size) {
-            display: none;
-        }
-    }
+   .categories {
+      @media screen and (max-width: $phone-size) {
+         display: none;
+      }
+   }
 }

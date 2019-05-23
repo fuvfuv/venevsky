@@ -3,4 +3,7 @@
    &.tab--active {
       display: block;
    }
+   .category-list__item:last-child {
+      margin-top: 10px;
+   }
 }

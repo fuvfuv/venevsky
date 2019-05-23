@@ -212,6 +212,7 @@
       color: $base-text-color;
       background-color: $white;
       box-shadow: 0 0 30px 0 rgba(0,0,0, .2);
+
       @media screen and (max-width:$tablet-size) {
          width: 780px;
       }

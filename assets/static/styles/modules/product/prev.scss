@@ -51,9 +51,6 @@
          }
       }
    }
-   &.product-prev--adaptive {
-
-   }
    &__header {
       display: flex;
       overflow: hidden;
@@ -80,7 +77,10 @@
    }
    &__img {
       max-width: 100%;
-      // max-height: 140px;
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+         height: 100%;
+         margin: auto;
+      }
    }
    &__marks {
       display: flex;

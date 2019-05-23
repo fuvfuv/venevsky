@@ -49,7 +49,7 @@ $(document).ready(function() {
       if ($(window).width() < 768) {
          $('.js-categories-prev').slick({
             slidesToShow: 2,
-            slidesToScroll: 1
+            slidesToScroll: 1,
          });
       }
    };
@@ -79,7 +79,7 @@ $(document).ready(function() {
             .addClass('is-location-choose');
       });
 
-      $('body').click(function () {
+      $('body').click(function() {
          var locationBody = $('.location__body');
          if (locationBody.hasClass('is-location-choose')) {
             locationBody.removeClass('is-location-choose');
@@ -91,7 +91,7 @@ $(document).ready(function() {
       $('.js-popup-link').magnificPopup({
          showCloseBtn: false,
          fixedBgPos: true,
-         fixedContentPos: true
+         fixedContentPos: true,
       });
 
       $(document).on('click', '.popup__close', function() {
@@ -108,14 +108,14 @@ $(document).ready(function() {
                   tel: 'required',
                   email: 'required',
                   password: 'required',
-                  comment: 'required'
+                  comment: 'required',
                },
                messages: {
                   name: 'Введите корректное имя',
                   tel: 'Введите корректный номер',
                   email: 'Введите корректный email',
                   password: 'Введите корректный пароль',
-                  comment: 'Заполните поле'
+                  comment: 'Заполните поле',
                },
                errorPlacement: function(error, element) {
                   element.attr('placeholder', error[0].outerText);
@@ -184,29 +184,29 @@ $(document).ready(function() {
       });
    };
 
-   var breadcrumbsNav = function () {
-      $(document).on('click', '.breadcrumbs__toggle', function (evt) {
+   var breadcrumbsNav = function() {
+      $(document).on('click', '.breadcrumbs__toggle', function(evt) {
          if ($(window).width() > 767) {
             evt.preventDefault();
          }
       });
-   }
+   };
 
-   var dropDown = function () {
-      $(document).on('click', '.dropdown__toggle', function (evt) {
+   var dropDown = function() {
+      $(document).on('click', '.dropdown__toggle', function(evt) {
          var dropDown = $(this).parent();
          dropDown.toggleClass('dropdown--show');
       });
-         if ($(window).width() > 767) {
-            $('body').click(function (evt) {
-               if ($(evt.target).closest('.dropdown--show').length === 0) {
-                  $('.breadcrumbs').removeClass('dropdown--show');
-               }
-            });
-         }
+      if ($(window).width() > 767) {
+         $('body').click(function(evt) {
+            if ($(evt.target).closest('.dropdown--show').length === 0) {
+               $('.breadcrumbs').removeClass('dropdown--show');
+            }
+         });
       }
+   };
 
-      var catalogMobileNav = function() {
+   var catalogMobileNav = function() {
       catalogNavToggle('.catalog-mobile-nav__label', 'catalog-mobile-nav__item--active');
       catalogNavToggle('.catalog-mobile-subnav__label', 'catalog-mobile-subnav__item--active');
    };
@@ -281,11 +281,11 @@ $(document).ready(function() {
                connect: true,
                range: {
                   min: 0,
-                  max: 10000
+                  max: 10000,
                },
                format: wNumb({
                   decimals: 0,
-                  thousand: ''
+                  thousand: '',
                }),
             });
          } else if (type === 'mm') {
@@ -294,41 +294,41 @@ $(document).ready(function() {
                connect: true,
                range: {
                   min: 0,
-                  max: 10
+                  max: 10,
                },
                format: wNumb({
-                  decimals: 2
+                  decimals: 2,
                }),
             });
          }
 
-         slider.noUiSlider.on('update', function (values, handle) {
+         slider.noUiSlider.on('update', function(values, handle) {
             inputs[handle].value = values[handle];
          });
 
-         inputs.forEach(function (input, handle) {
-            input.addEventListener('change', function () {
+         inputs.forEach(function(input, handle) {
+            input.addEventListener('change', function() {
                slider.noUiSlider.setHandle(handle, this.value);
             });
          });
       });
    };
 
-   var tagsToggle = function () {
-      $(document).on('click', '.tags__toggle', function () {
+   var tagsToggle = function() {
+      $(document).on('click', '.tags__toggle', function() {
          var el = $(this).parent();
          if (el.hasClass('tags--active')) {
             el.removeClass('tags--active');
             $(this).text('Все запросы');
-         }  else {
+         } else {
             el.addClass('tags--active');
             $(this).text('Скрыть');
          }
       });
    };
 
-   var sortToggle = function () {
-      $(document).on('click', '.sort-action__header', function () {
+   var sortToggle = function() {
+      $(document).on('click', '.sort-action__header', function() {
          var el = $(this).parent();
 
          if (el.hasClass('sort-action--active')) {
@@ -338,7 +338,7 @@ $(document).ready(function() {
             el.addClass('sort-action--active');
          }
       });
-      $('body').click(function (evt) {
+      $('body').click(function(evt) {
          if ($('.sort-action').hasClass('sort-action--active')) {
             $('.sort-action').removeClass('sort-action--active');
          }
@@ -346,43 +346,52 @@ $(document).ready(function() {
    };
 
    var scrollColorCatalog = function() {
-      $('.colors-catalog').scroll(function () {
+      $('.colors-catalog').scroll(function() {
          var el = document.querySelector('#popup-colors-catalog');
          if ($(this).scrollTop() > 0 && !$(this).hasClass('colors-catalog--scrolled')) {
-            $(el).addClass('colors-catalog--scrolled')
+            $(el).addClass('colors-catalog--scrolled');
          } else {
             $(el).removeClass('colors-catalog--scrolled');
          }
       });
-   }
+   };
 
-   var tabs = function () {
-      $('.tabs-list__item').click(function () {
+   var tabs = function() {
+      $('.tabs-list__item').click(function() {
          var tabName = $(this).attr('show-tab');
          if ($(this).hasClass('js-tabs--aside')) {
-            $(this).closest('.sub-category__aside').addClass('sub-category__aside--active');
+            $(this)
+               .closest('.sub-category__aside')
+               .addClass('sub-category__aside--active');
             if ($(this).hasClass('tabs-list__item--active')) {
-               $(this).closest('.sub-category__aside').removeClass('sub-category__aside--active');
+               $(this)
+                  .closest('.sub-category__aside')
+                  .removeClass('sub-category__aside--active');
+               $(this).toggleClass('tabs-list__item--active')
+               .siblings()
+               .removeClass('tabs-list__item--active');
             }
          }
          if (!$(this).hasClass('tabs-list__item--active')) {
-            $(this).toggleClass('tabs-list__item--active').siblings().removeClass('tabs-list__item--active');
-            $('.tabs-content .' + tabName).toggleClass('tab--active').siblings().removeClass('tab--active');
+            $('.tabs-content .' + tabName)
+               .toggleClass('tab--active')
+               .siblings()
+               .removeClass('tab--active');
          }
       });
-   }
+   };
 
-   var formAppendDown = function () {
+   var formAppendDown = function() {
       var el = $('.js-mobile-down');
       if (window.innerWidth < 768) {
          el.appendTo(el.closest('.form'));
       } else {
-         el.appendTo(el.closest('.form').find('.js-mobile-down--start'))
+         el.appendTo(el.closest('.form').find('.js-mobile-down--start'));
       }
    };
 
-   var customSelect = function () {
-      $(document).on('click', '.select__header', function () {
+   var customSelect = function() {
+      $(document).on('click', '.select__header', function() {
          var sel = $(this).parent();
          if (sel.hasClass('select--active')) {
             sel.removeClass('select--active');
@@ -390,64 +399,62 @@ $(document).ready(function() {
             $('.select').removeClass('select--active');
             sel.addClass('select--active');
          }
-
       });
-      $(document).on('click', '.select__item', function () {
-         var val = $(this).find('.select__value').text();
+      $(document).on('click', '.select__item', function() {
+         var val = $(this)
+            .find('.select__value')
+            .text();
          var sel = $(this).closest('.select');
          sel.removeClass('select--active');
          sel.find('.select__current').text(val);
       });
-   }
+   };
 
-   var cabinetMobileNav = function () {
-      $(document).on('click', '.cabinet-nav__item--active', function (evt) {
+   var cabinetMobileNav = function() {
+      $(document).on('click', '.cabinet-nav__item--active', function(evt) {
          evt.preventDefault();
-         $(this).closest('.cabinet-nav__list').toggleClass('cabinet-nav__list--active');
+         $(this)
+            .closest('.cabinet-nav__list')
+            .toggleClass('cabinet-nav__list--active');
       });
-   }
+   };
 
    // slick-slider
-   var slider = function() {
-      var slideCount = $('.product-slider__count');
-      var prodSlider = $('.js-slider');
-
-      $('.js-slider').each(function (idx) {
-         var sliderClass = "slider-" + idx;
-         var sliderCount = $(this).closest('.slider').find('.slider__count');
-         this.closest('.slider').classList.add(sliderClass);
-         $(this).on('init afterChange', function (event, slick, currentSlide) {
-            if (slick.slideCount > 4) {
-               var i = (currentSlide ? currentSlide : 0) + 1;
-               sliderCount.text('Страница ' + i + ' из ' + slick.slideCount);
-            }
-         });
-         $(this).slick({
-               slidesToShow: 4,
-               slidesToScroll: 1,
-               prevArrow: '.' + sliderClass + ' .js-slider-prev',
-               nextArrow: '.' + sliderClass + ' .js-slider-next',
-               infinite: true,
-               adaptiveHeight: true,
-               arrows: true,
-               responsive: [
-                  {
-                     breakpoint: 1239,
-                     settings: {
-                        slidesToShow: 3,
-                        arrows: true,
-                        dots: true
-                     }
-                  },
-                  {
-                     breakpoint: 768,
-                     settings: {
-                        slidesToShow: 1,
-                        dots: true
-                     }
-                  }
-               ]
-            });
+   var productPrevSlider = function() {
+      var productSlider = $('.js-product-slider');
+      var sliderCount = $('.slider__count');
+      productSlider.on('init afterChange', function(event, slick, currentSlide) {
+         if (slick.slideCount > 4) {
+            console.log(currentSlide);
+            var i = (currentSlide ? currentSlide : 0) + 1;
+            sliderCount.text('Страница ' + i + ' из ' + slick.slideCount);
+         }
+      });
+      productSlider.slick({
+         slidesToShow: 4,
+         slidesToScroll: 1,
+         prevArrow: '.js-product-slider-prev',
+         nextArrow: '.js-product-slider-next',
+         infinite: true,
+         adaptiveHeight: true,
+         arrows: true,
+         responsive: [
+            {
+               breakpoint: 1239,
+               settings: {
+                  slidesToShow: 3,
+                  arrows: true,
+                  dots: true,
+               },
+            },
+            {
+               breakpoint: 768,
+               settings: {
+                  slidesToShow: 1,
+                  dots: true,
+               },
+            },
+         ],
       });
    };
 
@@ -461,7 +468,7 @@ $(document).ready(function() {
             adaptiveHeight: true,
             infinite: false,
             arrows: false,
-            dots: true
+            dots: true,
          });
       } else if ($(window).width() > 768 && sliderElement.hasClass('slick-initialized')) {
          sliderElement.slick('unslick');
@@ -477,7 +484,6 @@ $(document).ready(function() {
    svg4everybody();
    sandwich();
    popularCategoriesSlider();
-   slider();
    locationChoose();
    popupLink();
    formValidation();
@@ -499,4 +505,5 @@ $(document).ready(function() {
    formAppendDown();
    customSelect();
    cabinetMobileNav();
+   productPrevSlider();
 });
