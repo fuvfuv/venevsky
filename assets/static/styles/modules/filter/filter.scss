@@ -13,7 +13,7 @@
     }
     &__title {
         font-size: 22px;
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
         line-height: 28px;
     }
     &__footer {
@@ -34,7 +34,7 @@
     }
     &__clear {
         color: $link-color;
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
         cursor: pointer;
     }
     &__link {
@@ -42,7 +42,7 @@
         margin-top: 15px;
         color: $link-color;
         font-size: 14px;
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
     }
     &__toggle {
         display: flex;
@@ -106,7 +106,7 @@
         }
         &__btn {
             color: $link-color;
-            font-weight: 600;
+            font-family: $mainFontSemiBold;
             cursor: pointer;
             &:hover {
                 text-decoration: underline;
@@ -151,7 +151,7 @@
             }
         }
         &__title {
-            font-weight: 600;
+            font-family: $mainFontSemiBold;
         }
         &__body {
             display: none;

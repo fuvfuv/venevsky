@@ -67,7 +67,7 @@
    }
    &__name {
       font-size: 14px;
-      font-weight: 600;
+      font-family: $mainFontSemiBold;
       line-height: 1.43;
       text-align: center;
       @media screen and (max-width: $phone-size) {

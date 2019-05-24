@@ -132,7 +132,7 @@
       }
       &__text {
          font-size: 17px;
-         font-weight: 600;
+         font-family: $mainFontSemiBold;
          line-height: 1.44;
          white-space: nowrap;
          @media screen and (max-width: $phone-size) {
@@ -190,7 +190,7 @@
       &__item {
          padding: 6px 15px;
          font-size: 14px;
-         font-weight: 600;
+         font-family: $mainFontSemiBold;
          line-height: 18px;
          cursor: pointer;
          transition: all linear .2s;

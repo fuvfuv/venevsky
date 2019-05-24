@@ -62,7 +62,7 @@
     &.checkbox {
         &--bold {
             .checkbox__text {
-                font-weight: 600;
+                font-family: $mainFontSemiBold;
             }
         }
         &--big {

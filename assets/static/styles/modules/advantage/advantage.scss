@@ -48,13 +48,13 @@
         flex: 1;
         flex-direction: column;
         font-size: 14px;
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
         letter-spacing: .25px;
     }
     &__title {
         margin-bottom: 4px;
         font-size: 16px;
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
     }
     &__text {
         color: $text-info-color;

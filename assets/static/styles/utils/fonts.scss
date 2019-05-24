@@ -1,4 +1,27 @@
-@include font-face("SourceSansPro", "../../fonts/SourceSansPro/SourceSansPro-Regular", 400);
-@include font-face("SourceSansPro", "../../fonts/SourceSansPro/SourceSansPro-SemiBold", 600);
-@include font-face("SourceSansPro", "../../fonts/SourceSansPro/SourceSansPro-Bold", 700);
-@include font-face("SourceSansPro", "../../fonts/SourceSansPro/SourceSansPro-Black", 800);
+@font-face {
+   font-family: SourceSansPro-Regular;
+   font-style: normal;
+   font-weight: 400;
+   src: url("../fonts/SourceSansPro/SourceSansPro-Regular.woff");
+}
+
+@font-face {
+   font-family: SourceSansPro-SemiBold;
+   font-style: normal;
+   font-weight: 600;
+   src: url("../fonts/SourceSansPro/SourceSansPro-SemiBold.woff");
+}
+
+@font-face {
+   font-family: SourceSansPro-Bold;
+   font-style: normal;
+   font-weight: 700;
+   src: url("../fonts/SourceSansPro/SourceSansPro-Bold.woff");
+}
+
+@font-face {
+   font-family: SourceSansPro-Black;
+   font-style: normal;
+   font-weight: 800;
+   src: url("../fonts/SourceSansPro/SourceSansPro-Black.woff");
+}

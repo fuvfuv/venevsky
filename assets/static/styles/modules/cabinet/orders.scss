@@ -29,7 +29,7 @@
          }
          &.tabs-list__item--active {
             border-bottom-color: $main-action-color;
-            font-weight: 600;
+            font-family: $mainFontSemiBold;
             cursor: default;
          }
       }

@@ -23,26 +23,26 @@ block content
             include pages/cabinet/navigation
             .cabinet__main
                .cabinet-form
-                  form.form(action="#" method="#")
+                  form.form(action="#" method="get")
                      .form__body
                         .cabinet-form__item
                            span.cabinet-form__title Изменить пароль
                            .form-line
                               .form-group.form-group--width-m
                                  .form-group__header
-                                    label(for="#").form-group__label Текущий пароль
+                                    label(for="cur-password").form-group__label Текущий пароль
                                  .form-group__body
                                     //- +icon('eye', 'form-password-icon-toggle')
-                                    input(type="password", placeholder="Введите пароль" name="password" minlength="8").input-field
+                                    input(type="password", placeholder="Введите пароль" name="password" id="cur-password" minlength="8").input-field
 
 
                            .form-line.form-line--tablet-column
                               .form-group.form-group--width-m
                                  .form-group__header
-                                    label(for="#").form-group__label Новый пароль
+                                    label(for="rep-password").form-group__label Новый пароль
                                  .form-group__body
                                     //- +icon('eye', 'form-password-icon-toggle')
-                                    input(type="password", placeholder="Введите пароль" name="password" minlength="8").input-field
+                                    input(type="password", placeholder="Введите пароль" name="password" id="rep-password" minlength="8").input-field
                               .form-password-requirements
                                  span.form-password-requirements__name Укажите сильный пароль:
                                  ul.form-password-requirements__list
@@ -54,10 +54,10 @@ block content
                            .form-line
                               .form-group.form-group--width-m
                                  .form-group__header
-                                    label(for="#").form-group__label Повторить пароль
+                                    label(for="new-password").form-group__label Повторить пароль
                                  .form-group__body
                                     //- +icon('eye', 'form-password-icon-toggle')
-                                    input(type="password", placeholder="Введите пароль" name="password" minlength="8").input-field
+                                    input(type="password", placeholder="Введите пароль" name="password" id="new-password" minlength="8").input-field
                                  .form-group__footer
                                     .form-message.form-message--success
                                        span.form-message__text Пароли совпадают

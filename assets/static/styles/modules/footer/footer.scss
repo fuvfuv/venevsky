@@ -3,7 +3,7 @@
       display: block;
       margin-bottom: 10px;
       font-size: 17px;
-      font-weight: 600;
+      font-family: $mainFontSemiBold;
    }
    &__block {
       margin-bottom: 25px;
@@ -150,7 +150,7 @@
          display: block;
          margin-bottom: 5px;
          font-size: 15px;
-         font-weight: 600;
+         font-family: $mainFontSemiBold;
       }
       &__text {
          font-size: 13px;
@@ -201,6 +201,9 @@
       background-color: transparent;
       text-decoration: underline;
       cursor: pointer;
+   }
+   &__map {
+      background-color: darken(#f2f2f2, 20%);
    }
    &__body {
       display: flex;
@@ -295,7 +298,7 @@
       display: block;
       margin-bottom: 10px;
       font-size: 18px;
-      font-weight: 600;
+      font-family: $mainFontSemiBold;
       line-height: 1.44;
    }
    &__text {
@@ -306,7 +309,7 @@
    }
    &__label {
       font-size: 14px;
-      font-weight: 700;
+      font-family: $mainFontBold;
    }
    &__block {
       display: flex;

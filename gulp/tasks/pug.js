@@ -9,9 +9,6 @@ module.exports = function () {
          .pipe(pug({
             pretty: true
          }))
-         .pipe(gulpif($.production, pug({
-            pretty: false
-         })))
          .pipe(plumber.stop())
          .pipe($.gulp.dest('./build/'))
          .on('end', $.browserSync.reload);

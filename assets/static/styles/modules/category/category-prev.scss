@@ -82,7 +82,7 @@
         margin-bottom: 20px;
         &-text {
             font-size: 22px;
-            font-weight: 700;
+            font-family: $mainFontBold;
         }
     }
     &__img {
@@ -104,13 +104,13 @@
         word-break: break-word;
         &-text {
             font-size: 22px;
-            font-weight: 700;
+            font-family: $mainFontBold;
         }
     }
     &__item {
         margin-bottom: 10px;
         font-size: 15px;
-        font-weight: 500;
+        font-family: $mainFontSemiBold;
         &:last-child {
             margin-top: 20px;
             margin-bottom: 0;

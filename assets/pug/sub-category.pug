@@ -18,23 +18,23 @@ block content
                         li.dropdown-list__item
                            a(href="#").dropdown-list__link
                               span.breadcrums-nav__text Рулонная сталь
-                              count.count-text 23
+                              span.count-text 23
                         li.dropdown-list__item
                            a(href="#").dropdown-list__link
                               span.breadcrums-nav__text Профнастил
-                              count.count-text 23
+                              span.count-text 23
                         li.dropdown-list__item
                            a(href="#").dropdown-list__link
                               span.breadcrums-nav__text Листовой прокат
-                              count.count-text 23
+                              span.count-text 23
                         li.dropdown-list__item
                            a(href="#").dropdown-list__link
                               span.breadcrums-nav__text Распродажа
-                              count.count-text 23
+                              span.count-text 23
                         li.dropdown-list__item
                            a(href="#").dropdown-list__link
                               span.breadcrums-nav__text Специальные предложения
-                              count.count-text 23
+                              span.count-text 23
             li.breadcrumbs__item
                span.breadcrumbs__current Доборные элементы кровли
 
@@ -46,18 +46,18 @@ block content
          .sub-category
             aside.sub-category__aside
                ul.sub-category-mobile-nav.tabs-list
-                  li.tabs-list__item.js-tabs--aside.sub-category-mobile-nav__item(show-tab = "tab-category")
+                  li.tabs-list__item.js-tabs--aside.sub-category-mobile-nav__item(data-tab = "tab-category")
                      span.sub-category-mobile-nav__text Подразделы
-                  li.tabs-list__item.js-tabs--aside.sub-category-mobile-nav__item(show-tab = "tab-filter")
+                  li.tabs-list__item.js-tabs--aside.sub-category-mobile-nav__item(data-tab = "tab-filter")
                      span.sub-category-mobile-nav__text Фильтр
-                  li.tabs-list__item.js-tabs--aside.sub-category-mobile-nav__item(show-tab = "tab-often")
+                  li.tabs-list__item.js-tabs--aside.sub-category-mobile-nav__item(data-tab = "tab-often")
                      span.sub-category-mobile-nav__text Часто ищут
                .tabs-content
                   include pages/sub-category/category-list
                   include pages/sub-category/filter
                   include pages/sub-category/often-looking-mobile
 
-            main.sub-category__main
+            .sub-category__main
                include pages/sub-category/tags
                .sub-category__status
                   include pages/sub-category/sort

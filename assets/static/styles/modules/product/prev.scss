@@ -97,7 +97,7 @@
       height: 30px;
       padding: 0 4px;
       border-radius: 0 0 4px 4px;
-      font-weight: 600;
+      font-family: $mainFontSemiBold;
       line-height: 30px;
       &.product-prev__mark {
          &--bg {
@@ -113,7 +113,7 @@
    }
    &__name {
       font-size: 14px;
-      font-weight: 600;
+      font-family: $mainFontSemiBold;
    }
    &__title {
       display: block;
@@ -190,7 +190,7 @@
       }
       &-current {
          font-size: 18px;
-         font-weight: 800;
+         font-family: $mainFontBlack;
       }
    }
 }

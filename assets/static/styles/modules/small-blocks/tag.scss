@@ -16,7 +16,7 @@
    }
    &__title {
       padding-top: 15px;
-      font-weight: 600;
+      font-family: $mainFontSemiBold;
 
       flex-shrink: 0;
    }
@@ -42,7 +42,7 @@
       padding-top: 12px;
       border-bottom: 1px solid $link-color;
       color: $link-color;
-      font-weight: 600;
+      font-family: $mainFontSemiBold;
       cursor: pointer;
 
       flex-shrink: 0;

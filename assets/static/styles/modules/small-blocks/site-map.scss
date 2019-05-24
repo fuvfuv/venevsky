@@ -40,7 +40,7 @@
          display: block;
          margin-bottom: 10px;
          font-size: 18px;
-         font-weight: 600;
+         font-family: $mainFontSemiBold;
          line-height: 1.44;
          @media screen and (max-width: $phone-size) {
             font-size: 16px;
@@ -49,7 +49,7 @@
    }
    &-list {
       &__link {
-         font-weight: 500;
+         font-family: $mainFontSemiBold;
       }
       & > * {
          margin: 10px 0;

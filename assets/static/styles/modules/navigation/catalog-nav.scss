@@ -134,7 +134,7 @@
         }
         &-text {
             font-size: 14px;
-            font-weight: 600;
+            font-family: $mainFontSemiBold;
             line-height: 18px;
             @media screen and (max-width:$phone-size) {
                 font-size: 16px;
@@ -280,7 +280,7 @@
     &__title {
         margin-bottom: 10px;
         font-size: 18px;
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
         line-height: 26px;
         @media screen and (max-width:$phone-size) {
             margin-top: 5px;
@@ -308,7 +308,7 @@
     }
     &__item {
         font-size: 14px;
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
         line-height: 18px;
         @media screen and (max-width:$phone-size) {
             padding: 5px 15px;
@@ -358,7 +358,7 @@
     &__label {
         padding: 8px 25px 8px 15px;
         font-size: 18px;
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
         line-height: 24px;
         cursor: pointer;
     }
@@ -370,7 +370,7 @@
         padding: 8px 25px 8px 15px;
         border-bottom: 1px solid #DEDEDE;
         font-size: 14px;
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
         line-height: 24px;
         cursor: pointer;
         &:after {
@@ -392,7 +392,7 @@
         display: block;
         font-weight: 400;
         &.catalog-mobile-subnav__link--main {
-            font-weight: 600;
+            font-family: $mainFontSemiBold;
         }
     }
     .catalog-mobile-subnav {

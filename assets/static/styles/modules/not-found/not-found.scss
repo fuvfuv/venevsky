@@ -18,7 +18,7 @@
    &__number {
       color: #DEDEDE;
       font-size: 150px;
-      font-weight: 600;
+      font-family: $mainFontSemiBold;
       line-height: 1.25;
       @media screen and (max-width: $phone-size) {
          font-size: 90px;

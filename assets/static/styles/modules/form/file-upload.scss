@@ -9,7 +9,7 @@
     &__custom {
         display: flex;
         color: #1FA349; // hex
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
 
         align-items: center;
         & > * {

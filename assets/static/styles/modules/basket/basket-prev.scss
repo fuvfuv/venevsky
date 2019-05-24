@@ -13,7 +13,7 @@
         }
     }
     &__title {
-        font-weight: 600;
+        font-family: $mainFontSemiBold;
         line-height: 20px;
         @media screen and(max-width: $tablet-size) {
             display: none;
