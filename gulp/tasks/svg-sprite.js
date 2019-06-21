@@ -4,7 +4,7 @@ const svgmin = require('gulp-svgmin');
 const replace = require('gulp-replace');
 const gulpif = require('gulp-if');
 
-svgPath = {
+const svgPath = {
    "input": "./assets/static/images/icons/*.svg",
    "output": "./build/images/svg"
 };

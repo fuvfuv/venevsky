@@ -1,8 +1,8 @@
 mixin checkboxLine(text, count, color)
    li.filter-list__item
       .checkbox
-         input(type="checkbox")
-         .checkbox__custom
+         input(type="checkbox" id="color")
+         label(for="color").checkbox__custom
          .checkbox__body
             if (color)
                span.checkbox__text=text
