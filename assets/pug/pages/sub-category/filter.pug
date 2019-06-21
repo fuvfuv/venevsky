@@ -1,8 +1,8 @@
-mixin checkboxLine(text, count, color)
+mixin checkboxLine(text, count, color, type)
    li.filter-list__item
       .checkbox
-         input(type="checkbox" id="color")
-         label(for="color").checkbox__custom
+         input(type="checkbox" id="" + type)
+         label(for="" + type).checkbox__custom
          .checkbox__body
             if (color)
                span.checkbox__text=text
@@ -50,33 +50,33 @@ mixin checkboxLine(text, count, color)
                span.filter-item__title Полимерное покрытие
             .filter-item__body
                ul.filter-list
-                  +checkboxLine('Цветное с одной стороны','456')
-                  +checkboxLine('Цветное с двух сторон','456')
-                  +checkboxLine('С рисунком под дерево','456')
-                  +checkboxLine('С рисунком под камень','456')
-                  +checkboxLine('С рисунком под кирпич','456')
+                  +checkboxLine('Цветное с одной стороны','456', '', 'id-1')
+                  +checkboxLine('Цветное с двух сторон','456', '', 'id-2')
+                  +checkboxLine('С рисунком под дерево','456', '', 'id-3')
+                  +checkboxLine('С рисунком под камень','456', '', 'id-4')
+                  +checkboxLine('С рисунком под кирпич','456', '', 'id-5')
          .filter-item
             .filter-item__header
                span.filter-item__title Цвет
             .filter-item__body
                ul.filter-list
-                  +checkboxLine('Зеленый','456', '#417505')
-                  +checkboxLine('Коричневый','456', '#8b572a')
-                  +checkboxLine('Красное вино','456', '#ae0707')
-                  +checkboxLine('Красный','456', '#ff4d63')
-                  +checkboxLine('Серый','456', '#bababa')
-                  +checkboxLine('Черный','456', '#000000')
+                  +checkboxLine('Зеленый','456', '#417505' ,'#417505')
+                  +checkboxLine('Коричневый','456', '#8b572a' , '#8b572a')
+                  +checkboxLine('Красное вино','456', '#ae0707', '#ae0707')
+                  +checkboxLine('Красный','456', '#ff4d63', '#ff4d63')
+                  +checkboxLine('Серый','456', '#bababa', '#bababa')
+                  +checkboxLine('Черный','456', '#000000', '#000000')
          .filter-item
             .filter-item__header
                span.filter-item__title Коллекция
             .filter-item__body
                ul.filter-list
-                  +checkboxLine('Времена года','456')
-                  +checkboxLine('Времена года','456')
-                  +checkboxLine('Времена года','456')
-                  +checkboxLine('Времена года','456')
-                  +checkboxLine('Времена года','456')
-                  +checkboxLine('Времена года','456')
+                  +checkboxLine('Времена года','456', '', 'id-6')
+                  +checkboxLine('Времена года','456', '', 'id-7')
+                  +checkboxLine('Времена года','456', '', 'id-8')
+                  +checkboxLine('Времена года','456', '', 'id-9')
+                  +checkboxLine('Времена года','456', '', 'id-10')
+                  +checkboxLine('Времена года','456', '', 'id-11')
                .filter__toggle
                   span.filter__toggle-text Показать еще
          .filter-item
@@ -84,7 +84,7 @@ mixin checkboxLine(text, count, color)
                span.filter-item__title Спецпредложения
             .filter-item__body
                ul.filter-list
-                  +checkboxLine('Краска в подарок','456')
+                  +checkboxLine('Краска в подарок','456', '', 'id-12')
       .filter__footer
          button.btn
             span Показать
